@@ -1,0 +1,164 @@
+.foot{
+	position:relative;
+	width:100%;
+	text-align: center;
+	font-size: 16px;
+	overflow: hidden;
+	top: 70px;
+}
+.dkhs p{
+	margin:0px;
+}
+
+.dkhs ul{
+	width: 1190px;
+	margin:0px auto;
+	 list-style: none;
+	padding:0px;
+	overflow:hidden;
+	list-style: none;
+	}
+.dkhs ul li{
+	width: 297px;
+	height: 140px;
+	float:left;
+	display:block;
+	text-align:center;
+	line-height:140px;
+	font-size:20px;
+	font-weight:700;
+}
+.dkhs ul li .duo{
+	width: 37px;
+	height: 43px;
+	background-image:url(../../images/common/ico_service.png);
+	background-position:0px 0px;
+	float:left;
+	margin-left:55px;
+	margin-top:50px;
+}
+.dkhs ul li .kuai{
+	width: 37px;
+	height: 43px;
+	background-image:url(../../images/common/ico_service.png);
+	background-position:0px -42px;
+	float:left;
+	margin-left:55px;
+	margin-top:50px;
+}
+.dkhs ul li .hao{
+	width: 37px;
+	height: 43px;
+	background-image:url(../../images/common/ico_service.png);
+	background-position:0px -85px;
+	float:left;
+	margin-left:55px;
+	margin-top:50px;
+}
+.dkhs ul li .sheng{
+	width: 37px;
+	height: 43px;
+	background-image:url(../../images/common/ico_service.png);
+	background-position:0px -128px;
+	float:left;
+	margin-left:55px;
+	margin-top:50px;
+}
+
+.jiewei{
+	width: 1190px;
+	margin:0px auto;
+	clear:both;
+}
+.jiewei .j1 ul{
+	width: 1190px;
+	/* height: 300px; */
+	clear:both;
+	 list-style: none;
+    	padding:0px;
+    	margin:0px;
+   	 overflow:hidden;
+   	 list-style: none;
+}
+.jiewei .j1 ul li{
+	float:left;
+}
+.jiewei .j1 ul li a{
+	text-decoration:none;
+	color:gray;
+	margin:0px 10px;
+}
+.jiewei .j1 ul li a:hover{
+	color:red;
+}
+.line{
+	width: 1px;
+	height: 10px;
+	background-color:#ccc;
+	margin:5px 0px;
+	float:left;
+}
+.j2{
+	margin-top:20px;
+}
+.jiewei .j2 p{
+	color:gray;
+	font-size:14px;
+	text-align:center;
+	/* margin-top:-260px; */
+	/* line-height:150%; */
+}
+.jiewei .j3 ul{
+	width: 680px;
+	height: 35px;
+	margin:20px auto;
+	 list-style: none;
+    	padding:0px;
+    	overflow:hidden;
+    	list-style: none;
+}
+.jiewei .j3 ul li a{
+	margin-left:10px;
+}
+.l1 a{
+	width: 100px;
+	height: 35px;
+	float:left;
+	background:url(../../images/common/ico_footer.png);
+	background-position:0px -148px;
+}
+.l2 a{
+            width: 100px;
+	height: 35px;
+	float:left;
+	background:url(../../images/common/ico_footer.png);
+	background-position:-105px -148px;
+}
+.l3 a{
+            width: 100px;
+	height: 35px;
+	float:left;
+	background:url(../../images/common/ico_footer.png);
+	background-position:0px -182px;
+ }
+.l4 a{
+            width: 100px;
+	height: 35px;
+	float:left;
+	background:url(../../images/common/ico_footer.png);
+	background-position:-105px -182px;
+}
+.l5 a{
+            width: 100px;
+	height: 35px;
+	float:left;
+	background:url(../../images/common/ico_footer.png);
+	background-position:0px -217px;
+}
+.l6 a{
+            width: 100px;
+	height: 35px;
+	float:left;
+	background:url(../../images/common/ico_footer.png);
+	background-position:-105px -217px;
+}

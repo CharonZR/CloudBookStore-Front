@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云上书屋管理端</title>
+    <link rel="stylesheet" href="../../css/admin/admin.css">
+    <link rel="icon" href="../../images/admin/管理.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/common/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/common/bootstrap.min.js"></script>
+    <script src="../../js/common/jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="head-left">
+            <a href="#">
+                <i class="iconfont">&#xe653;</i>
+                <span>云上管理</span>
+            </a>
+        </div>
+        <div class="head-middle">
+            <ul id="one-menu" class="nav nav-pills">
+                <!-- <li role="presentation" class="active"><a href="#">首页</a></li> -->
+                <li id="menu1" role="presentation"><a href="#">
+                    <i class="iconfont">&#xe698;</i>
+                    &nbsp;
+                    首页</a></li>
+
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="iconfont">&#xe61d;</i>
+                        &nbsp;
+                      人员管理 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li id="menu2-1"><a href="#">基本信息表(所有人员)</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li id="menu2-2"><a href="#">管理员表</a></li>
+                      <li id="menu2-3"><a href="#">用户表</a></li>
+                    </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="iconfont">&#xe600;</i>
+                        &nbsp;
+                      商品管理 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li id="menu3-1"><a href="#">书籍信息表</a></li>
+                      <li id="menu3-2"><a href="#">课程信息表</a></li>
+                      <li id="menu3-3"><a href="#">电子书信息表</a></li>
+                      <li id="menu3-4"><a href="#">VIP价格信息表</a></li>
+                    </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="iconfont">&#xebef;</i>
+                        &nbsp;
+                      类别管理 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li id="menu4-1"><a href="#">书籍类别表</a></li>
+                      <li id="menu4-2"><a href="#">课程类别表</a></li>
+                    </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="iconfont">&#xe615;</i>
+                        &nbsp;
+                      订单管理 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li id="menu5-1"><a href="#">订单表</a></li>
+                    </ul>
+                </li>
+
+                <li id="menu6" role="presentation"><a href="#">
+                    <i class="iconfont">&#xe670;</i>
+                    &nbsp;
+                    公告</a></li>
+
+                <li id="menu7" role="presentation"><a href="#">
+                    <i class="iconfont">&#xe701;</i>
+                    &nbsp;
+                    轮播图</a></li>
+                
+            </ul>
+        </div>
+        <div class="head-right">
+            <ul>
+                <li class="sixin" style="margin-right: 30px;">
+                    <i class="iconfont" style="font-size: 30px;float: left;color: #3E8EF7;">&#xe628;</i>
+                    <sup class="sup">8</sup>
+                    <div class="chat">
+                        <ul>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">踏北小天才</h5>&nbsp;的来信:</span>
+                                <p>尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:</p>
+                                <span class="time">2021-9-10 15:11:24</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="admin-li">
+                    <div class="admin-img"></div>
+                    <span style="float: left; margin-left: 10px;margin-right: 20px;">尊敬的&nbsp;<h4 style="color: red; display: inline;">饿熊的咆哮</h4>&nbsp;欢迎您!</span>
+                    <ul class="user" style="clear: both;">
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">登出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle">
+        <div style="position: relative;">
+            <div class="middlek one">
+                <!-- 首页 -->
+                <iframe src="in-admin/首页.html"></iframe>
+            </div>
+            <div class="middlek two">
+                <!-- 基本信息表(所有人员) -->
+                <iframe src="in-admin/基本信息表(所有人员).html"></iframe>
+            </div>
+            <div class="middlek three">
+                <!-- 管理员表 -->
+                <iframe src="in-admin/管理员表.html"></iframe>
+            </div>
+            <div class="middlek four">
+                <!-- 用户表 -->
+                <iframe src="in-admin/用户表.html"></iframe>
+            </div>
+            <div class="middlek five">
+                <!-- 书籍信息表 -->
+                <iframe src="in-admin/书籍信息表.html"></iframe>
+            </div>
+            <div class="middlek six">
+                <!-- 课程信息表 -->
+                <iframe src="in-admin/课程信息表.html"></iframe>
+            </div>
+            <div class="middlek seven">
+                <!-- 电子书信息表 -->
+                <iframe src="in-admin/电子书信息表.html"></iframe>
+            </div>
+            <div class="middlek eight">
+                <!-- VIP价格信息表 -->
+                <iframe src="in-admin/VIP价格信息表.html"></iframe>
+            </div>
+            <div class="middlek nine">
+                <!-- 书籍类别表 -->
+                <iframe src="in-admin/书籍类别表.html"></iframe>
+            </div>
+            <div class="middlek ten">
+                <!-- 课程类别表 -->
+                <iframe src="in-admin/课程类别表.html"></iframe>
+            </div>
+            <div class="middlek oneone">
+                <!-- 订单表 -->
+                <iframe src="in-admin/订单表.html"></iframe>
+            </div>
+            <div class="middlek onetwo">
+                <!-- 公告 -->
+                <iframe src="in-admin/公告.html"></iframe>
+            </div>
+            <div class="middlek onethree">
+                <!-- 轮播图 -->
+                <iframe src="in-admin/轮播图.html"></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#menu1").click(function(){
+                $(".middlek").css("display","none");
+                $(".one").css("display","block");
+            });
+            $("#menu2-1").click(function(){
+                $(".middlek").css("display","none");
+                $(".two").css("display","block");
+            });
+            $("#menu2-2").click(function(){
+                $(".middlek").css("display","none");
+                $(".three").css("display","block");
+            });
+            $("#menu2-3").click(function(){
+                $(".middlek").css("display","none");
+                $(".four").css("display","block");
+            });
+            $("#menu3-1").click(function(){
+                $(".middlek").css("display","none");
+                $(".five").css("display","block");
+            });
+            $("#menu3-2").click(function(){
+                $(".middlek").css("display","none");
+                $(".six").css("display","block");
+            });
+            $("#menu3-3").click(function(){
+                $(".middlek").css("display","none");
+                $(".seven").css("display","block");
+            });
+            $("#menu3-4").click(function(){
+                $(".middlek").css("display","none");
+                $(".eight").css("display","block");
+            });
+            $("#menu4-1").click(function(){
+                $(".middlek").css("display","none");
+                $(".nine").css("display","block");
+            });
+            $("#menu4-2").click(function(){
+                $(".middlek").css("display","none");
+                $(".ten").css("display","block");
+            });
+            $("#menu5-1").click(function(){
+                $(".middlek").css("display","none");
+                $(".oneone").css("display","block");
+            });
+            $("#menu6").click(function(){
+                $(".middlek").css("display","none");
+                $(".onetwo").css("display","block");
+            });
+            $("#menu7").click(function(){
+                $(".middlek").css("display","none");
+                $(".onethree").css("display","block");
+            });
+        })
+    </script>
+</body>
+</html>

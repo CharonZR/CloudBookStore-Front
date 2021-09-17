@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云上书屋</title>
+	<link rel="icon" href="./images/common/云上书屋.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/common/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/index/index01-style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./css/common/nav.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common/foot.css" />
+    <script src="./js/common/swiper-bundle.min.js"></script>
+</head>
+
+<style>
+    body {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        border: 0;
+       /* overflow-x: hidden;*/
+        display: block;
+    }
+    /*logo*/
+    .logo-line{
+        position: relative;
+        top: 40px;
+        width: auto;
+        height: 85px;
+        overflow: hidden;
+    }
+    .logo{
+        width: 220px;
+        height: 85px;
+        left: 150px;
+        position: absolute;
+        background-image: url("./images/common/logo.png");
+        background-size: cover;
+    }
+
+    /*搜索框*/
+    .search>input{
+        width: 600px;
+        height: 40px;
+        top: 25px;
+        border: 1px solid rgb(196,219,102);
+        position: absolute;
+        left: 460px;
+        outline:none;
+
+    }
+    .search>button{
+        border: 1px solid rgb(196, 219, 102);
+        width: 48px;
+        height: 42px;
+        position: absolute;
+        top: 25px;
+        left: 1060px;
+        background-image: url("./images/index/查询.png");
+        background-size: 45px;
+    }
+    .search>button:hover{
+        background-color: white;
+    }
+</style>
+<body>
+<div class="contai">
+<!--定义头部-->
+<div class='nav'>
+    <ul>
+        <li><img src="./images/common/素材-大书.png"></li>
+        <li><a href='#'>主页</a></li>
+        <li><a href='#'>分类</a>
+            <ul>
+                <li><a href='#'>图书</a></li>
+                <li><a href='#'>电子书</a></li>
+                <li><a href='#'>课程</a></li>
+            </ul>
+        </li>
+        <li><a href='#'>个人中心</a>
+            <ul>
+                <li><a href='#'>购物车</a></li>
+                <li><a href='#'>个人信息</a></li>
+                <li><a href='#'>订单信息</a></li>
+                <li><a href='#'>地址信息</a></li>
+            </ul>
+        </li>
+        <li><a href='#'>登陆</a></li>
+        <li><a href='#'>注册</a></li>
+    </ul>
+</div>
+/*定义logo和搜索框*/
+<div class="logo-line">
+    <div class="logo"></div>
+    <div class="search">
+        <input type="text" placeholder="请输入...">
+        <button type="button" class="button"></button>
+    </div>
+</div>
+
+<div class="pic">
+    <img src="./images/index/1200x65_0906-1630997035.jpg">
+</div>
+<!-- 定义banner begin -->
+<div class="banners">
+    <nav>
+        <ul>
+            <li><img src="./images/index/I-文学.svg" ><a href="#">文学</a></li>
+            <li><img src="./images/index/J-艺术.svg" ><a href="#">艺术</a></li>
+            <li><img src="./images/index/G-文化.svg" ><a href="#">动漫</a></li>
+            <li><img src="./images/index/计算机.svg" ><a href="#">科技</a></li>
+            <li><img src="./images/index/想法.svg" ><a href="#">经管</a></li>
+            <li><img src="./images/index/启蒙.svg" ><a href="#">童书</a></li>
+            <li><img src="./images/index/B-哲学宗教.svg" ><a href="#">人文</a></li>
+            <li><img src="./images/index/健康.svg" ><a href="#">励志</a></li>
+            <li><img src="./images/index/生活.svg" ><a href="#">生活</a></li>
+            <li><img src="./images/index/C-社会.svg" ><a href="#">社会</a></li>
+        </ul>
+    </nav>
+    <section> </section>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/index/750x315-1629688493.jpg"></div>
+            <div class="swiper-slide"><img src="./images/index/750x315-1630996532.jpg"></div>
+            <div class="swiper-slide"><img src="./images/index/2021090914183116115.jpg"></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <DIV id="cntR">
+        <DIV id="NewsTop">
+            <DIV id="NewsTop_tit">
+                <P class="topTit">热门书摘</P>
+                <P class="topC0">文学</P>
+                <P class="topC0">青春</P>
+                <P class="topC0">经典</P>
+            </DIV>
+            <DIV id="NewsTop_cnt"> <SPAN title="Don't delete me"></SPAN> <SPAN>
+                <A href="#" target=_self>只有经历过地狱般的磨砺，才能练就创造天堂的力量；只有流过血的手指，才能弹出世间的绝响。
+                    ——泰戈尔《飞鸟集》</A><BR>
+      <A href="#" target=_self>我们最大的悲哀，是迷茫的走在路上，看不到前面的希望；我们最坏的习惯，是苟安于当下生活，不知道明天的方向。
+          ——故事梵高</A><BR>
+      <A href="#" target=_self>我们看到的从很远星系来的光是在几百万年之前发出的，在我们看到的最远的物体的情况下，光是在80亿年前发出的。这样当我们看宇宙时，我们是在看它的过去。
+          ——霍金《时间简史》</A><BR>
+      <div align="right"><A href="#" target=_self>...more</A></div>
+      </SPAN> <SPAN><A href="#" target=_self>人之所以痛苦，在于追求错误的东西。如果你不给自己烦恼，别人也永远不可能给你烦恼。因为你自己的内心，你放不下。好好的管教你自己，不要管别人。
+                ——路遥</A><BR>
+      <A href="#" target=_self>不要轻易去依赖一个人，它会成为你的习惯，当分别来临，你失去的不是某个人，而是你精神的支柱，无论何时何地，都要学会独立行走，它会让你走的更坦然些。
+          ——宫崎骏</A><BR>
+      <A href="#" target=_self>我们准备着深深地领受，那些意想不到的奇迹， 在漫长的岁月里忽然有，彗星的出现，狂风乍起。——冯至《十四行诗》</A><BR>
+      <div align="right"><A href="#" target=_self>...more</A></div>
+      </SPAN> <SPAN> <A href="#" target=_self>用了世界上最轻最轻的声音，轻轻唤你的名字每夜每夜。写你的名字，画你的名字，而梦见的是你发光的名字。——纪弦《你的名字》</A><BR>
+      <A href="#" target=_self>你是一树一树的花开，是燕在梁间呢喃。你是爱，是暖，是希望，你是人间的四月天。——林徽因《你是那人间的四月天》</A><BR>
+      <A href="#" target=_self>屏弃于温暖之外，满足于荒凉的寂寞。有孤独，才能保持永远澄澈。——杜运燮《井》</A><BR>
+      <A href="#" target=_self>突然很喜欢惊鸿一瞥这个词，一见钟情太肤浅，日久生情太苍白，别人眉来眼去，我只偷看你那么一眼 。——《一介书生》</A><BR>
+      <div align="right"><A href="#" target=_self>...more</A></div>
+      </SPAN> </DIV>
+        </DIV>
+    </DIV>
+    <div class="book-new">
+        <div class="new-title"><h2>最新动态</h2></div>
+        <ul>
+            <li><a href="#">99读书节，爆款童书3.9折封顶</a></li>
+            <li><a href="#">各年级阅读书单，每满100减50</a></li>
+            <li><a href="#">外语高效学习方法</a></li>
+            <li><a href="#">开学季好课低至9.9</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <ul class="ca-menu">
+            <li> <a href="#"> <span class="ca-icon">Y</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/68d578ba59c236b6.png.webp">
+                </div>
+            </a> </li>
+            <li> <a href="#"> <span class="ca-icon">S</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/787826547b9a2358.png.webp">
+                </div>
+            </a> </li>
+            <li> <a href="#"> <span class="ca-icon" >S</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/fbb346ee93b77cd3.png.webp">
+                </div>
+            </a> </li>
+            <li> <a href="#"> <span class="ca-icon">W</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/bb7c9501d6cc184b.png.webp">
+                </div>
+            </a> </li>
+            <li> <a href="#"> <span class="ca-icon">H</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/e6161a7f05e830a7.png.webp">
+                </div>
+            </a> </li>
+            <li> <a href="#"> <span class="ca-icon">Y</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/d2ce1ec0f671c1d5.png.webp">
+                </div>
+            </a> </li>
+            <li> <a href="#"> <span class="ca-icon">N</span>
+                <div class="ca-content">
+                    <img class="ca-sub" src="./images/index/44b783211d5b14bb.png.webp">
+                </div>
+            </a> </li>
+        </ul>
+    </div>
+</div>
+<div class="con-storey">
+    <div class="con-storey-left">
+        <div class="dujia">
+            <div class="head" id="list">
+                <h3 class="title">独家特供</h3>
+                <ul class="tab-a" id="tab">
+                    <li class="active"><span>主打</span></li>
+                    <li><span>童书</span></li>
+                    <li><span>文艺</span></li>
+                    <li><span>生活</span></li>
+                    <li><span>励志</span></li>
+                    <li><span>社会</span></li>
+                    <li><span>科技</span></li>
+                    <li><span>经管</span></li>
+                </ul>
+            </div>
+            <div class="tab" id="content">
+                <div class="content tab_1" title="主打" style="display: block" >
+                    <ul class="list">
+                        <li class="line1">
+                            <a class="img"><img src="//img3m5.ddimg.cn/40/33/29294635-1_l_5.jpg"></a>
+                            <p class="name"><a>论孤独（当当专享签名+作者印章本）</a></p>
+                            <span class="num_logo">云上书屋独家特供</span>
+                            <p class="price">
+										<span class="rob">
+											<span class="sign">¥</span>
+											<span class="num">34</span>
+											<span class="tail">.20</span>
+										</span>
+                                <span class="price_r">
+											<span class="sign">¥</span>
+											<span class="num">58</span>
+											<span class="tail">.00</span>
+										</span>
+                            </p>
+                            <div class="pop"></div>
+                        </li>
+                        <li class="line2 ">
+                            <a class="img">
+                                <img src="//img3m5.ddimg.cn/56/4/23761145-1_l_10.jpg"></a>
+                            <p class="name"><a>人间失格（日本小说家太宰治代表作，一个对村上春树影响至深的绝望凄美故事）</a></p>
+                            <span class="num_logo">云上书屋独家特供</span>
+                            <p class="price">
+										<span class="rob">
+											<span class="sign">¥</span>
+											<span class="num">10</span>
+											<span class="tail">.10</span>
+										</span>
+                                <span class="price_r">
+											<span class="sign">¥</span>
+											<span class="num">25</span>
+											<span class="tail">.00</span>
+										</span>
+                                <span class="ebookprice_n">
+											<span class="ebookprice_title">电子书</span>
+											<span class="sign">¥</span>
+											<span class="num">4</span>
+											<span class="tail">.99</span>
+										</span>
+                            </p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 ">
+                            <a title="孩子，你可以更勇敢（亲笔签名版）" class="img">
+                                <img src="//img3m3.ddimg.cn/1/6/29118673-1_l_15.jpg"></a>
+                            <p class="name">
+                                <a title="孩子，你可以更勇敢（亲笔签名版）">孩子，你可以更勇敢（亲笔签名版）</a></p>
+                            <span class="num_logo">云上书屋独家特供</span>
+                            <p class="price">
+										<span class="rob">
+											<span class="sign">¥</span>
+											<span class="num">34</span>
+											<span class="tail">.50</span>
+										</span>
+                                <span class="price_r">
+											<span class="sign">¥</span>
+											<span class="num">69</span>
+											<span class="tail">.00</span>
+										</span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470351_4" ddt-pit="4" dd_name="4">
+                            <a class="img"><img src="//img3m6.ddimg.cn/31/4/29288686-1_l_11.jpg"></a>
+                            <p class="name">
+                                <a style=" ">祥瑞：王莽和他的时代</a></p><span >云上书屋独家特供</span>
+                            <p class=" price"><span class="rob"><span class="sign">¥</span><span
+                                    class="num">39</span><span class="tail">.90</span></span><span class="price_r"><span class="sign">¥</span><span
+                                    class="num">79</span><span class="tail">.80</span></span>
+                            </p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 ">
+                            <a class="img"><img src="//img3m5.ddimg.cn/68/0/29287535-1_l_10.jpg"></a>
+                            <p class="name" style=" ">改变人生的说话术</a></p><span class="num_logo">云上书屋独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">21</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">42</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">21</span><span
+                                    class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 ">
+                            <a class="img"><img src="//img3m0.ddimg.cn/54/20/29213370-1_l_11.jpg"></a>
+                            <p class="name"><a style=" ">财务自由之路（全6册）</a></p><span class="num_logo">云上书屋独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">131</span><span class="tail">.80</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">270</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 ">
+                            <a class="img"><img src="//img3m2.ddimg.cn/35/14/29217212-1_l_16.jpg"></a>
+                            <p class="name"><a style=" ">那些我生命中的飞羽（当当独家首发1000本签名本，从鸟类救助师的成长故事中学会与鸟类的和谐相处之道）</a></p><span class="num_logo">云上独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">38</span><span class="tail">.30</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">65</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 ">
+                            <a title="笨狼的故事（典藏版 共8册）" class="img"><img src="//img3m4.ddimg.cn/51/33/29126544-1_l_5.jpg" alt="笨狼的故事（典藏版 共8册）"></a>
+                            <p class="name"><a style=" ">笨狼的故事（典藏版 共8册）</a></p><span class="num_logo">云上书屋独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">99</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">198</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 ">
+                            <a class="img"><img src="//img3m0.ddimg.cn/90/19/29206080-1_l_24.jpg" alt="男孩的冒险书（少儿绘图版（2021版） 英国国家图书奖大作"></a>
+                            <p class="name"><a style=" ">男孩的冒险书（少儿绘图版（2021版） 英国国家图书奖大作</a></p><span class="num_logo">云上书屋独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">140</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">280</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 ">
+                            <a class="img"><img src="//img3m8.ddimg.cn/9/8/29127888-1_l_26.jpg"></a>
+                            <p class="name"><a style=" ">中国优秀图画书典藏系列（全16册）</a></p><span class="num_logo">云上书屋独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">99</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">198</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line11" ><a title="渡边淳一乐园三部曲" class="img" ><img src="//img3m6.ddimg.cn/16/36/25573696-1_l_8.jpg" alt="渡边淳一乐园三部曲"  ></a>
+                            <p class="name"><a title="渡边淳一乐园三部曲" >渡边淳一乐园三部曲</a></p><span class="num_logo">云上书屋独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">66</span><span class="tail">.50</span></span>
+                                <span class="price_r"><span class="sign">¥</span><span class="num">133</span><span class="tail">.00</span></span>
+                                <span class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">6</span><span class="tail">.99</span></span>
+                            </p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul></div>
+                <div class="content tab_2" type="item" dd_name="童书" >
+
+                    <ul class="list " id="component_403758__5206_5187__5187" ddt-area="5187" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470742_1" ddt-pit="1" dd_name="1">
+                            <a title="十万个为什么（普及版）" class="img" href="//product.dangdang.com/29220228.html" target="_blank"><img src="//img3m8.ddimg.cn/81/33/29220228-1_l_15.jpg"
+                                                                                                                                alt="十万个为什么（普及版）"></a>
+                            <p class="name" ddt-src="29220228"><a title="十万个为什么（普及版）" href="//product.dangdang.com/29220228.html" target="_blank"
+                                                                  style=" ">十万个为什么（普及版）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">120</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">240</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470742_2" ddt-pit="2" dd_name="2">
+                            <a title="好想和你在一起" class="img" href="//product.dangdang.com/29237316.html" target="_blank"><img src="//img3m6.ddimg.cn/42/27/29237316-1_l_40.jpg"
+                                                                                                                            alt="好想和你在一起"></a>
+                            <p class="name" ddt-src="29237316"><a title="好想和你在一起" href="//product.dangdang.com/29237316.html" target="_blank"
+                                                                  style=" ">好想和你在一起</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">75</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">150</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470742_3" ddt-pit="3" dd_name="3">
+                            <a title="巴瑞的书屋（6册/套）" class="img" href="//product.dangdang.com/29203665.html" target="_blank"><img src="//img3m5.ddimg.cn/51/9/29203665-1_l_25.jpg"
+                                                                                                                                alt="巴瑞的书屋（6册/套）"></a>
+                            <p class="name" ddt-src="29203665"><a title="巴瑞的书屋（6册/套）" href="//product.dangdang.com/29203665.html" target="_blank"
+                                                                  style=" ">巴瑞的书屋（6册/套）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">123</span><span class="tail">.30</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">274</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470742_4" ddt-pit="4" dd_name="4">
+                            <a title="星光的速度" class="img" href="//product.dangdang.com/28517992.html" target="_blank"><img src="//img3m2.ddimg.cn/52/20/28517992-1_l_2.jpg"
+                                                                                                                          alt="星光的速度"></a>
+                            <p class="name" ddt-src="28517992"><a title="星光的速度" href="//product.dangdang.com/28517992.html" target="_blank"
+                                                                  style=" ">星光的速度</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">63</span><span class="tail">.40</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">138</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470742_5" ddt-pit="5" dd_name="5">
+                            <a title="小小暖房子·好孩子艾奇（套装共5册）" class="img" href="//product.dangdang.com/29224002.html" target="_blank"><img src="//img3m2.ddimg.cn/93/33/29224002-1_l_14.jpg"
+                                                                                                                                       alt="小小暖房子·好孩子艾奇（套装共5册）"></a>
+                            <p class="name" ddt-src="29224002"><a title="小小暖房子·好孩子艾奇（套装共5册）" href="//product.dangdang.com/29224002.html"
+                                                                  target="_blank" style=" ">小小暖房子·好孩子艾奇（套装共5册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">62</span><span class="tail">.30</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">99</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470742_6" ddt-pit="6" dd_name="6">
+                            <a title="笨狼的故事（典藏版 共8册）" class="img" href="//product.dangdang.com/29126544.html" target="_blank"><img src="//img3m4.ddimg.cn/51/33/29126544-1_l_5.jpg"
+                                                                                                                                   alt="笨狼的故事（典藏版 共8册）"></a>
+                            <p class="name" ddt-src="29126544"><a title="笨狼的故事（典藏版 共8册）" href="//product.dangdang.com/29126544.html"
+                                                                  target="_blank">笨狼的故事（典藏版 共8册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">99</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">198</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470742_7" ddt-pit="7" dd_name="7">
+                            <a title="一年（全4册）" class="img" href="//product.dangdang.com/29222390.html" target="_blank"><img src="//img3m0.ddimg.cn/65/12/29222390-1_l_9.jpg"
+                                                                                                                            alt="一年（全4册）"></a>
+                            <p class="name" ddt-src="29222390"><a title="一年（全4册）" href="//product.dangdang.com/29222390.html" target="_blank">一年（全4册）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">99</span><span class="tail">.60</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">199</span><span class="tail">.20</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470742_8" ddt-pit="8" dd_name="8">
+                            <a title="乌鸦面包店" class="img" href="//product.dangdang.com/29234915.html" target="_blank"><img src="//img3m5.ddimg.cn/17/31/29234915-1_l_15.jpg"
+                                                                                                                          alt="乌鸦面包店"></a>
+                            <p class="name" ddt-src="29234915"><a title="乌鸦面包店" href="//product.dangdang.com/29234915.html" target="_blank">乌鸦面包店</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">107</span><span class="tail">.60</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">138</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470742_9" ddt-pit="9" dd_name="9">
+                            <a title="曹文轩文集典藏版（全7册）" class="img" href="//product.dangdang.com/23323691.html" target="_blank"><img src="//img3m1.ddimg.cn/83/1/23323691-1_l_16.jpg"
+                                                                                                                                  alt="曹文轩文集典藏版（全7册）"></a>
+                            <p class="name" ddt-src="23323691"><a title="曹文轩文集典藏版（全7册）" href="//product.dangdang.com/23323691.html" target="_blank">曹文轩文集典藏版（全7册）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">84</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">168</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470742_10" ddt-pit="10" dd_name="10">
+                            <a title="歪歪兔安全习惯系列图画书（全10册）" class="img" href="//product.dangdang.com/29128636.html" target="_blank"><img src="//img3m6.ddimg.cn/64/16/29128636-1_l_6.jpg"
+                                                                                                                                       alt="歪歪兔安全习惯系列图画书（全10册）"></a>
+                            <p class="name" ddt-src="29128636"><a title="歪歪兔安全习惯系列图画书（全10册）" href="//product.dangdang.com/29128636.html"
+                                                                  target="_blank">歪歪兔安全习惯系列图画书（全10册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">42</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">85</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content tab_3" type="item" dd_name="文艺" >
+
+                    <ul class="list " id="component_403758__5206_5191__5191" ddt-area="5191" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470744_1" ddt-pit="1" dd_name="1">
+                            <a title="写给大家的西方美术史 2021新版" class="img" href="//product.dangdang.com/29283020.html" target="_blank"><img src="//img3m0.ddimg.cn/8/36/29283020-1_l_10.jpg"
+                                                                                                                                      alt="写给大家的西方美术史 2021新版"></a>
+                            <p class="name" ddt-src="29283020"><a title="写给大家的西方美术史 2021新版" href="//product.dangdang.com/29283020.html"
+                                                                  target="_blank" style=" ">写给大家的西方美术史 2021新版</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">49</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">98</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470744_2" ddt-pit="2" dd_name="2">
+                            <a title="韩愈传" class="img" href="//product.dangdang.com/29251225.html" target="_blank"><img src="//img3m5.ddimg.cn/91/24/29251225-1_l_3755.jpg"
+                                                                                                                        alt="韩愈传"></a>
+                            <p class="name" ddt-src="29251225"><a title="韩愈传" href="//product.dangdang.com/29251225.html" target="_blank"
+                                                                  style=" ">韩愈传</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">34</span><span class="tail">.40</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">68</span><span class="tail">.80</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470744_3" ddt-pit="3" dd_name="3">
+                            <a title="众神的星座：希腊神话与西方艺术" class="img" href="//product.dangdang.com/29265809.html" target="_blank"><img src="//img3m9.ddimg.cn/23/30/29265809-1_l_6.jpg"
+                                                                                                                                    alt="众神的星座：希腊神话与西方艺术"></a>
+                            <p class="name" ddt-src="29265809"><a title="众神的星座：希腊神话与西方艺术" href="//product.dangdang.com/29265809.html"
+                                                                  target="_blank" style=" ">众神的星座：希腊神话与西方艺术</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">44</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">88</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470744_4" ddt-pit="4" dd_name="4">
+                            <a title="月亮：艺术 科学与文化" class="img" href="//product.dangdang.com/29247327.html" target="_blank"><img src="//img3m7.ddimg.cn/54/11/29247327-1_l_15.jpg"
+                                                                                                                                alt="月亮：艺术 科学与文化"></a>
+                            <p class="name" ddt-src="29247327"><a title="月亮：艺术 科学与文化" href="//product.dangdang.com/29247327.html" target="_blank">月亮：艺术
+                                科学与文化</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">59</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">118</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470744_5" ddt-pit="5" dd_name="5">
+                            <a title="愿为敦煌燃此生：常书鸿自传" class="img" href="//product.dangdang.com/29262831.html" target="_blank"><img src="//img3m1.ddimg.cn/15/12/29262831-1_l_15.jpg"
+                                                                                                                                  alt="愿为敦煌燃此生：常书鸿自传"></a>
+                            <p class="name" ddt-src="29262831"><a title="愿为敦煌燃此生：常书鸿自传" href="//product.dangdang.com/29262831.html" target="_blank">愿为敦煌燃此生：常书鸿自传</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">39</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">78</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470744_6" ddt-pit="6" dd_name="6">
+                            <a title="午夜降临前抵达（当当专享签章本）" class="img" href="//product.dangdang.com/29276881.html" target="_blank"><img src="//img3m1.ddimg.cn/7/2/29276881-1_l_18.jpg"
+                                                                                                                                     alt="午夜降临前抵达（当当专享签章本）"></a>
+                            <p class="name" ddt-src="29276881"><a title="午夜降临前抵达（当当专享签章本）" href="//product.dangdang.com/29276881.html"
+                                                                  target="_blank">午夜降临前抵达（当当专享签章本）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">29</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">59</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">35</span><span
+                                    class="tail">.40</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470744_7" ddt-pit="7" dd_name="7">
+                            <a title="躬笃集（当当专享签章版随机掉落）" class="img" href="//product.dangdang.com/29290994.html" target="_blank"><img src="//img3m4.ddimg.cn/62/18/29290994-1_l_20.jpg"
+                                                                                                                                     alt="躬笃集（当当专享签章版随机掉落）"></a>
+                            <p class="name" ddt-src="29290994"><a title="躬笃集（当当专享签章版随机掉落）" href="//product.dangdang.com/29290994.html"
+                                                                  target="_blank" style=" ">躬笃集（当当专享签章版随机掉落）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">57</span><span class="tail">.20</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">88</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">48</span><span
+                                    class="tail">.62</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470744_8" ddt-pit="8" dd_name="8">
+                            <a title="奇书与世相：刘心武细说金瓶梅（当当专享钤印版）（刘心武40载研究金瓶梅心血之作，道出千百年来未曾变化的世道人心）" class="img" href="//product.dangdang.com/29267147.html"
+                               target="_blank"><img src="//img3m7.ddimg.cn/74/36/29267147-1_l_33.jpg" alt="奇书与世相：刘心武细说金瓶梅（当当专享钤印版）（刘心武40载研究金瓶梅心血之作，道出千百年来未曾变化的世道人心）"></a>
+                            <p class="name" ddt-src="29267147"><a title="奇书与世相：刘心武细说金瓶梅（当当专享钤印版）（刘心武40载研究金瓶梅心血之作，道出千百年来未曾变化的世道人心）" href="//product.dangdang.com/29267147.html"
+                                                                  target="_blank" style=" ">奇书与世相：刘心武细说金瓶梅（当当专享钤印版）（刘心武40载研究金瓶梅心血之作，道出千百年来未曾变化的世道人心）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">49</span><span class="tail">.90</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">88</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470744_9" ddt-pit="9" dd_name="9">
+                            <a title="臧棣诗系限量签名套装（情感教育入门+沸腾协会+尖锐的信任丛书）" class="img" href="//product.dangdang.com/27903558.html" target="_blank"><img
+                                    src="//img3m8.ddimg.cn/12/8/27903558-1_l_5.jpg" alt="臧棣诗系限量签名套装（情感教育入门+沸腾协会+尖锐的信任丛书）"></a>
+                            <p class="name" ddt-src="27903558"><a title="臧棣诗系限量签名套装（情感教育入门+沸腾协会+尖锐的信任丛书）" href="//product.dangdang.com/27903558.html"
+                                                                  target="_blank">臧棣诗系限量签名套装（情感教育入门+沸腾协会+尖锐的信任丛书）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">126</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">168</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470744_10" ddt-pit="10" dd_name="10">
+                            <a title="荷马史诗：伊利亚特·奥德赛(套装。古希腊语直译精选本，精通古希腊语的老一代翻译家王焕生翻译）" class="img" href="//product.dangdang.com/24170737.html"
+                               target="_blank"><img src="//img3m7.ddimg.cn/85/6/24170737-1_l_9.jpg" alt="荷马史诗：伊利亚特·奥德赛(套装。古希腊语直译精选本，精通古希腊语的老一代翻译家王焕生翻译）"></a>
+                            <p class="name" ddt-src="24170737"><a title="荷马史诗：伊利亚特·奥德赛(套装。古希腊语直译精选本，精通古希腊语的老一代翻译家王焕生翻译）" href="//product.dangdang.com/24170737.html"
+                                                                  target="_blank">荷马史诗：伊利亚特·奥德赛(套装。古希腊语直译精选本，精通古希腊语的老一代翻译家王焕生翻译）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">19</span><span class="tail">.70</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">42</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">3</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content tab_4" type="item" dd_name="小说" >
+
+                    <ul class="list " id="component_403758__5206_5193__5193" ddt-area="5193" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470745_1" ddt-pit="1" dd_name="1">
+                            <a title="北洋夜行记.2 城南旧案（签名版）" class="img" href="//product.dangdang.com/29275230.html" target="_blank"><img src="//img3m0.ddimg.cn/39/16/29275230-1_l_9.jpg"
+                                                                                                                                      alt="北洋夜行记.2 城南旧案（签名版）"></a>
+                            <p class="name" ddt-src="29275230"><a title="北洋夜行记.2 城南旧案（签名版）" href="//product.dangdang.com/29275230.html"
+                                                                  target="_blank">北洋夜行记.2 城南旧案（签名版）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">27</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">55</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470745_2" ddt-pit="2" dd_name="2">
+                            <a title="余华作品平装13册（当当独享限量礼盒套装经典全含，活着+许三观卖血记+兄弟+在细雨中呼喊+9部短篇小说）" class="img" href="//product.dangdang.com/27868442.html"
+                               target="_blank"><img src="//img3m2.ddimg.cn/41/5/27868442-1_l_4.jpg" alt="余华作品平装13册（当当独享限量礼盒套装经典全含，活着+许三观卖血记+兄弟+在细雨中呼喊+9部短篇小说）"></a>
+                            <p class="name" ddt-src="27868442"><a title="余华作品平装13册（当当独享限量礼盒套装经典全含，活着+许三观卖血记+兄弟+在细雨中呼喊+9部短篇小说）" href="//product.dangdang.com/27868442.html"
+                                                                  target="_blank" style=" ">余华作品平装13册（当当独享限量礼盒套装经典全含，活着+许三观卖血记+兄弟+在细雨中呼喊+9部短篇小说）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">218</span><span class="tail">.30</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">370</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470745_3" ddt-pit="3" dd_name="3">
+                            <a title="天堂旅行团（当当专享寄语印签环衬+精编小册子，继《全世界》《云边》之后，张嘉佳新书2021全新长篇力作）" class="img" href="//product.dangdang.com/29288121.html"
+                               target="_blank"><img src="//img3m1.ddimg.cn/60/31/29288121-1_l_45230.jpg" alt="天堂旅行团（当当专享寄语印签环衬+精编小册子，继《全世界》《云边》之后，张嘉佳新书2021全新长篇力作）"></a>
+                            <p class="name" ddt-src="29288121"><a title="天堂旅行团（当当专享寄语印签环衬+精编小册子，继《全世界》《云边》之后，张嘉佳新书2021全新长篇力作）" href="//product.dangdang.com/29288121.html"
+                                                                  target="_blank" style=" ">天堂旅行团（当当专享寄语印签环衬+精编小册子，继《全世界》《云边》之后，张嘉佳新书2021全新长篇力作）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">36</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">48</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470745_4" ddt-pit="4" dd_name="4">
+                            <a title="为她准备的好躯壳（当当专享签名版，粉丝追更的【没药花园】创始人何袜皮考验人性之作）" class="img" href="//product.dangdang.com/29236964.html"
+                               target="_blank"><img src="//img3m4.ddimg.cn/86/8/29236964-1_l_15.jpg" alt="为她准备的好躯壳（当当专享签名版，粉丝追更的【没药花园】创始人何袜皮考验人性之作）"></a>
+                            <p class="name" ddt-src="29236964"><a title="为她准备的好躯壳（当当专享签名版，粉丝追更的【没药花园】创始人何袜皮考验人性之作）" href="//product.dangdang.com/29236964.html"
+                                                                  target="_blank" style=" ">为她准备的好躯壳（当当专享签名版，粉丝追更的【没药花园】创始人何袜皮考验人性之作）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">24</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">48</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470745_5" ddt-pit="5" dd_name="5">
+                            <a title="一把刀，千个字（2021年王安忆新作，亲笔签名本）" class="img" href="//product.dangdang.com/29251987.html" target="_blank"><img
+                                    src="//img3m7.ddimg.cn/61/9/29251987-1_l_3.jpg" alt="一把刀，千个字（2021年王安忆新作，亲笔签名本）"></a>
+                            <p class="name" ddt-src="29251987"><a title="一把刀，千个字（2021年王安忆新作，亲笔签名本）" href="//product.dangdang.com/29251987.html"
+                                                                  target="_blank">一把刀，千个字（2021年王安忆新作，亲笔签名本）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">44</span><span class="tail">.20</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">56</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470745_6" ddt-pit="6" dd_name="6">
+                            <a title="阿加莎·克里斯蒂必读精选集（当当定制）" class="img" href="//product.dangdang.com/29245180.html" target="_blank"><img
+                                    src="//img3m0.ddimg.cn/85/10/29245180-1_l_24.jpg" alt="阿加莎·克里斯蒂必读精选集（当当定制）"></a>
+                            <p class="name" ddt-src="29245180"><a title="阿加莎·克里斯蒂必读精选集（当当定制）" href="//product.dangdang.com/29245180.html"
+                                                                  target="_blank">阿加莎·克里斯蒂必读精选集（当当定制）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">73</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">147</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470745_7" ddt-pit="7" dd_name="7">
+                            <a title="心理罪插图版套装（六本）签名版" class="img" href="//product.dangdang.com/29291317.html" target="_blank"><img src="//img3m7.ddimg.cn/88/8/29291317-1_l_26.jpg"
+                                                                                                                                    alt="心理罪插图版套装（六本）签名版"></a>
+                            <p class="name" ddt-src="29291317"><a title="心理罪插图版套装（六本）签名版" href="//product.dangdang.com/29291317.html"
+                                                                  target="_blank" style=" ">心理罪插图版套装（六本）签名版</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">200</span><span class="tail">.79</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">291</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470745_8" ddt-pit="8" dd_name="8">
+                            <a title="我和我的命（梁晓声新作 亲笔签名本）" class="img" href="//product.dangdang.com/29193449.html" target="_blank"><img src="//img3m9.ddimg.cn/32/5/29193449-1_l_18.jpg"
+                                                                                                                                       alt="我和我的命（梁晓声新作 亲笔签名本）"></a>
+                            <p class="name" ddt-src="29193449"><a title="我和我的命（梁晓声新作 亲笔签名本）" href="//product.dangdang.com/29193449.html"
+                                                                  target="_blank" style=" ">我和我的命（梁晓声新作 亲笔签名本）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">38</span><span class="tail">.70</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470745_9" ddt-pit="9" dd_name="9">
+                            <a title="活着之上（阎真插图典蔵版）签名本" class="img" href="//product.dangdang.com/29207592.html" target="_blank"><img src="//img3m2.ddimg.cn/18/14/29207592-1_l_11.jpg"
+                                                                                                                                     alt="活着之上（阎真插图典蔵版）签名本"></a>
+                            <p class="name" ddt-src="29207592"><a title="活着之上（阎真插图典蔵版）签名本" href="//product.dangdang.com/29207592.html"
+                                                                  target="_blank" style=" ">活着之上（阎真插图典蔵版）签名本</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">37</span><span class="tail">.30</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.80</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470745_10" ddt-pit="10" dd_name="10">
+                            <a title="老人与海（精装版，收录《老人与海》《乞力马扎罗的雪》等）" class="img" href="//product.dangdang.com/27891166.html" target="_blank"><img
+                                    src="//img3m6.ddimg.cn/94/11/27891166-1_l_9.jpg" alt="老人与海（精装版，收录《老人与海》《乞力马扎罗的雪》等）"></a>
+                            <p class="name" ddt-src="27891166"><a title="老人与海（精装版，收录《老人与海》《乞力马扎罗的雪》等）" href="//product.dangdang.com/27891166.html"
+                                                                  target="_blank">老人与海（精装版，收录《老人与海》《乞力马扎罗的雪》等）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">17</span><span class="tail">.30</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">37</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content tab_5" type="item" dd_name="青春励志" >
+
+                    <ul class="list " id="component_403758__5206_5195__5195" ddt-area="5195" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470746_1" ddt-pit="1" dd_name="1">
+                            <a title="刘墉青春修炼手册（全5册）" class="img" href="//product.dangdang.com/29280005.html" target="_blank"><img src="//img3m5.ddimg.cn/62/18/29280005-1_l_12.jpg"
+                                                                                                                                  alt="刘墉青春修炼手册（全5册）"></a>
+                            <p class="name" ddt-src="29280005"><a title="刘墉青春修炼手册（全5册）" href="//product.dangdang.com/29280005.html" target="_blank"
+                                                                  style=" ">刘墉青春修炼手册（全5册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">174</span><span class="tail">.70</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">233</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470746_2" ddt-pit="2" dd_name="2">
+                            <a title="能成事的人，都能扛事儿" class="img" href="//product.dangdang.com/29278294.html" target="_blank"><img src="//img3m4.ddimg.cn/34/9/29278294-1_l_12.jpg"
+                                                                                                                                alt="能成事的人，都能扛事儿"></a>
+                            <p class="name" ddt-src="29278294"><a title="能成事的人，都能扛事儿" href="//product.dangdang.com/29278294.html" target="_blank"
+                                                                  style=" ">能成事的人，都能扛事儿</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">35</span><span class="tail">.20</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470746_3" ddt-pit="3" dd_name="3">
+                            <a title="学习高手" class="img" href="//product.dangdang.com/29115439.html" target="_blank"><img src="//img3m9.ddimg.cn/34/28/29115439-1_l_8.jpg"
+                                                                                                                         alt="学习高手"></a>
+                            <p class="name" ddt-src="29115439"><a title="学习高手" href="//product.dangdang.com/29115439.html" target="_blank"
+                                                                  style=" ">学习高手</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">55</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">55</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">12</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470746_4" ddt-pit="4" dd_name="4">
+                            <a title="当你又忙又累必须人间清醒" class="img" href="//product.dangdang.com/29276538.html" target="_blank"><img src="//img3m8.ddimg.cn/60/29/29276538-1_l_17.jpg"
+                                                                                                                                 alt="当你又忙又累必须人间清醒"></a>
+                            <p class="name" ddt-src="29276538"><a title="当你又忙又累必须人间清醒" href="//product.dangdang.com/29276538.html" target="_blank"
+                                                                  style=" ">当你又忙又累必须人间清醒</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">35</span><span class="tail">.80</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.80</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">24</span><span
+                                    class="tail">.90</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470746_5" ddt-pit="5" dd_name="5">
+                            <a title="你要悄悄地拔尖，然后惊艳所有人" class="img" href="//product.dangdang.com/29280530.html" target="_blank"><img src="//img3m0.ddimg.cn/92/25/29280530-1_l_31.jpg"
+                                                                                                                                    alt="你要悄悄地拔尖，然后惊艳所有人"></a>
+                            <p class="name" ddt-src="29280530"><a title="你要悄悄地拔尖，然后惊艳所有人" href="//product.dangdang.com/29280530.html"
+                                                                  target="_blank" style=" ">你要悄悄地拔尖，然后惊艳所有人</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">24</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470746_6" ddt-pit="6" dd_name="6">
+                            <a title="这么多年 （全3册）" class="img" href="//product.dangdang.com/29279949.html" target="_blank"><img src="//img3m9.ddimg.cn/6/36/29279949-1_l_27.jpg"
+                                                                                                                               alt="这么多年 （全3册）"></a>
+                            <p class="name" ddt-src="29279949"><a title="这么多年 （全3册）" href="//product.dangdang.com/29279949.html" target="_blank">这么多年
+                                （全3册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">88</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">128</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">69</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470746_7" ddt-pit="7" dd_name="7">
+                            <a title="小林漫画：小林生活禅（随机掉落签名本+当当印章版精美海报 随书赠送贴纸）（国民漫画家小林2021新著——漫画张张逗趣，文字句句哲理，日常减压神器，暖心深情治愈！）（全二册套装）" class="img"
+                               href="//product.dangdang.com/29263328.html" target="_blank"><img src="//img3m8.ddimg.cn/17/28/29263328-1_l_1436.jpg"
+                                                                                                alt="小林漫画：小林生活禅（随机掉落签名本+当当印章版精美海报 随书赠送贴纸）（国民漫画家小林2021新著——漫画张张逗趣，文字句句哲理，日常减压神器，暖心深情治愈！）（全二册套装）"></a>
+                            <p class="name" ddt-src="29263328"><a title="小林漫画：小林生活禅（随机掉落签名本+当当印章版精美海报 随书赠送贴纸）（国民漫画家小林2021新著——漫画张张逗趣，文字句句哲理，日常减压神器，暖心深情治愈！）（全二册套装）"
+                                                                  href="//product.dangdang.com/29263328.html" target="_blank">小林漫画：小林生活禅（随机掉落签名本+当当印章版精美海报
+                                随书赠送贴纸）（国民漫画家小林2021新著——漫画张张逗趣，文字句句哲理，日常减压神器，暖心深情治愈！）（全二册套装）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">84</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">112</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470746_8" ddt-pit="8" dd_name="8">
+                            <a title="今天也要元气满满呀（新生代超人气国漫IP“元气食堂”作品）" class="img" href="//product.dangdang.com/29252468.html" target="_blank"><img
+                                    src="//img3m8.ddimg.cn/47/9/29252468-1_l_27.jpg" alt="今天也要元气满满呀（新生代超人气国漫IP“元气食堂”作品）"></a>
+                            <p class="name" ddt-src="29252468"><a title="今天也要元气满满呀（新生代超人气国漫IP“元气食堂”作品）" href="//product.dangdang.com/29252468.html"
+                                                                  target="_blank">今天也要元气满满呀（新生代超人气国漫IP“元气食堂”作品）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">29</span><span class="tail">.90</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">59</span><span class="tail">.80</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">47</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470746_9" ddt-pit="9" dd_name="9">
+                            <a title="看你一眼就会笑（Buddy Gator盖朵短尾鳄漫画暖心上市，当当专享作者寄语签名版+异形卡通书签）" class="img" href="//product.dangdang.com/29273151.html"
+                               target="_blank"><img src="//img3m1.ddimg.cn/39/9/29273151-1_l_8.jpg" alt="看你一眼就会笑（Buddy Gator盖朵短尾鳄漫画暖心上市，当当专享作者寄语签名版+异形卡通书签）"></a>
+                            <p class="name" ddt-src="29273151"><a title="看你一眼就会笑（Buddy Gator盖朵短尾鳄漫画暖心上市，当当专享作者寄语签名版+异形卡通书签）" href="//product.dangdang.com/29273151.html"
+                                                                  target="_blank">看你一眼就会笑（Buddy Gator盖朵短尾鳄漫画暖心上市，当当专享作者寄语签名版+异形卡通书签）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">24</span><span class="tail">.90</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.80</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470746_10" ddt-pit="10" dd_name="10">
+                            <a title="赛雷三分钟漫画世界史3（当当定制彩蛋版环衬，一本书看懂九大文明历史！爆笑三分钟，吃透世界史！）" class="img" href="//product.dangdang.com/29268947.html"
+                               target="_blank"><img src="//img3m7.ddimg.cn/92/23/29268947-1_l_8.jpg" alt="赛雷三分钟漫画世界史3（当当定制彩蛋版环衬，一本书看懂九大文明历史！爆笑三分钟，吃透世界史！）"></a>
+                            <p class="name" ddt-src="29268947"><a title="赛雷三分钟漫画世界史3（当当定制彩蛋版环衬，一本书看懂九大文明历史！爆笑三分钟，吃透世界史！）" href="//product.dangdang.com/29268947.html"
+                                                                  target="_blank">赛雷三分钟漫画世界史3（当当定制彩蛋版环衬，一本书看懂九大文明历史！爆笑三分钟，吃透世界史！）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">24</span><span class="tail">.90</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.80</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">29</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content tab_6" type="item" dd_name="社科" >
+
+                    <ul class="list " id="component_403758__5206_5197__5197" ddt-area="5197" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470747_1" ddt-pit="1" dd_name="1">
+                            <a title="乐读史记" class="img" href="//product.dangdang.com/29297250.html" target="_blank"><img src="//img3m0.ddimg.cn/81/21/29297250-1_l_17.jpg"
+                                                                                                                         alt="乐读史记"></a>
+                            <p class="name" ddt-src="29297250"><a title="乐读史记" href="//product.dangdang.com/29297250.html" target="_blank">乐读史记</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">69</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">138</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470747_2" ddt-pit="2" dd_name="2">
+                            <a title="伊朗四千年" class="img" href="//product.dangdang.com/29266470.html" target="_blank"><img src="//img3m0.ddimg.cn/90/25/29266470-1_l_27.jpg"
+                                                                                                                          alt="伊朗四千年"></a>
+                            <p class="name" ddt-src="29266470"><a title="伊朗四千年" href="//product.dangdang.com/29266470.html" target="_blank"
+                                                                  style=" ">伊朗四千年</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">49</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">98</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470747_3" ddt-pit="3" dd_name="3">
+                            <a title="海国图志" class="img" href="//product.dangdang.com/29272089.html" target="_blank"><img src="//img3m9.ddimg.cn/66/20/29272089-1_l_27.jpg"
+                                                                                                                         alt="海国图志"></a>
+                            <p class="name" ddt-src="29272089"><a title="海国图志" href="//product.dangdang.com/29272089.html" target="_blank"
+                                                                  style=" ">海国图志</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">249</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">498</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470747_4" ddt-pit="4" dd_name="4">
+                            <a title="与内在小孩和解:打破童年创伤的阴霾，重获自信勇敢的人生" class="img" href="//product.dangdang.com/29285826.html" target="_blank"><img
+                                    src="//img3m6.ddimg.cn/42/30/29285826-1_l_7.jpg" alt="与内在小孩和解:打破童年创伤的阴霾，重获自信勇敢的人生"></a>
+                            <p class="name" ddt-src="29285826"><a title="与内在小孩和解:打破童年创伤的阴霾，重获自信勇敢的人生" href="//product.dangdang.com/29285826.html"
+                                                                  target="_blank">与内在小孩和解:打破童年创伤的阴霾，重获自信勇敢的人生</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">22</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">45</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">22</span><span
+                                    class="tail">.50</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470747_5" ddt-pit="5" dd_name="5">
+                            <a title="全译罗马帝国衰亡史（人类文明史上绕不开的巨著，一部包罗万象，了解罗马帝国政治、经济、军事、文化的至高经典）（套装共6册）" class="img" href="//product.dangdang.com/29254643.html"
+                               target="_blank"><img src="//img3m3.ddimg.cn/44/1/29254643-1_l_12.jpg" alt="全译罗马帝国衰亡史（人类文明史上绕不开的巨著，一部包罗万象，了解罗马帝国政治、经济、军事、文化的至高经典）（套装共6册）"></a>
+                            <p class="name" ddt-src="29254643"><a title="全译罗马帝国衰亡史（人类文明史上绕不开的巨著，一部包罗万象，了解罗马帝国政治、经济、军事、文化的至高经典）（套装共6册）"
+                                                                  href="//product.dangdang.com/29254643.html" target="_blank" style=" ">全译罗马帝国衰亡史（人类文明史上绕不开的巨著，一部包罗万象，了解罗马帝国政治、经济、军事、文化的至高经典）（套装共6册）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">199</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">399</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470747_6" ddt-pit="6" dd_name="6">
+                            <a title="大众哲学" class="img" href="//product.dangdang.com/29266022.html" target="_blank"><img src="//img3m2.ddimg.cn/38/21/29266022-1_l_6.jpg"
+                                                                                                                         alt="大众哲学"></a>
+                            <p class="name" ddt-src="29266022"><a title="大众哲学" href="//product.dangdang.com/29266022.html" target="_blank">大众哲学</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">19</span><span class="tail">.40</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.80</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470747_7" ddt-pit="7" dd_name="7">
+                            <a title="被遗忘的海上中国史（古代中国其实是一个海洋强国！造船技术世界当先，航海足迹远至东非，傲视东方海域数百年！从海洋看中国史）" class="img" href="//product.dangdang.com/29265301.html"
+                               target="_blank"><img src="//img3m1.ddimg.cn/10/3/29265301-1_l_9.jpg" alt="被遗忘的海上中国史（古代中国其实是一个海洋强国！造船技术世界当先，航海足迹远至东非，傲视东方海域数百年！从海洋看中国史）"></a>
+                            <p class="name" ddt-src="29265301"><a title="被遗忘的海上中国史（古代中国其实是一个海洋强国！造船技术世界当先，航海足迹远至东非，傲视东方海域数百年！从海洋看中国史）"
+                                                                  href="//product.dangdang.com/29265301.html" target="_blank" style=" ">被遗忘的海上中国史（古代中国其实是一个海洋强国！造船技术世界当先，航海足迹远至东非，傲视东方海域数百年！从海洋看中国史）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">36</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">72</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">34</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470747_8" ddt-pit="8" dd_name="8">
+                            <a title="犹太人4000年" class="img" href="//product.dangdang.com/29268398.html" target="_blank"><img src="//img3m8.ddimg.cn/38/29/29268398-1_l_13.jpg"
+                                                                                                                             alt="犹太人4000年"></a>
+                            <p class="name" ddt-src="29268398"><a title="犹太人4000年" href="//product.dangdang.com/29268398.html" target="_blank">犹太人4000年</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">74</span><span class="tail">.90</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">179</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">79</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470747_9" ddt-pit="9" dd_name="9">
+                            <a title="庄子諵譁 2021版（全两册）" class="img" href="//product.dangdang.com/29287893.html" target="_blank"><img src="//img3m3.ddimg.cn/30/25/29287893-1_l_13.jpg"
+                                                                                                                                    alt="庄子諵譁 2021版（全两册）"></a>
+                            <p class="name" ddt-src="29287893"><a title="庄子諵譁 2021版（全两册）" href="//product.dangdang.com/29287893.html"
+                                                                  target="_blank">庄子諵譁 2021版（全两册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">43</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">86</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470747_10" ddt-pit="10" dd_name="10">
+                            <a title="我们内心的焦虑：分裂、忧郁、强迫、歇斯底里四大人格心理分析" class="img" href="//product.dangdang.com/29256034.html" target="_blank"><img
+                                    src="//img3m4.ddimg.cn/49/23/29256034-1_l_30.jpg" alt="我们内心的焦虑：分裂、忧郁、强迫、歇斯底里四大人格心理分析"></a>
+                            <p class="name" ddt-src="29256034"><a title="我们内心的焦虑：分裂、忧郁、强迫、歇斯底里四大人格心理分析" href="//product.dangdang.com/29256034.html"
+                                                                  target="_blank">我们内心的焦虑：分裂、忧郁、强迫、歇斯底里四大人格心理分析</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">25</span><span class="tail">.40</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">52</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content tab_7" type="item" dd_name="经管" >
+
+                    <ul class="list " id="component_403758__5206_5199__5199" ddt-area="5199" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470748_1" ddt-pit="1" dd_name="1">
+                            <a title="AI经济：机器人时代的工作、财富和社会福利（英国畅销10万册的未来经济学巨著！曾成功预测了2008年金融危机的英国政府智囊之一、凯投宏观创始人、沃尔夫森经济学奖获得者全新力作）" class="img"
+                               href="//product.dangdang.com/29223422.html" target="_blank"><img src="//img3m2.ddimg.cn/8/8/29223422-1_l_33.jpg"
+                                                                                                alt="AI经济：机器人时代的工作、财富和社会福利（英国畅销10万册的未来经济学巨著！曾成功预测了2008年金融危机的英国政府智囊之一、凯投宏观创始人、沃尔夫森经济学奖获得者全新力作）"></a>
+                            <p class="name" ddt-src="29223422"><a title="AI经济：机器人时代的工作、财富和社会福利（英国畅销10万册的未来经济学巨著！曾成功预测了2008年金融危机的英国政府智囊之一、凯投宏观创始人、沃尔夫森经济学奖获得者全新力作）"
+                                                                  href="//product.dangdang.com/29223422.html" target="_blank">AI经济：机器人时代的工作、财富和社会福利（英国畅销10万册的未来经济学巨著！曾成功预测了2008年金融危机的英国政府智囊之一、凯投宏观创始人、沃尔夫森经济学奖获得者全新力作）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">53</span><span class="tail">.20</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">109</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">19</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470748_2" ddt-pit="2" dd_name="2">
+                            <a title="拿铁因素" class="img" href="//product.dangdang.com/29291947.html" target="_blank"><img src="//img3m7.ddimg.cn/25/9/29291947-1_l_9.jpg"
+                                                                                                                         alt="拿铁因素"></a>
+                            <p class="name" ddt-src="29291947"><a title="拿铁因素" href="//product.dangdang.com/29291947.html" target="_blank"
+                                                                  style=" ">拿铁因素</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">24</span><span class="tail">.90</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">49</span><span class="tail">.80</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470748_3" ddt-pit="3" dd_name="3">
+                            <a title="富爸爸穷爸爸精装典藏版（当当独家赠送2021年财富日历，本版赠送5大超值福利《富爸爸穷爸爸》电子书、有声书、财商测试问卷、财商记账本、价值198元小白财商在线课程）" class="img" href="//product.dangdang.com/29156255.html"
+                               target="_blank"><img src="//img3m5.ddimg.cn/62/33/29156255-1_l_20.jpg" alt="富爸爸穷爸爸精装典藏版（当当独家赠送2021年财富日历，本版赠送5大超值福利《富爸爸穷爸爸》电子书、有声书、财商测试问卷、财商记账本、价值198元小白财商在线课程）"></a>
+                            <p class="name" ddt-src="29156255"><a title="富爸爸穷爸爸精装典藏版（当当独家赠送2021年财富日历，本版赠送5大超值福利《富爸爸穷爸爸》电子书、有声书、财商测试问卷、财商记账本、价值198元小白财商在线课程）"
+                                                                  href="//product.dangdang.com/29156255.html" target="_blank" style=" ">富爸爸穷爸爸精装典藏版（当当独家赠送2021年财富日历，本版赠送5大超值福利《富爸爸穷爸爸》电子书、有声书、财商测试问卷、财商记账本、价值198元小白财商在线课程）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">77</span><span class="tail">.10</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">158</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470748_4" ddt-pit="4" dd_name="4">
+                            <a title="京瓷哲学" class="img" href="//product.dangdang.com/29118359.html" target="_blank"><img src="//img3m9.ddimg.cn/83/25/29118359-1_l_8.jpg"
+                                                                                                                         alt="京瓷哲学"></a>
+                            <p class="name" ddt-src="29118359"><a title="京瓷哲学" href="//product.dangdang.com/29118359.html" target="_blank"
+                                                                  style=" ">京瓷哲学</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">29</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">59</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470748_5" ddt-pit="5" dd_name="5">
+                            <a title="穿越时间的价值：看得准、守得稳、拿得住的投资逻辑" class="img" href="//product.dangdang.com/29287982.html" target="_blank"><img
+                                    src="//img3m2.ddimg.cn/20/3/29287982-1_l_7.jpg" alt="穿越时间的价值：看得准、守得稳、拿得住的投资逻辑"></a>
+                            <p class="name" ddt-src="29287982"><a title="穿越时间的价值：看得准、守得稳、拿得住的投资逻辑" href="//product.dangdang.com/29287982.html"
+                                                                  target="_blank" style=" ">穿越时间的价值：看得准、守得稳、拿得住的投资逻辑</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">34</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">68</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">20</span><span
+                                    class="tail">.40</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470748_6" ddt-pit="6" dd_name="6">
+                            <a title="股票魔法师III（精装）赠送当当专享拉页，附投资秘诀35条" class="img" href="//product.dangdang.com/29261030.html" target="_blank"><img
+                                    src="//img3m0.ddimg.cn/95/24/29261030-1_l_19.jpg" alt="股票魔法师III（精装）赠送当当专享拉页，附投资秘诀35条"></a>
+                            <p class="name" ddt-src="29261030"><a title="股票魔法师III（精装）赠送当当专享拉页，附投资秘诀35条" href="//product.dangdang.com/29261030.html"
+                                                                  target="_blank">股票魔法师III（精装）赠送当当专享拉页，附投资秘诀35条</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">34</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">69</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470748_7" ddt-pit="7" dd_name="7">
+                            <a title="中国基本盘（吴晓波总顾问倾力推荐！读懂基本盘，把握中国新发展的大逻辑）" class="img" href="//product.dangdang.com/29236162.html" target="_blank"><img
+                                    src="//img3m2.ddimg.cn/76/20/29236162-1_l_24.jpg" alt="中国基本盘（吴晓波总顾问倾力推荐！读懂基本盘，把握中国新发展的大逻辑）"></a>
+                            <p class="name" ddt-src="29236162"><a title="中国基本盘（吴晓波总顾问倾力推荐！读懂基本盘，把握中国新发展的大逻辑）" href="//product.dangdang.com/29236162.html"
+                                                                  target="_blank">中国基本盘（吴晓波总顾问倾力推荐！读懂基本盘，把握中国新发展的大逻辑）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">31</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">63</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">43</span><span
+                                    class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470748_8" ddt-pit="8" dd_name="8">
+                            <a title="股权之道" class="img" href="//product.dangdang.com/29239548.html" target="_blank"><img src="//img3m8.ddimg.cn/96/2/29239548-1_l_12.jpg"
+                                                                                                                         alt="股权之道"></a>
+                            <p class="name" ddt-src="29239548"><a title="股权之道" href="//product.dangdang.com/29239548.html" target="_blank">股权之道</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">34</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">68</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">17</span><span
+                                    class="tail">.40</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470748_9" ddt-pit="9" dd_name="9">
+                            <a title="有钱人和你想的不一样（2020版，附赠当当专享财务手账本）" class="img" href="//product.dangdang.com/29118940.html" target="_blank"><img
+                                    src="//img3m0.ddimg.cn/70/14/29118940-1_l_9.jpg" alt="有钱人和你想的不一样（2020版，附赠当当专享财务手账本）"></a>
+                            <p class="name" ddt-src="29118940"><a title="有钱人和你想的不一样（2020版，附赠当当专享财务手账本）" href="//product.dangdang.com/29118940.html"
+                                                                  target="_blank">有钱人和你想的不一样（2020版，附赠当当专享财务手账本）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">22</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">45</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470748_10" ddt-pit="10" dd_name="10">
+                            <a title="跟道德经学领导力" class="img" href="//product.dangdang.com/29261839.html" target="_blank"><img src="//img3m9.ddimg.cn/13/19/29261839-1_l_15.jpg"
+                                                                                                                             alt="跟道德经学领导力"></a>
+                            <p class="name" ddt-src="29261839"><a title="跟道德经学领导力" href="//product.dangdang.com/29261839.html" target="_blank">跟道德经学领导力</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">96</span><span class="tail">.70</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">129</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">38</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content tab_8" type="item" dd_name="生活" >
+                    <ul class="list " id="component_403758__5206_5201__5201" ddt-area="5201" dd_name="商品">
+                        <li class="line1 " nname="book-65152-9161_1-470749_1" ddt-pit="1" dd_name="1">
+                            <a title="DK新一代妈妈宝宝护理大全" class="img" href="//product.dangdang.com/29205608.html" target="_blank"><img src="//img3m8.ddimg.cn/14/28/29205608-1_l_7.jpg"
+                                                                                                                                  alt="DK新一代妈妈宝宝护理大全"></a>
+                            <p class="name" ddt-src="29205608"><a title="DK新一代妈妈宝宝护理大全" href="//product.dangdang.com/29205608.html" target="_blank">DK新一代妈妈宝宝护理大全</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">156</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">208</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line2 " nname="book-65152-9161_1-470749_2" ddt-pit="2" dd_name="2">
+                            <a title="女人这东西（全新纪念版）" class="img" href="//product.dangdang.com/29268287.html" target="_blank"><img src="//img3m7.ddimg.cn/26/29/29268287-1_l_3.jpg"
+                                                                                                                                 alt="女人这东西（全新纪念版）"></a>
+                            <p class="name" ddt-src="29268287"><a title="女人这东西（全新纪念版）" href="//product.dangdang.com/29268287.html" target="_blank">女人这东西（全新纪念版）</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">26</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">40</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line3 " nname="book-65152-9161_1-470749_3" ddt-pit="3" dd_name="3">
+                            <a title="我可能是中国薪水最高的月嫂（千锤百炼的月子陪护手册）" class="img" href="//product.dangdang.com/29275882.html" target="_blank"><img
+                                    src="//img3m2.ddimg.cn/97/2/29275882-1_l_19.jpg" alt="我可能是中国薪水最高的月嫂（千锤百炼的月子陪护手册）"></a>
+                            <p class="name" ddt-src="29275882"><a title="我可能是中国薪水最高的月嫂（千锤百炼的月子陪护手册）" href="//product.dangdang.com/29275882.html"
+                                                                  target="_blank">我可能是中国薪水最高的月嫂（千锤百炼的月子陪护手册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">30</span><span class="tail">.60</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">68</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">20</span><span
+                                    class="tail">.99</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line4 " nname="book-65152-9161_1-470749_4" ddt-pit="4" dd_name="4">
+                            <a title="DK瑜伽" class="img" href="//product.dangdang.com/29281162.html" target="_blank"><img src="//img3m2.ddimg.cn/31/28/29281162-1_l_16.jpg"
+                                                                                                                         alt="DK瑜伽"></a>
+                            <p class="name" ddt-src="29281162"><a title="DK瑜伽" href="//product.dangdang.com/29281162.html" target="_blank"
+                                                                  style=" ">DK瑜伽</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">94</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">188</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line5 " nname="book-65152-9161_1-470749_5" ddt-pit="5" dd_name="5">
+                            <a title="好品格带来好成绩" class="img" href="//product.dangdang.com/29284638.html" target="_blank"><img src="//img3m8.ddimg.cn/42/26/29284638-1_l_25.jpg"
+                                                                                                                             alt="好品格带来好成绩"></a>
+                            <p class="name" ddt-src="29284638"><a title="好品格带来好成绩" href="//product.dangdang.com/29284638.html" target="_blank">好品格带来好成绩</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">22</span><span class="tail">.50</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">45</span><span class="tail">.00</span></span><span
+                                    class="ebookprice_n"><span class="ebookprice_title">电子书</span><span class="sign">¥</span><span class="num">22</span><span
+                                    class="tail">.50</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line6 " nname="book-65152-9161_1-470749_6" ddt-pit="6" dd_name="6">
+                            <a title="给孩子的阅读启蒙书 阅读力训练：科学（全3册）" class="img" href="//product.dangdang.com/29219634.html" target="_blank"><img
+                                    src="//img3m4.ddimg.cn/81/31/29219634-1_l_36.jpg" alt="给孩子的阅读启蒙书 阅读力训练：科学（全3册）"></a>
+                            <p class="name" ddt-src="29219634"><a title="给孩子的阅读启蒙书 阅读力训练：科学（全3册）" href="//product.dangdang.com/29219634.html"
+                                                                  target="_blank">给孩子的阅读启蒙书 阅读力训练：科学（全3册）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">39</span><span class="tail">.60</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">88</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line7 " nname="book-65152-9161_1-470749_7" ddt-pit="7" dd_name="7">
+                            <a title="2022日历：湛庐珍藏·大英图书馆.2022" class="img" href="//product.dangdang.com/29289522.html" target="_blank"><img
+                                    src="//img3m2.ddimg.cn/75/26/29289522-1_l_22.jpg" alt="2022日历：湛庐珍藏·大英图书馆.2022"></a>
+                            <p class="name" ddt-src="29289522"><a title="2022日历：湛庐珍藏·大英图书馆.2022" href="//product.dangdang.com/29289522.html"
+                                                                  target="_blank">2022日历：湛庐珍藏·大英图书馆.2022</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">103</span><span class="tail">.80</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">159</span><span class="tail">.80</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line8 " nname="book-65152-9161_1-470749_8" ddt-pit="8" dd_name="8">
+                            <a title="美国儿科学会育儿百科（第7版） 张思莱精讲定制版" class="img" href="//product.dangdang.com/29141308.html" target="_blank"><img
+                                    src="//img3m8.ddimg.cn/64/34/29141308-1_l_3.jpg" alt="美国儿科学会育儿百科（第7版） 张思莱精讲定制版"></a>
+                            <p class="name" ddt-src="29141308"><a title="美国儿科学会育儿百科（第7版） 张思莱精讲定制版" href="//product.dangdang.com/29141308.html"
+                                                                  target="_blank">美国儿科学会育儿百科（第7版） 张思莱精讲定制版</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">79</span><span class="tail">.00</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">158</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line9 " nname="book-65152-9161_1-470749_9" ddt-pit="9" dd_name="9">
+                            <a title="让孩子受益一生的社会情商（当当专享签名本）" class="img" href="//product.dangdang.com/29250119.html" target="_blank"><img
+                                    src="//img3m9.ddimg.cn/74/28/29250119-1_l_11.jpg" alt="让孩子受益一生的社会情商（当当专享签名本）"></a>
+                            <p class="name" ddt-src="29250119"><a title="让孩子受益一生的社会情商（当当专享签名本）" href="//product.dangdang.com/29250119.html"
+                                                                  target="_blank">让孩子受益一生的社会情商（当当专享签名本）</a></p><span class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">21</span><span class="tail">.60</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">48</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                        <li class="line10 " nname="book-65152-9161_1-470749_10" ddt-pit="10" dd_name="10">
+                            <a title="有能量的父母话术" class="img" href="//product.dangdang.com/29289779.html" target="_blank"><img src="//img3m9.ddimg.cn/35/24/29289779-1_l_6.jpg"
+                                                                                                                             alt="有能量的父母话术"></a>
+                            <p class="name" ddt-src="29289779"><a title="有能量的父母话术" href="//product.dangdang.com/29289779.html" target="_blank">有能量的父母话术</a></p><span
+                                class="num_logo">当当独家特供</span>
+                            <p class="price"><span class="rob"><span class="sign">¥</span><span class="num">30</span><span class="tail">.60</span></span><span
+                                    class="price_r"><span class="sign">¥</span><span class="num">68</span><span class="tail">.00</span></span></p>
+                            <div class="icon_pop"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="foot">
+    <!-- 多快好省start -->
+    <div class="dkhs">
+        <ul>
+            <li><div class="duo"></div><p>品类齐全，轻松购物</p></li>
+            <li><div class="kuai"></div><p>多仓直发，急速配送</p></li>
+            <li><div class="hao"></div><p>正平行货，精致服务</p></li>
+            <li><div class="sheng"></div><p>天天低价，畅选无忧</p></li>
+        </ul>
+    </div>
+    <!-- 多快好省end -->
+
+    <!-- 结尾start -->
+    <div class="jiewei">
+        <div class="j1">
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">关于我们</a></li>
+                <li class="line"></li>
+                <li><a href="#">English</a></li>
+                <li class="line"></li>
+                <li><a href="#">Site</a></li>
+                <li class="line"></li>
+                <li><a href="#">Media & IR</a></li>
+                <li class="line"></li>
+            </ul>
+        </div>
+        <div class="j2">
+            <p>云上书屋收录的免费书籍作品、频道内容、书友评论、用户上传文字、图片等其他一切内容及在云上书屋所做之广告均属用户个人行为，与本网站无关。
+            </p>
+        </div>
+        <div class="j3">
+            <ul>
+                <li class="l1"><a href="#"></a></li>
+                <li class="l2"><a href="#"></a></li>
+                <li class="l3"><a href="#"></a></li>
+                <li class="l4"><a href="#"></a></li>
+                <li class="l5"><a href="#"></a></li>
+                <li class="l6"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 结尾end -->
+</div>
+</div>
+</body>
+<script>
+    /*轮播图*/
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: true, // 循环模式选项
+        autoplay:true,
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+    /*热点信息*/
+    var Tags=document.getElementById('NewsTop_tit').getElementsByTagName('p');
+    var TagsCnt=document.getElementById('NewsTop_cnt').getElementsByTagName('span');
+    var len=Tags.length;
+    var flag=1;//修改默认值
+    for(i=1;i<len;i++){
+        Tags[i].value = i;
+        Tags[i].onmouseover=function(){changeNav(this.value)};
+        TagsCnt[i].className='undis';
+    }
+    Tags[flag].className='topC1';
+    TagsCnt[flag].className='dis';
+    function changeNav(v){
+        Tags[flag].className='topC0';
+        TagsCnt[flag].className='undis';
+        flag=v;
+        Tags[v].className='topC1';
+        TagsCnt[v].className='dis';
+    }
+    /*商品页面*/
+    var nav =document.getElementById("tab");
+    var navlist = nav.children;
+    var con = document.getElementById("content");
+    var conlist = con.children;
+    for (var i= 0;i<navlist.length;i++){
+        navlist[i].index = i;
+        navlist[i].onmouseover = function (){
+            for (var m = 0;m< conlist.length;m++){
+                navlist[m].className = "";
+                conlist[m].style.display ="none";
+            }
+            this.className = "active";
+            conlist[this.index].style.display = "block";
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="../../../css/common/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
+    <script src="../../../js/common/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            //通过点击最上面的全选框，它的选中状态决定后面复选框的选中状态
+            $("#all").click(function(){
+              console.log($(this).prop("checked"));
+              console.log($("#tb input"));
+              $("#tb input").prop("checked",$(this).prop("checked"));
+            });
+
+            //后面的复选框点击后，判断是否全部都选中，如果都选中，最上面的全选框自动勾上
+            $("#tb input").click(function(){
+                console.log($("#tb input:checked"));//选中的元素
+                if($("#tb input:checked").length == $("#tb input").length){
+                    $("#all").prop("checked",true);
+                }else{
+                    $("#all").prop("checked",false);
+                }
+            });
+        });
+    </script>
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%;height: 20px;"></div>
+    <form class="form-inline" style="text-align: center;">
+        <div class="form-group">
+            <label for="RimId">轮播图id</label>
+            <input type="text" class="form-control" id="RimId" placeholder="请输入轮播图id">
+            <label for="RimName">轮播图名称</label>
+            <input type="text" class="form-control" id="RimName" placeholder="请输入轮播图名称">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="iconfont" style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
+        <button type="button" style="margin-left: 10px;" class="btn btn-info">新增</button>
+        <button type="button" style="margin-left: 10px;" class="btn btn-danger" onclick="fun1()">批量删除</button>
+    </form>
+    <div style="width: 100%;height: 20px;"></div>
+    <table class="table table-bordered" style="text-align: center;">
+        <thead id="th">
+            <tr>
+                <th><input type="checkbox" id="all"></th>
+                <th>轮播图id</th>
+                <th>轮播图名称</th>
+                <th>轮播图url地址(双击修改)</th>
+                <th>跳转地址(双击修改)</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+            <tr>
+                <td><input type="checkbox" name="cks"></td>
+                <td>1</td>
+                <td>全场8折</td>
+                <td>https://img0.baidu.com/it/u=561041293,259965800&fm=26&fmt=auto&gp=0.jpg</td>
+                <td>https://www.baidu.com/</td>
+                <td>
+                     <a href="#" onclick="del()">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cks"></td>
+                <td>2</td>
+                <td>儿童书籍半价</td>
+                <td>https://img1.baidu.com/it/u=376237260,4064993811&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1083</td>
+                <td>https://www.baidu.com/</td>
+                <td>
+                    <a href="#" onclick="del()">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="cks"></td>
+                <td>2</td>
+                <td>龙族改版</td>
+                <td>https://img2.baidu.com/it/u=2510891666,2454567058&fm=26&fmt=auto&gp=0.jpg</td>
+                <td>https://www.baidu.com/</td>
+                <td>
+                    <a href="#" onclick="del()">删除</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div style="float: right;margin-right: 20px;">
+        <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">共&nbsp;4&nbsp;条记录</div>
+        <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">14条&nbsp;/&nbsp;页</div>
+        <nav aria-label="Page navigation" style="float: left;">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    </div>
+    <script type="text/javascript">
+            let len = document.getElementById("tb").getElementsByTagName("tr").length;
+    let trs = document.getElementById("tb").getElementsByTagName("tr");
+    for (let i = 0; i < len; i++) {
+        let td = trs[i].querySelector('td:last-child').previousElementSibling;
+        let td_type = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling;
+        td.ondblclick = update;
+        td_type.ondblclick = update;
+    }
+    function update(){
+        let oldValue = this.innerText;
+        this.innerHTML="";
+        let input =document.createElement("input");
+        let td = this;
+        input.type = "text";
+        input.value = oldValue;
+        input.onblur=function(){
+            td.innerHTML = this.value;
+        }
+        input.onclick=function(){
+                this.select();
+         }
+        td.appendChild(input);
+    }
+    let tbody = document.getElementById("tb");
+
+    // function del(temp){
+    //     var flag = confirm("您确定要执行删除操作吗?");
+    //      if (flag){
+    //         let tr = temp.parentElement.parentElement;
+    //         tbody.removeChild(tr);
+    //      }
+    // }
+    //批量删除
+        function fun1(){
+            var flag = confirm("您确定要执行批量删除操作吗?");
+            if (flag) {
+                 //判断是否有选中的.
+                let count = 0;
+                let cks = document.getElementsByName("cks");
+                for(let i=0;i<cks.length;i++){
+                    if(cks[i].checked){
+                        count++;
+                    }
+                }
+                if(count==0){
+                    alert("sorry,请你先勾选删除的数据!");
+                    return;
+                }
+
+                //搞定勾选的 - 删除...
+                for(let i=cks.length-1;i>=0;i--){
+                    if(cks[i].checked){
+                        //删除cks[i]所在行
+                        let tr = cks[i].parentElement.parentElement;
+                        tbody.removeChild(tr);
+                    }
+                }
+            }
+
+        }
+    </script>
+    </body>
+</html>

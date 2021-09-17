@@ -1,0 +1,107 @@
+{
+  "id": "2801350",
+  "name": "云上书屋",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12002313",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "23659150",
+      "name": "客服管理",
+      "font_class": "kefuguanli",
+      "unicode": "f8f1",
+      "unicode_decimal": 63729
+    },
+    {
+      "icon_id": "3199539",
+      "name": "轮播图管理",
+      "font_class": "drxx70",
+      "unicode": "e701",
+      "unicode_decimal": 59137
+    },
+    {
+      "icon_id": "3759622",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "11344407",
+      "name": "私信",
+      "font_class": "sixin",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "16250643",
+      "name": "商品管理",
+      "font_class": "shangpinguanli",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "16401934",
+      "name": "分类",
+      "font_class": "biaoqiankuozhan_fenlei-382",
+      "unicode": "ebef",
+      "unicode_decimal": 60399
+    },
+    {
+      "icon_id": "17456836",
+      "name": "公告",
+      "font_class": "gonggao",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "22325495",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "23681931",
+      "name": "人员管理",
+      "font_class": "renyuanguanli",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "8948997",
+      "name": "后台管理",
+      "font_class": "houtaiguanli",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "2512619",
+      "name": "BAI-屋子",
+      "font_class": "BAI-wuzi",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "444566",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "6210741",
+      "name": "云信-主页选中-01",
+      "font_class": "yunxin-zhuyexuanzhong-",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}
