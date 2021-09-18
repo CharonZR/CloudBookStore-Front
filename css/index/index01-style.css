@@ -10,13 +10,12 @@ html,body{
   margin: 0 auto;
   height: auto !important;
   height: 100%;
-  min-height: 100%;
+  width: 1226PX;
 }
 /*横幅*/
 .pic{
   top: 155px;
   position: absolute;
-  left: 146px;
   width: 1226px;
 }
 .pic img{

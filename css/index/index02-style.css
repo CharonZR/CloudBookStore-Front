@@ -4,10 +4,16 @@ a{
 li{
     list-style-type: none;
 }
-
+.contain{
+  position: relative;
+  margin: 0 auto;
+  height: auto !important;
+  height: 100%;
+  width: 1226PX;
+}
 /* banner */
 .banners{
-    width: 80%;
+    width: 1226PX;
     height: 1250px;
     margin: auto;
     position: relative;
