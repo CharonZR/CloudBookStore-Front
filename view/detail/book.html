@@ -149,7 +149,7 @@
             </div>
             <div class="introduce">
                 <div class="introduce-left">
-                    <img src="//img3m8.ddimg.cn/85/19/28533568-1_u_5.jpg" style="width: 375px;height: 375px;">
+                    <img class="right" src="//img3m8.ddimg.cn/85/19/28533568-1_u_5.jpg" style="width: 375px;height: 375px;">
                     <div class="small-img">
                         <a href="#" style="margin-bottom: 0px;"><img src="//img3m8.ddimg.cn/85/19/28533568-1_x_5.jpg" style="width: 65px;height: 65px;"></a>
                     </div>
@@ -290,7 +290,7 @@
                             <input class="add" name="" type="button" value="+" />
                         </div>
                         <div class="add-3">
-                            <button id="add3-btn1" type="button">加入购物车</button>
+                            <button id="add3-btn1" type="button" class="lanrenzhijia">加入购物车</button>
                             <button id="add3-btn2" type="button">立即购买</button>
                         </div>
                     </div>
@@ -1165,6 +1165,31 @@
                     }
                 }
             }
+//购物车
+        $(function(){
+            var aa=0;
+            $('.lanrenzhijia').click(function(){
+                aa+=parseInt($('.text_box').val());
+                var flyElm = $('.lanrenzhijia').clone().css('opacity','0.7');
+                $("#num").text(aa);
+                flyElm.css({
+                    'z-index': 9000,
+                    'display': 'block',
+                    'position': 'absolute',
+                    'top': $('.lanrenzhijia').offset().top +'px',
+                    'left': $('.lanrenzhijia').offset().left +'px',
+                    'width': $('.lanrenzhijia').width() +'px',
+                    'height': $('.lanrenzhijia').height() +'px'
+                });
+                $('body').append(flyElm);
+                flyElm.animate({
+                    top:$('.right').offset().top,
+                    left:$('.right').offset().left,
+                    width:50,
+                    height:50,
+                },'slow');
+            });
+        });
     </script>
 </body>
 </html>
