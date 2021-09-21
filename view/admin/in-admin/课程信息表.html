@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +9,148 @@
     <link rel="stylesheet" href="../../../css/common/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
     <script src="../../../js/common/jquery-1.12.4.js"></script>
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="../../../js/common/vue.js"></script>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="../../../css/common/element.css">
+    <!-- 引入element 的组件库-->
+    <script src="../../../js/common/element.js"></script>
     <script>
-        $(function(){
+        $(function() {
             //通过点击最上面的全选框，它的选中状态决定后面复选框的选中状态
-            $("#all").click(function(){
-              console.log($(this).prop("checked"));
-              console.log($("#tb input"));
-              $("#tb input").prop("checked",$(this).prop("checked"));
+            $("#all").click(function() {
+                console.log($(this).prop("checked"));
+                console.log($("#tb input"));
+                $("#tb input").prop("checked", $(this).prop("checked"));
             });
 
             //后面的复选框点击后，判断是否全部都选中，如果都选中，最上面的全选框自动勾上
-            $("#tb input").click(function(){
-                console.log($("#tb input:checked"));//选中的元素
-                if($("#tb input:checked").length == $("#tb input").length){
-                    $("#all").prop("checked",true);
-                }else{
-                    $("#all").prop("checked",false);
+            $("#tb input").click(function() {
+                console.log($("#tb input:checked")); //选中的元素
+                if ($("#tb input:checked").length == $("#tb input").length) {
+                    $("#all").prop("checked", true);
+                } else {
+                    $("#all").prop("checked", false);
                 }
             });
+            $("#close").click(function() {
+                $(".bg").css("display", "none");
+            });
+            $("#close-add").click(function() {
+                $(".bg-add").css("display", "none");
+            });
+
+            $("#className").bind("input propertychange", function() {
+                var text = $("#className").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#teacher").attr("disabled", "disabled"); //设置输入框2不可用
+                    $("#classType").attr("disabled", "disabled");
+                } else {
+                    $("#teacher").removeAttr("disabled"); //移除不可用的属性
+                    $("#classType").removeAttr("disabled");
+                }
+            })
+            $("#teacher").bind("input propertychange", function() {
+                var text = $("#teacher").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#className").attr("disabled", "disabled"); //设置输入框2不可用
+                    $("#classType").attr("disabled", "disabled");
+                } else {
+                    $("#className").removeAttr("disabled"); //移除不可用的属性
+                    $("#classType").removeAttr("disabled");
+                }
+            })
+            $("#classType").bind("input propertychange", function() {
+                var text = $("#classType").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#className").attr("disabled", "disabled");
+                    $("#teacher").attr("disabled", "disabled");
+                } else {
+                    $("#className").removeAttr("disabled"); //移除不可用的属性
+                    $("#teacher").removeAttr("disabled");
+                }
+            })
+
         });
-        function fun1() {
-            confirm("您确定要执行批量删除操作吗?");
-        }
     </script>
     <style>
-        th{
+        th {
             text-align: center;
+        }
+        
+        .bg,
+        .bg-add {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .inf {
+            background-color: white;
+            height: 630px;
+            width: 45%;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 3px;
+        }
+        
+        .inf-head {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(21, 184, 215);
+            border-radius: 3px;
+        }
+        
+        #close,
+        #close-add {
+            float: right;
+            margin-right: 5px;
+            background-color: red;
+            color: white;
+            font-weight: 900;
+            border-radius: 5px;
+            border: 0px;
+            margin-top: 3px;
+        }
+        
+        .inf-from {
+            width: 100%;
+            height: 600px;
+            border-radius: 3px;
+            overflow: scroll;
+        }
+        
+        .mailTable,
+        .mailTable1 {
+            width: 100%;
+            border-top: 1px solid #E6EAEE;
+            border-left: 1px solid #E6EAEE;
+            margin-bottom: 30px;
+        }
+        
+        .mailTable tr td,
+        .mailTable1 tr td {
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            border-bottom: 1px solid #E6EAEE;
+            border-right: 1px solid #E6EAEE;
+        }
+        
+        .mailTable tr td.column,
+        .mailTable1 tr td.column1 {
+            background-color: #EFF3F6;
+            color: #393C3E;
+            width: 30%;
         }
     </style>
 </head>
+
 <body>
     <div style="width: 100%;height: 20px;"></div>
     <form class="form-inline" style="text-align: center;">
@@ -48,8 +162,9 @@
             <label for="classType">课程类别</label>
             <input type="text" class="form-control" id="classType" placeholder="请输入课程类别">
         </div>
-        <button type="submit" class="btn btn-default"><i class="iconfont" style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
-        <button type="button" style="margin-left: 10px;" class="btn btn-info">新增</button>
+        <button type="submit" class="btn btn-default"><i class="iconfont"
+                style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
+        <button type="button" style="margin-left: 10px;" class="btn btn-info" onclick="add()">新增</button>
         <button type="button" style="margin-left: 10px;" class="btn btn-danger" onclick="fun1()">批量删除</button>
     </form>
     <div style="width: 100%;height: 20px;"></div>
@@ -63,7 +178,7 @@
                 <th>开课时间</th>
                 <th>结课时间</th>
                 <th>价格(双击修改)</th>
-                <th>所属课程类别</th>
+                <th>所属课程类别(双击修改)</th>
                 <th>操作</th>
             </tr>
         </thead>
@@ -78,103 +193,262 @@
                 <td>19999.0</td>
                 <td>物理</td>
                 <td>
-                    <a href="#" title="用于查看详细信息,例如老师信息,课程介绍..">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>1</td>
-                <td>老吴带你学物理</td>
-                <td>吴××</td>
-                <td>2021-9-11</td>
-                <td>2022-9-11</td>
-                <td>19999.0</td>
-                <td>物理</td>
-                <td>
-                    <a href="#" title="用于查看详细信息,例如老师信息,课程介绍..">详情</a>
-                    <a href="#">删除</a>
+                    <button class='btn-link' type='button' onclick='search(this)'>详情</button>
+                    <button class='btn-link' type='button' onclick='del(this)'>删除</button>
                 </td>
             </tr>
     </table>
     <div style="float: right;margin-right: 20px;">
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">共&nbsp;4&nbsp;条记录</div>
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">14条&nbsp;/&nbsp;页</div>
-        <nav aria-label="Page navigation" style="float: left;">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+        <div id="app" style="float: left;" onclick="page()">
+            <el-pagination background layout="prev, pager, next" :total="100" style="margin-top: 23px;">
+            </el-pagination>
+        </div>
     </div>
-     <script type="text/javascript">
-    let len = document.getElementById("tb").getElementsByTagName("tr").length;
-    let trs = document.getElementById("tb").getElementsByTagName("tr");
-    for (let i = 0; i < len; i++) {
-        let td = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling;
-        let td_type = trs[i].querySelector('td:last-child').previousElementSibling;
-        td.ondblclick = update;
-        td_type.ondblclick = update_type;
-    }
-    function update(){
-        let oldValue = this.innerText;
-        this.innerHTML="";
-        let input =document.createElement("input");
-        let td = this;
-        input.type = "text";
-        input.value = oldValue;
-        input.onblur=function(){
-            td.innerHTML = this.value;
+    <div class="bg">
+        <div class="inf">
+            <div class="inf-head">
+                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">课程详细信息</h4>
+                <input type="button" id="close" value="×">
+            </div>
+            <div class="inf-from">
+                <table class="mailTable" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="column">课程id</td>
+                        <td id="classid_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">课程名</td>
+                        <td id="classname_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">上课老师</td>
+                        <td id="teacher_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">开课时间</td>
+                        <td id="start_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">结课时间</td>
+                        <td id="end_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">价格</td>
+                        <td id="price_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">类别</td>
+                        <td id="classtype_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">课程介绍(图片,双击修改)</td>
+                        <td id="classint_update" ondblclick="update(this)"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">老师介绍(地址,双击修改)</td>
+                        <td id="teacherint_update" ondblclick="update(this)"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="bg-add">
+        <div class="inf">
+            <div class="inf-head">
+                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">新增课程</h4>
+                <input type="button" id="close-add" value="×">
+            </div>
+            <div class="inf-from">
+                <form action="">
+                    <table class="mailTable1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="column1">课程名</td>
+                            <td><input class="form-control" id="classname_add" type="text" placeholder="请输入课程名"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">老师</td>
+                            <td><input class="form-control" id="teacher_add" type="text" placeholder="请输入老师"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">开课时间</td>
+                            <td><input type="date" id="starttime_add" style="border-radius: 4px;border: 1px solid #999;"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">结课时间</td>
+                            <td><input type="date" id="endtime_add" style="border-radius: 4px;border: 1px solid #999;"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">价格</td>
+                            <td><input class="form-control" id="price_add" type="text" placeholder="请输入价格"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">类别</td>
+                            <td>
+                                <select class="form-control" id="classtype_add">
+                                        <option>HarmonyOS</option>
+                                        <option>历史</option>
+                                        <option>数学</option>
+                                        <option>物理</option>
+                                        <option>...</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="column1">课程介绍(图片)</td>
+                            <td><input class="form-control" id="classint_add" type="text" placeholder="请输入介绍课程的图片的url地址"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">老师介绍(地址)</td>
+                            <td><input class="form-control" id="teacherint_add" type="text" placeholder="请输入介绍老师的url地址"></td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btn btn-default" style="float: left;margin-left: 180px;">新增</button>
+                    <button type="reset" class="btn btn-default" style="float: right;margin-right: 180px;">重置</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        new Vue().$mount('#app');
+
+        function page() {
+            let active = document.getElementsByClassName("active")[0];
+            // 点击返回页码数
+            // console.log(active.innerText);
+            alert("当前第" + active.innerText + "页")
+            return parseInt(active.innerText);
         }
-        input.onclick=function(){
+        let class_list = [{
+            "class_id": 1,
+            "class_name": "走进科学",
+            "teacher": "Mr.Wu",
+            "star_time": "2021-9-11",
+            "end_time": "2022-9-29",
+            "price": 9999.99,
+            "class_type": "科学"
+        }, {
+            "class_id": 1,
+            "class_name": "走进科学",
+            "teacher": "Mr.Wu",
+            "star_time": "2021-9-11",
+            "end_time": "2022-9-29",
+            "price": 9999.99,
+            "class_type": "科学"
+        }, {
+            "class_id": 1,
+            "class_name": "走进科学",
+            "teacher": "Mr.Wu",
+            "star_time": "2021-9-11",
+            "end_time": "2022-9-29",
+            "price": 9999.99,
+            "class_type": "科学"
+        }, {
+            "class_id": 1,
+            "class_name": "走进科学",
+            "teacher": "Mr.Wu",
+            "star_time": "2021-9-11",
+            "end_time": "2022-9-29",
+            "price": 9999.99,
+            "class_type": "科学"
+        }]
+
+        let tb = document.getElementById("tb");
+        let str = "";
+        for (let i = 0; i < class_list.length; i++) {
+            str += '<tr>';
+            str += '<td><input type="checkbox" name="cks"></td>';
+            str += '<td>' + class_list[i].class_id + '</td>';
+            str += '<td>' + class_list[i].class_name + '</td>';
+            str += '<td>' + class_list[i].teacher + '</td>';
+            str += '<td>' + class_list[i].star_time + '</td>';
+            str += '<td>' + class_list[i].end_time + '</td>';
+            str += '<td>' + class_list[i].price + '</td>';
+            str += '<td>' + class_list[i].class_type + '</td>';
+            str += '<td>';
+            str += '<button class="btn-link" type="button" onclick="search(this)">详情</button>';
+            str += '<button class="btn-link" type="button" onclick="del(this)">删除</button>';
+            str += '</td>';
+            str += '</tr>';
+        }
+        tb.innerHTML = str;
+
+
+
+        let len = document.getElementById("tb").getElementsByTagName("tr").length;
+        let trs = document.getElementById("tb").getElementsByTagName("tr");
+        for (let i = 0; i < len; i++) {
+            let td = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling;
+            let td_type = trs[i].querySelector('td:last-child').previousElementSibling;
+            td.ondblclick = update_text;
+            td_type.ondblclick = update_type;
+        }
+
+        function update_text() {
+            let oldValue = this.innerText;
+            this.innerHTML = "";
+            let input = document.createElement("input");
+            let td = this;
+            input.type = "text";
+            input.value = oldValue;
+            input.onblur = function() {
+                td.innerHTML = this.value;
+            }
+            input.onclick = function() {
                 this.select();
-         }
-        td.appendChild(input);
-    }
-    function update_type(){
-        let oldValue = this.innerText;
-        this.innerHTML="";
-        let select =document.createElement("select");
-        let td = this;
-        select.innerHTML = "<option value='0'>玄幻</option><option value='1'>少儿</option><option value='2'>历史</option>";
-        select.onblur=function(){
-            td.innerHTML = this.options[this.selectedIndex].text;
+            }
+            td.appendChild(input);
         }
-        td.appendChild(select);
-    }
-let tbody = document.getElementById("tb");
-     function fun1(){
+
+        function update(obj) {
+            let oldValue = obj.innerText;
+            obj.innerHTML = "";
+            let input = document.createElement("input");
+            let td = obj;
+            input.type = "text";
+            input.value = oldValue;
+            input.onblur = function() {
+                td.innerHTML = this.value;
+            }
+            input.onclick = function() {
+                this.select();
+            }
+            td.appendChild(input);
+        }
+
+        function update_type() {
+            let oldValue = this.innerText;
+            this.innerHTML = "";
+            let select = document.createElement("select");
+            let td = this;
+            select.innerHTML = "<option value='0'>HarmonyOS</option><option value='1'>java</option><option value='2'>数学</option>";
+            select.onblur = function() {
+                td.innerHTML = this.options[this.selectedIndex].text;
+            }
+            td.appendChild(select);
+        }
+        let tbody = document.getElementById("tb");
+
+        function fun1() {
             var flag = confirm("您确定要执行批量删除操作吗?");
             if (flag) {
-                 //判断是否有选中的.
+                //判断是否有选中的.
                 let count = 0;
                 let cks = document.getElementsByName("cks");
-                for(let i=0;i<cks.length;i++){
-                    if(cks[i].checked){
+                for (let i = 0; i < cks.length; i++) {
+                    if (cks[i].checked) {
                         count++;
                     }
                 }
-                if(count==0){
+                if (count == 0) {
                     alert("sorry,请你先勾选删除的数据!");
                     return;
                 }
 
                 //搞定勾选的 - 删除...
-                for(let i=cks.length-1;i>=0;i--){
-                    if(cks[i].checked){
+                for (let i = cks.length - 1; i >= 0; i--) {
+                    if (cks[i].checked) {
                         //删除cks[i]所在行
                         let tr = cks[i].parentElement.parentElement;
                         tbody.removeChild(tr);
@@ -183,6 +457,47 @@ let tbody = document.getElementById("tb");
             }
 
         }
+
+        function del(obj) {
+            let flag = confirm("确定删除吗?");
+
+            if (flag) {
+                tbody.removeChild(obj.parentElement.parentElement);
+            }
+        }
+
+        function search(obj) {
+            let bg = document.getElementsByClassName("bg");
+            bg[0].style.display = "block";
+            let tr = obj.parentElement.parentElement;
+
+            let td_arr = tr.children;
+            let classid_update = document.getElementById("classid_update");
+            let classname_update = document.getElementById("classname_update");
+            let teacher_update = document.getElementById("teacher_update");
+            let start_update = document.getElementById("start_update");
+            let end_update = document.getElementById("end_update");
+            let price_update = document.getElementById("price_update");
+            let classtype_update = document.getElementById("classtype_update");
+            let classint_update = document.getElementById("classint_update");
+            let teacherint_update = document.getElementById("teacherint_update");
+
+            classid_update.innerText = td_arr[1].innerText;
+            classname_update.innerText = td_arr[2].innerText;
+            teacher_update.innerText = td_arr[3].innerText;
+            start_update.innerText = td_arr[4].innerText;
+            end_update.innerText = td_arr[5].innerText;
+            price_update.innerText = td_arr[6].innerText;
+            classtype_update.innerText = td_arr[7].innerText;
+            classint_update.innerText = "http://xxx此处根据书籍id后台查询数据";
+            teacherint_update.innerText = "http://xxx此处根据书籍id后台查询数据";
+        }
+
+        function add() {
+            let bgadd = document.getElementsByClassName("bg-add");
+            bgadd[0].style.display = "block";
+        }
     </script>
-    </body>
+</body>
+
 </html>

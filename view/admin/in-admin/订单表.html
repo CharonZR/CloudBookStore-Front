@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,110 @@
     <link rel="stylesheet" href="../../../css/common/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
     <script src="../../../js/common/jquery-1.12.4.js"></script>
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="../../../js/common/vue.js"></script>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="../../../css/common/element.css">
+    <!-- 引入element 的组件库-->
+    <script src="../../../js/common/element.js"></script>
     <script>
-        $(function(){
+        $(function() {
             //通过点击最上面的全选框，它的选中状态决定后面复选框的选中状态
-            $("#all").click(function(){
-              console.log($(this).prop("checked"));
-              console.log($("#tb input"));
-              $("#tb input").prop("checked",$(this).prop("checked"));
+            $("#all").click(function() {
+                console.log($(this).prop("checked"));
+                console.log($("#tb input"));
+                $("#tb input").prop("checked", $(this).prop("checked"));
             });
 
             //后面的复选框点击后，判断是否全部都选中，如果都选中，最上面的全选框自动勾上
-            $("#tb input").click(function(){
-                console.log($("#tb input:checked"));//选中的元素
-                if($("#tb input:checked").length == $("#tb input").length){
-                    $("#all").prop("checked",true);
-                }else{
-                    $("#all").prop("checked",false);
+            $("#tb input").click(function() {
+                console.log($("#tb input:checked")); //选中的元素
+                if ($("#tb input:checked").length == $("#tb input").length) {
+                    $("#all").prop("checked", true);
+                } else {
+                    $("#all").prop("checked", false);
                 }
             });
+            $("#close").click(function() {
+                $(".bg").css("display", "none");
+            });
+            $("#close-add").click(function() {
+                $(".bg-add").css("display", "none");
+            });
+
+            $("#orderID").bind("input propertychange", function() {
+                var text = $("#orderID").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#userID").attr("disabled", "disabled"); //设置输入框2不可用
+                } else {
+                    $("#userID").removeAttr("disabled"); //移除不可用的属性
+                }
+            })
+            $("#userID").bind("input propertychange", function() {
+                var text = $("#userID").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#orderID").attr("disabled", "disabled"); //设置输入框2不可用
+                } else {
+                    $("#orderID").removeAttr("disabled"); //移除不可用的属性
+                }
+            })
         });
     </script>
     <style>
-        th{
+        th {
             text-align: center;
+        }
+        
+        .bg {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .inf {
+            background-color: white;
+            height: 630px;
+            width: 45%;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 3px;
+        }
+        
+        .inf-head {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(21, 184, 215);
+            border-radius: 3px;
+        }
+        
+        #close {
+            float: right;
+            margin-right: 5px;
+            background-color: red;
+            color: white;
+            font-weight: 900;
+            border-radius: 5px;
+            border: 0px;
+            margin-top: 3px;
+        }
+        
+        .inf-from {
+            width: 100%;
+            height: 600px;
+            border-radius: 3px;
+            overflow: scroll;
+            padding: 10px;
+        }
+        
+        .ph {
+            text-align: left;
         }
     </style>
 </head>
+
 <body>
     <div style="width: 100%;height: 20px;"></div>
     <form class="form-inline" style="text-align: center;">
@@ -43,7 +122,8 @@
             <label for="userID">用户id</label>
             <input type="text" class="form-control" id="userID" placeholder="请输入用户ID">
         </div>
-        <button type="submit" class="btn btn-default"><i class="iconfont" style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
+        <button type="submit" class="btn btn-default"><i class="iconfont"
+                style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
         <button type="button" style="margin-left: 10px;" class="btn btn-danger" onclick="fun1()">批量删除</button>
     </form>
     <div style="width: 100%;height: 20px;"></div>
@@ -61,58 +141,7 @@
             </tr>
         </thead>
         <tbody id="tb">
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>1</td>
-                <td>1</td>
-                <td>2021-9-10 12:45:24</td>
-                <td>待发货</td>
-                <td>支付宝</td>
-                <td>顺丰</td>
-                <td>
-                    <a href="#" title="用于查询购买了哪些商品">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>2</td>
-                <td>1</td>
-                <td>2021-9-12 12:45:24</td>
-                <td>已发货</td>
-                <td>微信</td>
-                <td>韵达</td>
-                <td>
-                    <a href="#" title="用于查询购买了哪些商品">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>3</td>
-                <td>1</td>
-                <td>2021-9-19 12:45:24</td>
-                <td>待签收</td>
-                <td>银行卡</td>
-                <td>中国邮政</td>
-                <td>
-                    <a href="#" title="用于查询购买了哪些商品">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>4</td>
-                <td>1</td>
-                <td>2021-9-20 12:45:24</td>
-                <td>已签收</td>
-                <td>支付宝</td>
-                <td>中通</td>
-                <td>
-                    <a href="#" title="用于查询购买了哪些商品">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
+
         </tbody>
 
 
@@ -120,85 +149,214 @@
     <div style="float: right;margin-right: 20px;">
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">共&nbsp;4&nbsp;条记录</div>
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">8条&nbsp;/&nbsp;页</div>
-        <nav aria-label="Page navigation" style="float: left;">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+        <div id="app" style="float: left;" onclick="page()">
+            <el-pagination background layout="prev, pager, next" :total="100" style="margin-top: 23px;">
+            </el-pagination>
+        </div>
+    </div>
+    <div class="bg">
+        <div class="inf">
+            <div class="inf-head">
+                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">订单详细信息</h4>
+                <input type="button" id="close" value="×">
+            </div>
+            <div class="inf-from">
+                <table class="table table-striped">
+                    <caption>
+                        <h3>购买的详细物品</h3>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="ph">商品id</th>
+                            <th class="ph">商品名称</th>
+                            <th class="ph">购买数量</th>
+                            <th class="ph">单价</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list_tb">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
-    let len = document.getElementById("tb").getElementsByTagName("tr").length;
-    let trs = document.getElementById("tb").getElementsByTagName("tr");
-    for (let i = 0; i < len; i++) {
-        let td = trs[i].querySelector('td:last-child').previousElementSibling;
-         let td_list = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling.previousElementSibling;
-        td.ondblclick = update;
-        td_list.ondblclick = update_list;
-    }
-    function update(){
-        let oldValue = this.innerText;
-        this.innerHTML="";
-        let select =document.createElement("select");
-        let td = this;
-        select.innerHTML = "<option value='0'>顺丰</option><option value='1'>韵达</option><option value='2'>中通</option><option value='3'>圆通</option><option value='4'>中国邮政</option>";
-        select.onblur=function(){
-            td.innerHTML = this.options[this.selectedIndex].text;
+        new Vue().$mount('#app');
+
+        function page() {
+            let active = document.getElementsByClassName("active")[0];
+            // 点击返回页码数
+            // console.log(active.innerText);
+            alert("当前第" + active.innerText + "页")
+            return parseInt(active.innerText);
         }
-        td.appendChild(select);
-    }
-    function update_list(){
-        let oldValue = this.innerText;
-        this.innerHTML="";
-        let select =document.createElement("select");
-        let td = this;
-        select.innerHTML = "<option value='0'>待发货</option><option value='1'>运输中</option><option value='2'>待签收</option><option value='3'>已签收</option>";
-        select.onblur=function(){
-            td.innerHTML = this.options[this.selectedIndex].text;
+
+        let list_list = [{
+            "list_id": 1,
+            "user_id": 1,
+            "buy_time": "2021-9-20 12:45:24",
+            "list_state": "待发货",
+            "pay_type": "支付宝",
+            "send_type": "顺丰"
+        }, {
+            "list_id": 2,
+            "user_id": 1,
+            "buy_time": "2021-9-20 12:45:24",
+            "list_state": "待发货",
+            "pay_type": "支付宝",
+            "send_type": "顺丰"
+        }, {
+            "list_id": 3,
+            "user_id": 1,
+            "buy_time": "2021-9-20 12:45:24",
+            "list_state": "待发货",
+            "pay_type": "支付宝",
+            "send_type": "顺丰"
+        }, {
+            "list_id": 4,
+            "user_id": 1,
+            "buy_time": "2021-9-20 12:45:24",
+            "list_state": "待发货",
+            "pay_type": "支付宝",
+            "send_type": "顺丰"
+        }]
+        let tb = document.getElementById("tb");
+        let str = "";
+        for (let i = 0; i < list_list.length; i++) {
+            str += '<tr>';
+            str += '<td><input type="checkbox" name="cks"></td>';
+            str += '<td>' + list_list[i].list_id + '</td>';
+            str += '<td>' + list_list[i].user_id + '</td>';
+            str += '<td>' + list_list[i].buy_time + '</td>';
+            str += '<td>' + list_list[i].send_type + '</td>';
+            str += '<td>' + list_list[i].pay_type + '</td>';
+            str += '<td>' + list_list[i].send_type + '</td>';
+            str += '<td>';
+            str += '<button class="btn-link" type="button" onclick="search(this)">详情</button>';
+            str += '<button class="btn-link" type="button" onclick="del(this)">删除</button>';
+            str += '</td>';
+            str += '</tr>';
         }
-        td.appendChild(select);
-    }
-     let tbody = document.getElementById("tb");
-     function fun1(){
+        tb.innerHTML = str;
+
+        let len = document.getElementById("tb").getElementsByTagName("tr").length;
+        let trs = document.getElementById("tb").getElementsByTagName("tr");
+        for (let i = 0; i < len; i++) {
+            let td = trs[i].querySelector('td:last-child').previousElementSibling;
+            let td_list = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling.previousElementSibling;
+            td.ondblclick = update;
+            td_list.ondblclick = update_list;
+        }
+
+        function update() {
+            let oldValue = this.innerText;
+            this.innerHTML = "";
+            let select = document.createElement("select");
+            let td = this;
+            select.innerHTML = "<option value='0'>顺丰</option><option value='1'>韵达</option><option value='2'>中通</option><option value='3'>圆通</option><option value='4'>中国邮政</option>";
+            select.onblur = function() {
+                td.innerHTML = this.options[this.selectedIndex].text;
+            }
+            td.appendChild(select);
+        }
+
+        function update_list() {
+            let oldValue = this.innerText;
+            this.innerHTML = "";
+            let select = document.createElement("select");
+            let td = this;
+            select.innerHTML = "<option value='0'>待发货</option><option value='1'>运输中</option><option value='2'>待签收</option><option value='3'>已签收</option>";
+            select.onblur = function() {
+                td.innerHTML = this.options[this.selectedIndex].text;
+            }
+            td.appendChild(select);
+        }
+        let tbody = document.getElementById("tb");
+
+        function fun1() {
             var flag = confirm("您确定要执行批量删除操作吗?");
             if (flag) {
-                 //判断是否有选中的.
+                //判断是否有选中的.
                 let count = 0;
                 let cks = document.getElementsByName("cks");
-                for(let i=0;i<cks.length;i++){
-                    if(cks[i].checked){
+                for (let i = 0; i < cks.length; i++) {
+                    if (cks[i].checked) {
                         count++;
                     }
                 }
-                if(count==0){
+                if (count == 0) {
                     alert("sorry,请你先勾选删除的数据!");
                     return;
                 }
 
                 //搞定勾选的 - 删除...
-                for(let i=cks.length-1;i>=0;i--){
-                    if(cks[i].checked){
+                for (let i = cks.length - 1; i >= 0; i--) {
+                    if (cks[i].checked) {
                         //删除cks[i]所在行
                         let tr = cks[i].parentElement.parentElement;
                         tbody.removeChild(tr);
                     }
                 }
             }
-
         }
-</script>
-    </body>
+
+        function del(obj) {
+            let flag = confirm("确定删除吗?");
+
+            if (flag) {
+                tbody.removeChild(obj.parentElement.parentElement);
+            }
+        }
+
+        function search(obj) {
+            let bg = document.getElementsByClassName("bg");
+            bg[0].style.display = "block";
+            let tr = obj.parentElement.parentElement;
+            console.log(tr);
+            let shop_list = [{
+                "shopid": 1,
+                "shopname": "龙族Ⅱ悼亡者之瞳",
+                "buynum": 4,
+                "oneprice": 34.9
+            }, {
+                "shopid": 2,
+                "shopname": "龙族Ⅰ火之晨曦",
+                "buynum": 4,
+                "oneprice": 34.9
+            }, {
+                "shopid": 3,
+                "shopname": "龙族Ⅲ月黑之潮",
+                "buynum": 4,
+                "oneprice": 3
+            }, {
+                "shopid": 4,
+                "shopname": "龙族Ⅳ奥丁之渊",
+                "buynum": 4,
+                "oneprice": 30.0
+            }, {
+                "shopid": 5,
+                "shopname": "龙族Ⅱ悼亡者之瞳",
+                "buynum": 4,
+                "oneprice": 30.0
+            }]
+            let sum = 0;
+            for (let i = 0; i < shop_list.length; i++) {
+                sum += shop_list[i].buynum * shop_list[i].oneprice;
+            }
+            let list_tb = document.getElementById("list_tb");
+            let list_str = "";
+            for (let i = 0; i < shop_list.length; i++) {
+                list_str += '<tr>';
+                list_str += '<td>' + shop_list[i].shopid + '</td>';
+                list_str += '<td>' + shop_list[i].shopname + '</td>';
+                list_str += '<td>' + shop_list[i].buynum + '</td>';
+                list_str += '<td>' + shop_list[i].oneprice + '</td>';
+                list_str += '</tr>';
+            }
+            list_str += '<h4 style="color:red;">总价:' + sum + '</h4>'
+            list_tb.innerHTML = list_str;
+        }
+    </script>
+</body>
+
 </html>

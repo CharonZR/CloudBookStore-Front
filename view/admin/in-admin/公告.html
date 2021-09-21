@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +9,146 @@
     <link rel="stylesheet" href="../../../css/common/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
     <script src="../../../js/common/jquery-1.12.4.js"></script>
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="../../../js/common/vue.js"></script>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="../../../css/common/element.css">
+    <!-- 引入element 的组件库-->
+    <script src="../../../js/common/element.js"></script>
     <script>
-        $(function(){
+        $(function() {
             //通过点击最上面的全选框，它的选中状态决定后面复选框的选中状态
-            $("#all").click(function(){
-              console.log($(this).prop("checked"));
-              console.log($("#tb input"));
-              $("#tb input").prop("checked",$(this).prop("checked"));
+            $("#all").click(function() {
+                console.log($(this).prop("checked"));
+                console.log($("#tb input"));
+                $("#tb input").prop("checked", $(this).prop("checked"));
             });
 
             //后面的复选框点击后，判断是否全部都选中，如果都选中，最上面的全选框自动勾上
-            $("#tb input").click(function(){
-                console.log($("#tb input:checked"));//选中的元素
-                if($("#tb input:checked").length == $("#tb input").length){
-                    $("#all").prop("checked",true);
-                }else{
-                    $("#all").prop("checked",false);
+            $("#tb input").click(function() {
+                console.log($("#tb input:checked")); //选中的元素
+                if ($("#tb input:checked").length == $("#tb input").length) {
+                    $("#all").prop("checked", true);
+                } else {
+                    $("#all").prop("checked", false);
                 }
             });
+            $("#close").click(function() {
+                $(".bg").css("display", "none");
+            });
+            $("#close-add").click(function() {
+                $(".bg-add").css("display", "none");
+            });
+            $("#announcementId").bind("input propertychange", function() {
+                var text = $("#announcementId").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#announcement").attr("disabled", "disabled"); //设置输入框2不可用
+                    $("#adminId").attr("disabled", "disabled");
+                } else {
+                    $("#announcement").removeAttr("disabled"); //移除不可用的属性
+                    $("#adminId").removeAttr("disabled");
+                }
+            })
+            $("#announcement").bind("input propertychange", function() {
+                var text = $("#announcement").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#announcementId").attr("disabled", "disabled"); //设置输入框2不可用
+                    $("#adminId").attr("disabled", "disabled");
+                } else {
+                    $("#announcementId").removeAttr("disabled"); //移除不可用的属性
+                    $("#adminId").removeAttr("disabled");
+                }
+            })
+            $("#adminId").bind("input propertychange", function() {
+                var text = $("#adminId").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#announcementId").attr("disabled", "disabled");
+                    $("#announcement").attr("disabled", "disabled");
+                } else {
+                    $("#announcementId").removeAttr("disabled"); //移除不可用的属性
+                    $("#announcement").removeAttr("disabled");
+                }
+            })
         });
-        function fun1() {
-            confirm("您确定要执行批量删除操作吗?");
-        }
     </script>
     <style>
-        th{
+        th {
             text-align: center;
+        }
+        
+        .bg,
+        .bg-add {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .inf {
+            background-color: white;
+            height: 630px;
+            width: 45%;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 3px;
+        }
+        
+        .inf-head {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(21, 184, 215);
+            border-radius: 3px;
+        }
+        
+        #close,
+        #close-add {
+            float: right;
+            margin-right: 5px;
+            background-color: red;
+            color: white;
+            font-weight: 900;
+            border-radius: 5px;
+            border: 0px;
+            margin-top: 3px;
+        }
+        
+        .inf-from {
+            width: 100%;
+            height: 600px;
+            border-radius: 3px;
+            overflow: scroll;
+        }
+        
+        .mailTable,
+        .mailTable1 {
+            width: 100%;
+            border-top: 1px solid #E6EAEE;
+            border-left: 1px solid #E6EAEE;
+            margin-bottom: 30px;
+        }
+        
+        .mailTable tr td,
+        .mailTable1 tr td {
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            border-bottom: 1px solid #E6EAEE;
+            border-right: 1px solid #E6EAEE;
+        }
+        
+        .mailTable tr td.column,
+        .mailTable1 tr td.column1 {
+            background-color: #EFF3F6;
+            color: #393C3E;
+            width: 30%;
         }
     </style>
 </head>
+
 <body>
     <div style="width: 100%;height: 20px;"></div>
     <form class="form-inline" style="text-align: center;">
@@ -48,8 +160,9 @@
             <label for="adminId">发布者管理员id</label>
             <input type="text" class="form-control" id="adminId" placeholder="请输入发布者管理员id">
         </div>
-        <button type="submit" class="btn btn-default"><i class="iconfont" style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
-        <button type="button" style="margin-left: 10px;" class="btn btn-info">新增</button>
+        <button type="submit" class="btn btn-default"><i class="iconfont"
+                style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
+        <button type="button" style="margin-left: 10px;" class="btn btn-info" onclick="add()">新增</button>
         <button type="button" style="margin-left: 10px;" class="btn btn-danger" onclick="fun1()">批量删除</button>
     </form>
     <div style="width: 100%;height: 20px;"></div>
@@ -65,85 +178,152 @@
             </tr>
         </thead>
         <tbody id="tb">
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>1</td>
-                <td>暑假大酬宾</td>
-                <td>2021-06-06 13:17:56</td>
-                <td>1</td>
-                <td>
-                    <a href="#" title="用于查看公告内容">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>2</td>
-                <td>九月开学大放送</td>
-                <td>2021-09-06 13:17:56</td>
-                <td>1</td>
-                <td>
-                    <a href="#" title="用于查看公告内容">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>3</td>
-                <td>教师节快乐</td>
-                <td>2021-09-010 08:17:56</td>
-                <td>1</td>
-                <td>
-                    <a href="#" title="用于查看公告内容">详情</a>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
+
         </tbody>
     </table>
     <div style="float: right;margin-right: 20px;">
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">共&nbsp;4&nbsp;条记录</div>
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">14条&nbsp;/&nbsp;页</div>
-        <nav aria-label="Page navigation" style="float: left;">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+        <div id="app" style="float: left;" onclick="page()">
+            <el-pagination background layout="prev, pager, next" :total="100" style="margin-top: 23px;">
+            </el-pagination>
+        </div>
+    </div>
+    <div class="bg">
+        <div class="inf">
+            <div class="inf-head">
+                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">公告详细信息</h4>
+                <input type="button" id="close" value="×">
+            </div>
+            <div class="inf-from">
+                <table class="mailTable" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td class="column">公告id</td>
+                        <td id="id_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">公告标题</td>
+                        <td id="title_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">发布时间</td>
+                        <td id="time_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">发布人的管理员id</td>
+                        <td id="adminid_update"></td>
+                    </tr>
+                    <tr>
+                        <td class="column">公告内容</td>
+                        <td id="having_update"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="bg-add">
+        <div class="inf">
+            <div class="inf-head">
+                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">新增公告</h4>
+                <input type="button" id="close-add" value="×">
+            </div>
+            <div class="inf-from">
+                <form action="">
+                    <table class="mailTable1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="column1">公告标题</td>
+                            <td><input class="form-control" id="title_add" type="text" placeholder="请输入公告标题"></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">发布时间</td>
+                            <td><input class="form-control" id="time_add" type="text" disabled></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">发布人的管理员id(此处传入账号,再根据后台查询出管理员id)</td>
+                            <td><input class="form-control" id="admin_add" type="text" disabled></td>
+                        </tr>
+                        <tr>
+                            <td class="column1">公告内容</td>
+                            <td><textarea class="form-control" id="paper_add" rows="3"></textarea></td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn btn-default" style="float: left;margin-left: 180px;">新增</button>
+                    <button type="reset" class="btn btn-default" style="float: right;margin-right: 180px;">重置</button>
+                </form>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
-         let tbody = document.getElementById("tb");
-     function fun1(){
+        new Vue().$mount('#app');
+
+        function page() {
+            let active = document.getElementsByClassName("active")[0];
+            // 点击返回页码数
+            // console.log(active.innerText);
+            alert("当前第" + active.innerText + "页")
+            return parseInt(active.innerText);
+        }
+        let announcement = [{
+            "announcement_id": 1,
+            "announcement_name": "暑假大酬宾",
+            "time": "2021-09-010 08:17:56",
+            "admin_id": 1
+        }, {
+            "announcement_id": 1,
+            "announcement_name": "暑假大酬宾",
+            "time": "2021-09-010 08:17:56",
+            "admin_id": 1
+        }, {
+            "announcement_id": 1,
+            "announcement_name": "暑假大酬宾",
+            "time": "2021-09-010 08:17:56",
+            "admin_id": 1
+        }, {
+            "announcement_id": 1,
+            "announcement_name": "暑假大酬宾",
+            "time": "2021-09-010 08:17:56",
+            "admin_id": 1
+        }]
+
+        let tb = document.getElementById("tb");
+        let str = "";
+        for (let i = 0; i < announcement.length; i++) {
+            str += '<tr>';
+            str += '<td><input type="checkbox" name="cks"></td>';
+            str += '<td>' + announcement[i].announcement_id + '</td>';
+            str += '<td>' + announcement[i].announcement_name + '</td>';
+            str += '<td>' + announcement[i].time + '</td>';
+            str += '<td>' + announcement[i].admin_id + '</td>';
+            str += '<td>';
+            str += '<button class="btn-link" type="button" onclick="search(this)">详情</button>';
+            str += '<button class="btn-link" type="button" onclick="del(this)">删除</button>';
+            str += '</td>';
+            str += '</tr>';
+        }
+        tb.innerHTML = str;
+
+
+        let tbody = document.getElementById("tb");
+
+        function fun1() {
             var flag = confirm("您确定要执行批量删除操作吗?");
             if (flag) {
-                 //判断是否有选中的.
+                //判断是否有选中的.
                 let count = 0;
                 let cks = document.getElementsByName("cks");
-                for(let i=0;i<cks.length;i++){
-                    if(cks[i].checked){
+                for (let i = 0; i < cks.length; i++) {
+                    if (cks[i].checked) {
                         count++;
                     }
                 }
-                if(count==0){
+                if (count == 0) {
                     alert("sorry,请你先勾选删除的数据!");
                     return;
                 }
 
                 //搞定勾选的 - 删除...
-                for(let i=cks.length-1;i>=0;i--){
-                    if(cks[i].checked){
+                for (let i = cks.length - 1; i >= 0; i--) {
+                    if (cks[i].checked) {
                         //删除cks[i]所在行
                         let tr = cks[i].parentElement.parentElement;
                         tbody.removeChild(tr);
@@ -152,6 +332,75 @@
             }
 
         }
+
+        function del(obj) {
+            let flag = confirm("确定删除吗?");
+
+            if (flag) {
+                tbody.removeChild(obj.parentElement.parentElement);
+            }
+        }
+
+        function search(obj) {
+            let bg = document.getElementsByClassName("bg");
+            bg[0].style.display = "block";
+            let tr = obj.parentElement.parentElement;
+            let td_arr = tr.children;
+
+            let id_update = document.getElementById("id_update");
+            let title_update = document.getElementById("title_update");
+            let time_update = document.getElementById("time_update");
+            let adminid_update = document.getElementById("adminid_update");
+            let having_update = document.getElementById("having_update");
+
+            id_update.innerText = td_arr[1].innerText;
+            title_update.innerText = td_arr[2].innerText;
+            time_update.innerText = td_arr[3].innerText;
+            adminid_update.innerText = td_arr[4].innerText;
+            having_update.innerText = "此处根据公告id后台查询数据";
+
+        }
+
+        function add() {
+            let bgadd = document.getElementsByClassName("bg-add");
+            bgadd[0].style.display = "block";
+        }
+
+        //获取当前时间以字符串形式显示在span标签内
+        //  2020/10/15 15:08:10
+        function loadTime() {
+            var currentDate = new Date();
+            var dateStr = formatDate(currentDate);
+            var time_add = document.getElementById("time_add");
+            time_add.placeholder = dateStr;
+        }
+        //日期对象 转换为 指定日期格式的字符串 yyyy/MM/dd HH:mm:ss
+        function formatDate(date) {
+            var str = date.getFullYear() + "/" + subDate((date.getMonth() + 1)) + "/" +
+                subDate(date.getDate()) + " " + subDate(date.getHours()) + ":" +
+                subDate(date.getMinutes()) + ":" + subDate(date.getSeconds());
+            return str;
+        }
+        //补全日期 不足两位前面补0  5--05 10--10
+        //先统一前面加0  05  010
+        function subDate(s) {
+            var s1 = "0" + s;
+            return s1.substring(s1.length - 2);
+        }
+
+        onload = function() {
+            //每隔1秒 执行loadTime方法
+            setInterval(loadTime, 1000);
+        };
+        //此处传入账号,再根据后台查询出管理员id
+        $(function() {
+            let loc = location.href;
+            let nb = loc.indexOf('=');
+            let accountab = decodeURI(loc.substr(nb + 1, 11));
+            let admin_add = document.getElementById("admin_add");
+            admin_add.placeholder = accountab
+        })
     </script>
-    </body>
+</body>
+
 </html>

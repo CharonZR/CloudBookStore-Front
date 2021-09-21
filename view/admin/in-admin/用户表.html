@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +9,55 @@
     <link rel="stylesheet" href="../../../css/common/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
     <script src="../../../js/common/jquery-1.12.4.js"></script>
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="../../../js/common/vue.js"></script>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="../../../css/common/element.css">
+    <!-- 引入element 的组件库-->
+    <script src="../../../js/common/element.js"></script>
     <script>
-        $(function(){
+        $(function() {
             //通过点击最上面的全选框，它的选中状态决定后面复选框的选中状态
-            $("#all").click(function(){
-              console.log($(this).prop("checked"));
-              console.log($("#tb input"));
-              $("#tb input").prop("checked",$(this).prop("checked"));
+            $("#all").click(function() {
+                console.log($(this).prop("checked"));
+                console.log($("#tb input"));
+                $("#tb input").prop("checked", $(this).prop("checked"));
             });
 
             //后面的复选框点击后，判断是否全部都选中，如果都选中，最上面的全选框自动勾上
-            $("#tb input").click(function(){
-                console.log($("#tb input:checked"));//选中的元素
-                if($("#tb input:checked").length == $("#tb input").length){
-                    $("#all").prop("checked",true);
-                }else{
-                    $("#all").prop("checked",false);
+            $("#tb input").click(function() {
+                console.log($("#tb input:checked")); //选中的元素
+                if ($("#tb input:checked").length == $("#tb input").length) {
+                    $("#all").prop("checked", true);
+                } else {
+                    $("#all").prop("checked", false);
                 }
             });
+            $("#account").bind("input propertychange", function() {
+                var text = $("#account").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#nickName").attr("disabled", "disabled"); //设置输入框2不可用
+                } else {
+                    $("#nickName").removeAttr("disabled"); //移除不可用的属性
+                }
+            })
+            $("#nickName").bind("input propertychange", function() {
+                var text = $("#nickName").val();
+                if (text != '') { //若输入框1的内容不为空，则输入框2不可用
+                    $("#account").attr("disabled", "disabled"); //设置输入框2不可用
+                } else {
+                    $("#account").removeAttr("disabled"); //移除不可用的属性
+                }
+            })
         });
-        function fun1() {
-            confirm("您确定要执行批量删除操作吗?");
-        }
     </script>
     <style>
-        th{
+        th {
             text-align: center;
         }
     </style>
 </head>
+
 <body>
     <div style="width: 100%;height: 20px;"></div>
     <form class="form-inline" style="text-align: center;">
@@ -46,7 +67,8 @@
             <label for="nickName">昵称</label>
             <input type="text" class="form-control" id="nickName" placeholder="请输入昵称">
         </div>
-        <button type="submit" class="btn btn-default"><i class="iconfont" style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
+        <button type="submit" class="btn btn-default"><i class="iconfont"
+                style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
         <!-- <button type="button" style="margin-left: 10px;" class="btn btn-info">新增</button> -->
         <button type="button" style="margin-left: 10px;" class="btn btn-danger" onclick="fun1()">批量删除(批量封号)</button>
     </form>
@@ -69,38 +91,7 @@
             </tr>
         </thead>
         <tbody id="tb">
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>1</td>
-                <td>1</td>
-                <td>饿熊的咆哮</td>
-                <td>18936093161</td>
-                <!-- <td>wjz110032</td> -->
-                <td>你的现居地是?</td>
-                <!-- <td>赛博坦</td> -->
-                <td>正常</td>
-                <td>至尊会员</td>
-                <td>赛博坦中路24号</td>
-                <td>
-                    <a href="#">删除(封号)</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>1</td>
-                <td>1</td>
-                <td>饿熊的咆哮</td>
-                <td>18936093161</td>
-                <!-- <td>wjz110032</td> -->
-                <td>你的现居地是?</td>
-                <!-- <td>赛博坦</td> -->
-                <td>冻结中</td>
-                <td>钻石会员</td>
-                <td>赛博坦中路24号</td>
-                <td>
-                    <a href="#">删除(封号)</a>
-                </td>
-            </tr>
+
         </tbody>
 
 
@@ -109,63 +100,119 @@
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">共&nbsp;4&nbsp;条记录</div>
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">14条&nbsp;/&nbsp;页</div>
         <nav aria-label="Page navigation" style="float: left;">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+            <div id="app" style="float: left;" onclick="page()">
+                <el-pagination background layout="prev, pager, next" :total="100" style="margin-top: 23px;">
+                </el-pagination>
+            </div>
+        </nav>
     </div>
-     <script type="text/javascript">
-    let len = document.getElementById("tb").getElementsByTagName("tr").length;
-    let trs = document.getElementById("tb").getElementsByTagName("tr");
-    for (let i = 0; i < len; i++) {
-        let td = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling.previousElementSibling;
-        td.ondblclick = update;
-    }
-    function update(){
-        let oldValue = this.innerText;
-        this.innerHTML="";
-        let select =document.createElement("select");
-        let td = this;
-        select.innerHTML = "<option value='0'>正常</option><option value='1'>冻结</option>";
-        select.onblur=function(){
-            td.innerHTML = this.options[this.selectedIndex].text;
+    <script type="text/javascript">
+        new Vue().$mount('#app');
+
+        function page() {
+            let active = document.getElementsByClassName("active")[0];
+            // 点击返回页码数
+            // console.log(active.innerText);
+            alert("当前第" + active.innerText + "页")
+            return parseInt(active.innerText);
         }
-        td.appendChild(select);
-    }
-     let tbody = document.getElementById("tb");
-     function fun1(){
+        let user_list = [{
+            "user_id": 1,
+            "people_id": 1,
+            "nickname": "饿熊的咆哮",
+            "account": "18936093161",
+            "question": "你的现居地是?",
+            "state": "正常",
+            "vip": "至尊会员",
+            "address": "赛博坦中路24号"
+        }, {
+            "user_id": 2,
+            "people_id": 1,
+            "nickname": "饿熊的咆哮",
+            "account": "18936093161",
+            "question": "你的现居地是?",
+            "state": "正常",
+            "vip": "至尊会员",
+            "address": "赛博坦中路24号"
+        }, {
+            "user_id": 3,
+            "people_id": 1,
+            "nickname": "饿熊的咆哮",
+            "account": "18936093161",
+            "question": "你的现居地是?",
+            "state": "正常",
+            "vip": "至尊会员",
+            "address": "赛博坦中路24号"
+        }, {
+            "user_id": 4,
+            "people_id": 1,
+            "nickname": "饿熊的咆哮",
+            "account": "18936093161",
+            "question": "你的现居地是?",
+            "state": "正常",
+            "vip": "至尊会员",
+            "address": "赛博坦中路24号"
+        }]
+        let tb = document.getElementById("tb");
+        let str = "";
+        for (let i = 0; i < user_list.length; i++) {
+            str += '<tr>';
+            str += '<td><input type="checkbox" name="cks"></td>';
+            str += '<td>' + user_list[i].user_id + '</td>';
+            str += '<td>' + user_list[i].people_id + '</td>';
+            str += '<td>' + user_list[i].nickname + '</td>';
+            str += '<td>' + user_list[i].account + '</td>';
+            str += '<td>' + user_list[i].question + '</td>';
+            str += '<td>' + user_list[i].state + '</td>';
+            str += '<td>' + user_list[i].vip + '</td>';
+            str += '<td>' + user_list[i].address + '</td>';
+            str += '<td>';
+            str += '<button class="btn-link" type="button" onclick="del(this)">删除</button>';
+            str += '</td>';
+            str += '</tr>';
+        }
+        tb.innerHTML = str;
+
+
+        let len = document.getElementById("tb").getElementsByTagName("tr").length;
+        let trs = document.getElementById("tb").getElementsByTagName("tr");
+        for (let i = 0; i < len; i++) {
+            let td = trs[i].querySelector('td:last-child').previousElementSibling.previousElementSibling.previousElementSibling;
+            td.ondblclick = update;
+        }
+
+        function update() {
+            let oldValue = this.innerText;
+            this.innerHTML = "";
+            let select = document.createElement("select");
+            let td = this;
+            select.innerHTML = "<option value='0'>正常</option><option value='1'>冻结</option>";
+            select.onblur = function() {
+                td.innerHTML = this.options[this.selectedIndex].text;
+            }
+            td.appendChild(select);
+        }
+        let tbody = document.getElementById("tb");
+
+        function fun1() {
             var flag = confirm("您确定要执行批量删除操作吗?");
             if (flag) {
-                 //判断是否有选中的.
+                //判断是否有选中的.
                 let count = 0;
                 let cks = document.getElementsByName("cks");
-                for(let i=0;i<cks.length;i++){
-                    if(cks[i].checked){
+                for (let i = 0; i < cks.length; i++) {
+                    if (cks[i].checked) {
                         count++;
                     }
                 }
-                if(count==0){
+                if (count == 0) {
                     alert("sorry,请你先勾选删除的数据!");
                     return;
                 }
 
                 //搞定勾选的 - 删除...
-                for(let i=cks.length-1;i>=0;i--){
-                    if(cks[i].checked){
+                for (let i = cks.length - 1; i >= 0; i--) {
+                    if (cks[i].checked) {
                         //删除cks[i]所在行
                         let tr = cks[i].parentElement.parentElement;
                         tbody.removeChild(tr);
@@ -174,6 +221,15 @@
             }
 
         }
-</script>
-    </body>
+
+        function del(obj) {
+            let flag = confirm("确定删除吗?");
+
+            if (flag) {
+                tbody.removeChild(obj.parentElement.parentElement);
+            }
+        }
+    </script>
+</body>
+
 </html>

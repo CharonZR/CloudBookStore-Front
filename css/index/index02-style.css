@@ -4,6 +4,10 @@ a{
 li{
     list-style-type: none;
 }
+
+#first{
+    background-color: rgb(172,218,224);
+}
 .contain{
   position: relative;
   margin: 0 auto;
@@ -102,6 +106,7 @@ li{
 /*轮播图*/
 .swiper-container{
     width: 675px;
+    left: -10px;
 }
 
 .swiper-wrapper img{
@@ -206,11 +211,12 @@ li{
 }
 .index_content_right{
    /* border: 1px yellow solid;*/
-    width: 260px;
+    width: 265px;
     height: 390px;
     right: 0px;
     position: absolute;
     top: 0px;
+    left: 942px;
 }
 .recommend_book_adv{
    /* border: 1px blueviolet solid;*/
@@ -219,7 +225,7 @@ li{
     padding: 5px;
 }
 .recommend_book_adv>a>img{
-    width: 235px;
+    width: 245px;
     height: 120px;
     margin: 2px;
 }

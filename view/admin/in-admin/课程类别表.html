@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,35 +9,108 @@
     <link rel="stylesheet" href="../../../css/common/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
     <script src="../../../js/common/jquery-1.12.4.js"></script>
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="../../../js/common/vue.js"></script>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="../../../css/common/element.css">
+    <!-- 引入element 的组件库-->
+    <script src="../../../js/common/element.js"></script>
     <script>
-        $(function(){
+        $(function() {
             //通过点击最上面的全选框，它的选中状态决定后面复选框的选中状态
-            $("#all").click(function(){
-              console.log($(this).prop("checked"));
-              console.log($("#tb input"));
-              $("#tb input").prop("checked",$(this).prop("checked"));
+            $("#all").click(function() {
+                console.log($(this).prop("checked"));
+                console.log($("#tb input"));
+                $("#tb input").prop("checked", $(this).prop("checked"));
             });
 
             //后面的复选框点击后，判断是否全部都选中，如果都选中，最上面的全选框自动勾上
-            $("#tb input").click(function(){
-                console.log($("#tb input:checked"));//选中的元素
-                if($("#tb input:checked").length == $("#tb input").length){
-                    $("#all").prop("checked",true);
-                }else{
-                    $("#all").prop("checked",false);
+            $("#tb input").click(function() {
+                console.log($("#tb input:checked")); //选中的元素
+                if ($("#tb input:checked").length == $("#tb input").length) {
+                    $("#all").prop("checked", true);
+                } else {
+                    $("#all").prop("checked", false);
                 }
             });
+            $("#close-add").click(function() {
+                $(".bg-add").css("display", "none");
+            });
         });
-        function fun1() {
-            confirm("您确定要执行批量删除操作吗?");
-        }
     </script>
     <style>
-        th{
+        th {
             text-align: center;
+        }
+        
+        .bg-add {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .inf {
+            background-color: white;
+            height: 630px;
+            width: 45%;
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 3px;
+        }
+        
+        .inf-head {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(21, 184, 215);
+            border-radius: 3px;
+        }
+        
+        #close-add {
+            float: right;
+            margin-right: 5px;
+            background-color: red;
+            color: white;
+            font-weight: 900;
+            border-radius: 5px;
+            border: 0px;
+            margin-top: 3px;
+        }
+        
+        .inf-from {
+            width: 100%;
+            height: 600px;
+            border-radius: 3px;
+            overflow: scroll;
+        }
+        
+        .mailTable {
+            width: 100%;
+            border-top: 1px solid #E6EAEE;
+            border-left: 1px solid #E6EAEE;
+            margin-bottom: 30px;
+        }
+        
+        .mailTable tr td {
+            width: 200px;
+            height: 35px;
+            line-height: 35px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            border-bottom: 1px solid #E6EAEE;
+            border-right: 1px solid #E6EAEE;
+        }
+        
+        .mailTable tr td.column {
+            background-color: #EFF3F6;
+            color: #393C3E;
+            width: 30%;
         }
     </style>
 </head>
+
 <body>
     <div style="width: 100%;height: 20px;"></div>
     <form class="form-inline" style="text-align: center;">
@@ -44,8 +118,9 @@
             <label for="classTypeName">课程类别名</label>
             <input type="text" class="form-control" id="classTypeName" placeholder="请输入课程类别名称">
         </div>
-        <button type="submit" class="btn btn-default"><i class="iconfont" style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
-        <button type="button" style="margin-left: 10px;" class="btn btn-info">新增</button>
+        <button type="submit" class="btn btn-default"><i class="iconfont"
+                style="font-size: 14px;color: #3E8EF7;">&#xe660;</i></button>
+        <button type="button" style="margin-left: 10px;" class="btn btn-info" onclick="add()">新增</button>
         <button type="button" style="margin-left: 10px;" class="btn btn-danger" onclick="fun1()">批量删除</button>
     </form>
     <div style="width: 100%;height: 20px;"></div>
@@ -59,108 +134,106 @@
             </tr>
         </thead>
         <tbody id="tb">
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>1</td>
-                <td>数学</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>2</td>
-                <td>英语</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>2</td>
-                <td>玄幻</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>3</td>
-                <td>Java</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>4</td>
-                <td>web</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>5</td>
-                <td>物理</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="cks"></td>
-                <td>6</td>
-                <td>HarmonyOS</td>
-                <td>
-                    <a href="#">删除</a>
-                </td>
-            </tr>
+
         </tbody>
     </table>
     <div style="float: right;margin-right: 20px;">
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">共&nbsp;4&nbsp;条记录</div>
         <div style="float: left;height: 80px;line-height: 80px;margin-right: 20px;">14条&nbsp;/&nbsp;页</div>
-        <nav aria-label="Page navigation" style="float: left;">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+        <div id="app" style="float: left;" onclick="page()">
+            <el-pagination background layout="prev, pager, next" :total="100" style="margin-top: 23px;">
+            </el-pagination>
+        </div>
+    </div>
+    <div class="bg-add">
+        <div class="inf">
+            <div class="inf-head">
+                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">新增课程类别</h4>
+                <input type="button" id="close-add" value="×">
+            </div>
+            <div class="inf-from">
+                <form action="" style="margin-top: 30px;">
+                    <table class="mailTable" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="column">课程类别名</td>
+                            <td><input class="form-control" id="classtype_add" type="text" placeholder="请输入课程类别名"></td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="btn btn-default" style="float: left;margin-left: 180px;">新增</button>
+                    <button type="reset" class="btn btn-default" style="float: right;margin-right: 180px;">重置</button>
+                </form>
+            </div>
+        </div>
     </div>
     <script type="text/javascript">
+        new Vue().$mount('#app');
+
+        function page() {
+            let active = document.getElementsByClassName("active")[0];
+            // 点击返回页码数
+            // console.log(active.innerText);
+            alert("当前第" + active.innerText + "页")
+            return parseInt(active.innerText);
+        }
+        let class_type = [{
+            "classtype_id": 1,
+            "classtype_name": "数学",
+        }, {
+            "classtype_id": 2,
+            "classtype_name": "数学",
+        }, {
+            "classtype_id": 3,
+            "classtype_name": "数学",
+        }, {
+            "classtype_id": 4,
+            "classtype_name": "数学",
+        }, {
+            "classtype_id": 5,
+            "classtype_name": "数学",
+        }, {
+            "classtype_id": 6,
+            "classtype_name": "数学",
+        }, {
+            "classtype_id": 7,
+            "classtype_name": "数学",
+        }]
+
+        let tb = document.getElementById("tb");
+        let str = "";
+        for (let i = 0; i < class_type.length; i++) {
+            str += '<tr>';
+            str += '<td><input type="checkbox" name="cks"></td>';
+            str += '<td>' + class_type[i].classtype_id + '</td>';
+            str += '<td>' + class_type[i].classtype_name + '</td>';
+            str += '<td>';
+            str += '<button class="btn-link" type="button" onclick="del(this)">删除</button>';
+            str += '</td>';
+            str += '</tr>';
+        }
+        tb.innerHTML = str;
+
+
         let tbody = document.getElementById("tb");
-     function fun1(){
+
+        function fun1() {
             var flag = confirm("您确定要执行批量删除操作吗?");
             if (flag) {
-                 //判断是否有选中的.
+                //判断是否有选中的.
                 let count = 0;
                 let cks = document.getElementsByName("cks");
-                for(let i=0;i<cks.length;i++){
-                    if(cks[i].checked){
+                for (let i = 0; i < cks.length; i++) {
+                    if (cks[i].checked) {
                         count++;
                     }
                 }
-                if(count==0){
+                if (count == 0) {
                     alert("sorry,请你先勾选删除的数据!");
                     return;
                 }
 
                 //搞定勾选的 - 删除...
-                for(let i=cks.length-1;i>=0;i--){
-                    if(cks[i].checked){
+                for (let i = cks.length - 1; i >= 0; i--) {
+                    if (cks[i].checked) {
                         //删除cks[i]所在行
                         let tr = cks[i].parentElement.parentElement;
                         tbody.removeChild(tr);
@@ -169,6 +242,20 @@
             }
 
         }
+
+        function del(obj) {
+            let flag = confirm("确定删除吗?");
+
+            if (flag) {
+                tbody.removeChild(obj.parentElement.parentElement);
+            }
+        }
+
+        function add() {
+            let bgadd = document.getElementsByClassName("bg-add");
+            bgadd[0].style.display = "block";
+        }
     </script>
-    </body>
+</body>
+
 </html>

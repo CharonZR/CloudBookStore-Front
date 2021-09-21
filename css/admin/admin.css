@@ -1,45 +1,54 @@
-.head{
+.head {
     width: 100%;
     height: 50px;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-.head-left{
+.head-left {
     float: left;
     width: 230px;
     height: 100%;
-    background-color: rgb(21,184,215);
+    background-color: rgb(21, 184, 215);
     text-align: center;
     line-height: 50px;
     font-size: 20px;
     font-weight: 900;
 }
-.head-left a,.head-left a:hover{
+
+.head-left a,
+.head-left a:hover {
     text-decoration: none;
     color: white;
 }
-.head-left i{
+
+.head-left i {
     font-size: 25px;
 }
-.head-middle{
+
+.head-middle {
     height: 100%;
     float: left;
 }
-#one-menu li{
+
+#one-menu li {
     line-height: 30px;
 }
-.head-right{
+
+.head-right {
     height: 100%;
     float: right;
 }
-.head-right>ul>li{
+
+.head-right>ul>li {
     float: left;
     text-align: center;
     line-height: 50px;
 }
-.admin-img{
+
+.admin-img {
     width: 36px;
     height: 36px;
     margin-top: 7px;
@@ -49,15 +58,18 @@ a{
     float: left;
     position: relative;
 }
-.user{
+
+.user {
     display: none;
 }
-.user li{
-    background-color:#EEEEEE;
+
+.user li {
+    background-color: #EEEEEE;
     border: 1px solid #999;
     margin: auto;
 }
-.admin-li:hover .user{
+
+.admin-li:hover .user {
     display: block;
     z-index: 999;
     width: 251px;
@@ -65,19 +77,23 @@ a{
     top: 50px;
     position: absolute;
 }
-.admin-li:hover a{
+
+.admin-li:hover a {
     text-decoration: none;
 }
-.head-right{
+
+.head-right {
     position: relative;
 }
-.head-right ul{
+
+.head-right ul {
     list-style: none;
-    padding:0px; 
-    margin:0px; 
-    overflow:hidden; 
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
 }
-.sup{
+
+.sup {
     float: left;
     font-size: 10px;
     height: 15px;
@@ -89,29 +105,33 @@ a{
     line-height: 15px;
     margin-top: 15px;
 }
-.chat{
+
+.chat {
     display: none;
 }
-.sixin:hover .chat{
+
+.sixin:hover .chat {
     clear: both;
     display: block;
     width: 326px;
     height: 400px;
     position: absolute;
-    top:50px;
-    overflow:auto;
+    top: 50px;
+    overflow: auto;
     z-index: 999;
-    background:#EEEEEE;
+    background: #EEEEEE;
 }
-.chat li{
-    width:326px;
+
+.chat li {
+    width: 326px;
     height: 70px;
     border: 1px solid black;
     margin-bottom: 4px;
     box-sizing: border-box;
     /* background-color: yellow; */
 }
-.come-from{
+
+.come-from {
     height: 20px;
     display: block;
     float: left;
@@ -119,17 +139,19 @@ a{
     margin-top: 0px;
     line-height: 20px;
 }
-.chat p{
+
+.chat p {
     margin: auto;
     width: 300px;
     height: 30px;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
     /* background-color: cyan; */
     line-height: 30px;
 }
-.time{
+
+.time {
     height: 20px;
     display: block;
     float: right;
@@ -138,29 +160,91 @@ a{
     margin-right: 15px;
     line-height: 20px;
 }
-.middle{
+
+.middle {
     width: 100%;
     height: calc(100vh - 50px);
     background: #EEEEEE;
 }
-.middle>div{
+
+.middle>div {
     width: 1300px;
     height: 100%;
     background-color: white;
     margin: auto;
     border: 20px solid #EEEEEE;
 }
-.middlek{
+
+.middlek {
     height: 100%;
     width: 100%;
     position: absolute;
     display: none;
 }
-.middlek iframe{
+
+.middlek iframe {
     height: 100%;
     width: 100%;
 }
-.one{
+
+.one {
     /* background-color: aqua; */
     display: block;
+}
+
+.bg,
+.bg_1 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.inf {
+    background-color: white;
+    height: 730px;
+    width: 45%;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 3px;
+}
+
+.inf-head {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(21, 184, 215);
+    border-radius: 3px;
+}
+
+#close,
+#close_1 {
+    float: right;
+    margin-right: 5px;
+    background-color: red;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 0px;
+    margin-top: 3px;
+    z-index: 999;
+}
+
+.inf-from {
+    width: 100%;
+    height: 700px;
+    border-radius: 3px;
+    overflow: scroll;
+    padding: 30px;
+}
+
+.inf-from li {
+    list-style: none;
+}
+
+.tip {
+    display: none;
+    color: red;
+    float: right;
 }

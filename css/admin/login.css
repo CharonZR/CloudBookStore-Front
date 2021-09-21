@@ -1,0 +1,71 @@
+body {
+    background-image: url("../../images/admin/login_bg.png");
+    background-size: cover;
+}
+
+#login {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    /* 2.往回走自己的一半 */
+    margin-left: -200px;
+    /* 垂直居中 */
+    top: 50%;
+    margin-top: -250px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+#login h2,
+#login h3 {
+    color: white;
+    font-weight: 900;
+}
+
+form {
+    color: white;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin: 20px 10px;
+}
+
+.call {
+    float: left;
+}
+
+.tip {
+    display: none;
+    color: red;
+    float: right;
+}
+
+.yzm {
+    width: 243px;
+}
+
+#canvas {
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: -34px;
+    width: 100px;
+    height: 34px;
+}
+
+.btn {
+    display: block;
+    margin-top: 40px;
+    height: 34px;
+    width: 100px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #457adb;
+    border: none;
+    border-radius: 50px;
+}

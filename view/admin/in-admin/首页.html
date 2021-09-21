@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>ECharts图</title>
     <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
 </head>
+
 <body>
     <div id="main-vip" style="width:100%;height:50vh;border-bottom:1px solid black ;"></div>
     <div id="mian-income" style="width:100%;height: calc(100vh - 50vh);"></div>
     <script type="text/javascript">
-        var mychart_vip=echarts.init(document.getElementById("main-vip"))
-        var open={
+        var mychart_vip = echarts.init(document.getElementById("main-vip"))
+        var open = {
             title: {
                 text: '用户VIP状态分布图(模拟数据)',
                 x: 'center',
@@ -24,45 +26,45 @@
             legend: {
                 // orient 设置布局方式，默认水平布局，可选值：'horizontal'（水平） ¦ 'vertical'（垂直）
                 orient: 'vertical',
-                 // x 设置水平安放位置，默认全图居中，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
+                // x 设置水平安放位置，默认全图居中，可选值：'center' ¦ 'left' ¦ 'right' ¦ {number}（x坐标，单位px）
                 x: 200,
                 // y 设置垂直安放位置，默认全图顶端，可选值：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
                 y: 'center',
                 itemWidth: 40,   // 设置图例图形的宽
                 itemHeight: 30,  // 设置图例图形的高
                 textStyle: {
-                color: '#666'  // 图例文字颜色
+                    color: '#666'  // 图例文字颜色
                 },
                 // itemGap设置各个item之间的间隔，单位px，默认为10，横向布局时为水平间隔，纵向布局时为纵向间隔
                 itemGap: 20,
                 // backgroundColor: '#eee',  // 设置整个图例区域背景颜色
-                data: ['非会员','青铜会员','黄金会员','钻石会员','至尊会员']
+                data: ['非会员', '青铜会员', '黄金会员', '钻石会员', '至尊会员']
             },
-            series : [
+            series: [
                 {
                     name: 'VIP人员比例饼图',
                     type: 'pie',
-                    radius : ['70%','30%'],
+                    radius: ['70%', '30%'],
                     center: ['70%', '50%'],
-                    data:[
-                        {value:11335, name:'非会员'},
-                        {value:2210, name:'青铜会员'},
-                        {value:1234, name:'黄金会员'},
-                        {value:935, name:'钻石会员'},
-                        {value:548, name:'至尊会员'}
+                    data: [
+                        { value: 11335, name: '非会员' },
+                        { value: 2210, name: '青铜会员' },
+                        { value: 1234, name: '黄金会员' },
+                        { value: 935, name: '钻石会员' },
+                        { value: 548, name: '至尊会员' }
                     ],
                     labelLine: {
                         normal: {
-                        show: false   // show设置线是否显示，默认为true，可选值：true ¦ false
+                            show: false   // show设置线是否显示，默认为true，可选值：true ¦ false
                         }
                     },
                     label: {
                         normal: {
-                        position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
-                        // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
-                        // {a}指series.name  {b}指series.data的name
-                        // {c}指series.data的value  {d}%指这一部分占总数的百分比
-                        formatter: '{c}'
+                            position: 'inner',  // 设置标签位置，默认在饼状图外 可选值：'outer' ¦ 'inner（饼状图上）'
+                            // formatter: '{a} {b} : {c}个 ({d}%)'   设置标签显示内容 ，默认显示{b}
+                            // {a}指series.name  {b}指series.data的name
+                            // {c}指series.data的value  {d}%指这一部分占总数的百分比
+                            formatter: '{c}'
                         }
                     }
                 }
@@ -71,8 +73,8 @@
         mychart_vip.setOption(open)
 
 
-        var mychart_income=echarts.init(document.getElementById("mian-income"));
-        var open={
+        var mychart_income = echarts.init(document.getElementById("mian-income"));
+        var open = {
             title: {
                 text: '近六个月收入(模拟数据)',
                 x: 'center',
@@ -94,7 +96,7 @@
             },
             grid: {
                 top: '20%',   // 等价于 y: '16%'
-                left: '5%', 
+                left: '5%',
                 right: '5%',
                 bottom: '3%',
                 containLabel: true
@@ -109,7 +111,7 @@
                     interval: 0  //设置X轴数据间隔几个显示一个，为0表示都显示
                 },
                 boundaryGap: true,
-                data: ['2021-4','2021-5','2021-6','2021-7','2021-8','2021-9']
+                data: ['2021-4', '2021-5', '2021-6', '2021-7', '2021-8', '2021-9']
             },
             yAxis: {
                 name: '收入',
@@ -118,19 +120,19 @@
             },
             series: [
                 {
-                    name:'总收入',
-                    type:'line',
+                    name: '总收入',
+                    type: 'line',
                     stack: '总量',
-                    data:[123000.0,129000.0,99987.0,130900.0,150000.0,88888.0],
-                    itemStyle:{
-                        normal:{
+                    data: [123000.0, 129000.0, 99987.0, 130900.0, 150000.0, 88888.0],
+                    itemStyle: {
+                        normal: {
                             // 拐点上显示数值
-                            label : {
+                            label: {
                                 show: true
                             },
-                            borderColor:'red',  // 拐点边框颜色
-                            lineStyle:{                 
-                                width:5,  // 设置线宽
+                            borderColor: 'red',  // 拐点边框颜色
+                            lineStyle: {
+                                width: 5,  // 设置线宽
                                 // type:'dotted'  //'dotted'虚线 'solid'实线
                             }
                         }
@@ -143,4 +145,5 @@
 
     </script>
 </body>
+
 </html>

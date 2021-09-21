@@ -5,6 +5,10 @@ html,body{
   padding: 0;
   height: 100%;
 }
+
+#first{
+  background-color: rgb(172,218,224);
+}
 .contai{
   position: relative;
   margin: 0 auto;
@@ -14,7 +18,7 @@ html,body{
 }
 /*横幅*/
 .pic{
-  top: 155px;
+  top: 135px;
   position: absolute;
   width: 1226px;
 }
