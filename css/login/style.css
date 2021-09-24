@@ -385,6 +385,11 @@ p.change_link{
 	height: 90px;
 	background: transparent;
 }
+
+.t{
+	display: none;
+}
+
 .tip{
 	display: block;
 }

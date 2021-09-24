@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>购物车</title>
-<link href="../../css/shoppingcar/shoppingcar.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="../../css/common/nav.css" />
-  <link rel="icon" href="../../images/common/云上书屋.png" type="image/x-icon" />
-<script src="../../js/common/jquery.1.4.2-min.js"></script>
-<script src="../../js/shoppingcar/Calculation.js"></script>
-<script>
-$(document).ready(function () {
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link href="../../css/shoppingcar/shoppingcar.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common/nav.css" />
+		<link rel="icon" href="../../images/common/云上书屋.png" type="image/x-icon" />
+		<script src="../../js/common/jquery.1.4.2-min.js"></script>
+		<script src="../../js/shoppingcar/Calculation.js"></script>
+		<script>
+			$(document).ready(function () {
 	$(".allselect").click(function () {
 		$(".gwc_tb2 input[name=newslist]").each(function () {
 			$(this).attr("checked", true);
@@ -71,46 +71,46 @@ function GetCount() {
 	$("#jz2").css("display", "block");
 }
 </script>
-</head>
-<body>
-<!--定义头部-->
-<div class='nav'>
-  <ul>
-    <li><img src="../../images/common/素材-大书.png"></li>
-    <li><a href='../../index01.html'>主页</a></li>
-    <li><a href='#'>分类</a>
-      <ul>
-        <li><a href='../../index01.html'>图书</a></li>
-        <li><a href='../../index02.html'>电子书</a></li>
-      </ul>
-    </li>
-    <li><a href='#'>个人中心</a>
-      <ul>
-        <li><a href='../../view/shoppingcar/shoppingcar.html'>购物车</a></li>
-        <li><a href='#'>个人信息</a></li>
-        <li><a href='#'>订单信息</a></li>
-        <li><a href='#'>地址信息</a></li>
-      </ul>
-    </li>
-    <li><a href='../../view/login/login.html'>登陆</a></li>
-    <li><a href='../../view/login/login.html'>注册</a></li>
-  </ul>
-</div>
-<div class="gwc" style=" margin:auto;top: 30px;position:relative;">
-  <table cellpadding="0" cellspacing="0" class="gwc_tb1">
-    <tr>
-      <td class="tb1_td1"><input id="Checkbox1" type="checkbox"  class="allselect"/></td>
-      <td class="tb1_td1">全选</td>
-      <td class="tb1_td3">商品</td>
-      <td class="tb1_td4">商品信息</td>
-      <td class="tb1_td5">数量</td>
-      <td class="tb1_td6">单价</td>
-      <td class="tb1_td7">操作</td>
-    </tr>
-  </table>
-  <!---商品加减算数---->
-  <script>
-	$(function () {
+	</head>
+	<body>
+		<!--定义头部-->
+		<div class='nav'>
+			<ul>
+				<li><img src="../../images/common/素材-大书.png"></li>
+				<li><a href='../../index01.html'>主页</a></li>
+				<li><a href='#'>分类</a>
+					<ul>
+						<li><a href='../../index01.html'>图书</a></li>
+						<li><a href='../../index02.html'>电子书</a></li>
+					</ul>
+				</li>
+				<li><a href='#'>个人中心</a>
+					<ul>
+						<li><a href='../../view/shoppingcar/shoppingcar.html'>购物车</a></li>
+						<li><a href='../../view/personal_center/center.html'>个人信息</a></li>
+						<li><a href='../../view/orders/orders.html'>订单信息</a></li>
+						<li><a href='../../view/personal_center/center.html'>地址信息</a></li>
+					</ul>
+				</li>
+				<li><a href='../../view/login/login.html'>登陆</a></li>
+				<li><a href='../../view/login/login.html'>注册</a></li>
+			</ul>
+		</div>
+		<div class="gwc" style=" margin:auto;top: 30px;position:relative;">
+			<table cellpadding="0" cellspacing="0" class="gwc_tb1">
+				<tr>
+					<td class="tb1_td1"><input id="Checkbox1" type="checkbox" class="allselect" /></td>
+					<td class="tb1_td1">全选</td>
+					<td class="tb1_td3">商品</td>
+					<td class="tb1_td4">商品信息</td>
+					<td class="tb1_td5">数量</td>
+					<td class="tb1_td6">单价</td>
+					<td class="tb1_td7">操作</td>
+				</tr>
+			</table>
+			<!---商品加减算数---->
+			<script>
+				$(function () {
 		var t = $("#text_box1");
 		$("#add1").click(function () {
 			t.val(parseInt(t.val()) + 1)
@@ -128,37 +128,39 @@ function GetCount() {
 		setTotal();
 	})
 	</script>
-  <table cellpadding="0" cellspacing="0" class="gwc_tb2">
-    <tr>
-      <td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-1" /></td>
-      <td class="tb2_td2"><a href="#"><img src="../../images/img1.jpg"/></a></td>
-      <td class="tb2_td3"><a href="#">产品标题</a></td>
-      <td class="tb1_td4">一件</td>
-      <td class="tb1_td5"><input id="min1" name=""  style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="-" />
-        <input id="text_box1" name="" type="text" value="1" style=" width:30px; text-align:center; border:1px solid #ccc;" />
-        <input id="add1" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
-      </td>
-      <td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
-      <td class="tb1_td7"><a href="#">删除</a></td>
-    </tr>
-  </table>
-  <table cellpadding="0" cellspacing="0" class="gwc_tb2">
-    <tr>
-      <td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-2" /></td>
-      <td class="tb2_td2"><a href="#"><img src="../../images/img2.jpg"/></a></td>
-      <td class="tb2_td3"><a href="#">产品标题</a></td>
-      <td class="tb1_td4">一件</td>
-      <td class="tb1_td5"><input id="min2" name=""  style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="-" />
-        <input id="text_box2" name="" type="text" value="1" style=" width:30px; text-align:center; border:1px solid #ccc;" />
-        <input id="add2" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
-      </td>
-      <td class="tb1_td6"><label id="total2" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
-      <td class="tb1_td7"><a href="#">删除</a></td>
-    </tr>
-  </table>
-  <!---商品加减算数---->
-  <script>
-	$(function () {
+			<table cellpadding="0" cellspacing="0" class="gwc_tb2">
+				<tr>
+					<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-1" /></td>
+					<td class="tb2_td2"><a href="#"><img src="../../images/img1.jpg" /></a></td>
+					<td class="tb2_td3"><a href="#">产品标题</a></td>
+					<td class="tb1_td4">一件</td>
+					<td class="tb1_td5"><input id="min1" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button"
+						 value="-" />
+						<input id="text_box1" name="" type="text" value="1" style=" width:30px; text-align:center; border:1px solid #ccc;" />
+						<input id="add1" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
+					</td>
+					<td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
+					<td class="tb1_td7"><a href="#">删除</a></td>
+				</tr>
+			</table>
+			<table cellpadding="0" cellspacing="0" class="gwc_tb2">
+				<tr>
+					<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-2" /></td>
+					<td class="tb2_td2"><a href="#"><img src="../../images/img2.jpg" /></a></td>
+					<td class="tb2_td3"><a href="#">产品标题</a></td>
+					<td class="tb1_td4">一件</td>
+					<td class="tb1_td5"><input id="min2" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button"
+						 value="-" />
+						<input id="text_box2" name="" type="text" value="1" style=" width:30px; text-align:center; border:1px solid #ccc;" />
+						<input id="add2" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
+					</td>
+					<td class="tb1_td6"><label id="total2" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
+					<td class="tb1_td7"><a href="#">删除</a></td>
+				</tr>
+			</table>
+			<!---商品加减算数---->
+			<script>
+				$(function () {
 		var t = $("#text_box2");
 		$("#add2").click(function () {
 			t.val(parseInt(t.val()) + 1)
@@ -195,20 +197,20 @@ function GetCount() {
 		//setTotal();
 	})
 	</script>
-  <table cellpadding="0" cellspacing="0" class="gwc_tb3">
-    <tr>
-      <td class="tb1_td1"><input id="checkAll" class="allselect" type="checkbox" /></td>
-      <td class="tb1_td1">全选</td>
-      <td class="tb3_td1"><input id="invert" type="checkbox" />反选
-        <input id="cancel" type="checkbox" />取消
-      </td>
-      <td class="tb3_td2">已选商品<label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label>件</td>
-      <td class="tb3_td3">合计(不含运费):<span>￥</span><span style=" color:#ff5500;">
-        <label id="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;"></label>
-        </span></td>
-      <td class="tb3_td4"><span id="jz1">结算</span><a href="#" style=" display:none;"  class="jz2" id="jz2">结算</a></td>
-    </tr>
-  </table>
-</div>
-</body>
+			<table cellpadding="0" cellspacing="0" class="gwc_tb3">
+				<tr>
+					<td class="tb1_td1"><input id="checkAll" class="allselect" type="checkbox" /></td>
+					<td class="tb1_td1">全选</td>
+					<td class="tb3_td1"><input id="invert" type="checkbox" />反选
+						<input id="cancel" type="checkbox" />取消
+					</td>
+					<td class="tb3_td2">已选商品<label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label>件</td>
+					<td class="tb3_td3">合计(不含运费):<span>￥</span><span style=" color:#ff5500;">
+							<label id="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;"></label>
+						</span></td>
+					<td class="tb3_td4"><span id="jz1">结算</span><a href="#" style=" display:none;" class="jz2" id="jz2">结算</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
 </html>

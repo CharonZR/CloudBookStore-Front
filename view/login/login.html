@@ -29,20 +29,23 @@
                                 <h1>Login</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your email or username or phone</label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
-									<label class="tp-1" style="color: red; display: none;">账号不存在！</label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="mysuperusername690"/>
+									<label id="tp-1" class="t" style="color: red;">账号不存在！</label>
 								</p>
                                 <p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Your password </label>
                                     <input id="password" name="password" required="required" type="password" placeholder="abc123456789" /> 
-									<label class="tp-2" style="color: red; display: none;">密码错误！</label>
+									<label id="tp-2" class="t" style="color: red;">密码错误！</label>
 								</p>
                                 <p class="keeplogin"> 
 									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
 									<label for="loginkeeping">Keep me logged in</label>
 								</p>
+								<p class="background button" style="top: 295px;position: absolute;width: 400px;">
+								    <input  id="babn"  type="button" value="ToBackgroud" /> 
+								</p>
                                 <p class="login button"> 
-                                    <input class="btn" type="submit" value="Login" /> 
+                                    <input id="btn"  type="button" value="Login" /> 
 								</p>
                                 <p class="change_link">
 									Not a member yet ?
@@ -56,31 +59,29 @@
                                 <h1> Sign up </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
-									<label class="tip-1" style="color: red; display: none;">格式错误！</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" />
 								</p>
                                 <p> 
                                     <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
-									<label class="tip-2" style="color: red;display: block;">格式错误！</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" /> 
 								</p>
                                 <p> 
                                     <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="abc123456789"/>
-									<label class="tip-3" style="color: red;display: none;">格式错误！</label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" />
+									<label id="tip-3" class="t" style="color: red;">格式错误！</label>
 								</p>
                                 <p> 
                                     <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="abc123456789"/>
-									<label class="tip-4" style="color: red;display: none;">两次密码不一致！</label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" />
+									<label id="tip-4" class="t" style="color: red;">两次密码不一致！</label>
 								</p>
 								<p>
 								    <label for="emailsignup" class="youmail" data-icon="p" > Your phone</label>
-								    <input id="phonesignup" name="phonesignup" required="required" type="phone" placeholder="15724865448"/> 
-									<label class="tip-5" style="color: red;display: none;">格式错误！</label>
+								    <input id="phonesignup" name="phonesignup" required="required" type="phone" /> 
+									<label id="tip-5"class="t" style="color: red;">格式错误！</label>
 								</p>
                                 <p class="signin button"> 
-									<input class="btn" type="submit" value="Sign up"/> 
+									<input class="btn" type="button" value="Sign up"/> 
 								</p>
                                 <p class="change_link">  
 									Already a member ?
@@ -94,7 +95,77 @@
         </div>
 	</body>	
 	<script>
-		let ti=document.getElementsByClassName("tip-1");
-		ti.className="tip";
+		let passwd="abc123456789";
+		let tel="15724865448";
+		let emil="mysupermail@mail.com";
+		let uname="mysuperusername690";
+		let t3=document.getElementById("tip-3");
+		let t4=document.getElementById("tip-4");
+		let t5=document.getElementById("tip-5");
+		let t6=document.getElementById("tp-1");
+		let t7=document.getElementById("tp-2");
+		let p3=document.getElementById("passwordsignup");
+		let p4=document.getElementById("passwordsignup_confirm");
+		let p5=document.getElementById("phonesignup");
+		let p6=document.getElementById("username");
+		let p7=document.getElementById("password");
+		let b=document.getElementById("btn");
+		let ba=document.getElementById("babn");
+		var account_reg = /^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+		var password_reg = /^[a-zA-Z]\w{5,17}$/;
+		let flag=false;
+		p6.onblur=()=>{
+			if(p6.value==uname||p6.value==tel||p6.value==emil){
+				t6.className="t";
+			}
+			else{
+				t6.className="tip";
+			}
+		}
+		p7.onblur=()=>{
+			if(p7.value!=passwd){
+				t7.className="tip";
+			}
+			else{
+				t7.className="t";
+			}
+		}
+		p5.onblur=()=>{
+			if(account_reg.test(p5.value)){
+				t5.className="t";			
+			}
+			else{
+				t5.className="tip";				
+			}
+		}
+		p4.onblur=()=>{
+			if(p4.value==p3.value){
+				t4.className="t";				
+			}
+			else{
+				t4.className="tip";
+				
+			}
+		}
+		p3.onblur=()=>{
+			if(password_reg.test(p3.value)){
+				t3.className="t";
+			}
+			else{
+				t3.className="tip";
+			}
+		}
+		b.onclick=()=>{
+			if(p6.value==uname&&p7.value==passwd){
+				flag=true;
+			}
+			 if(flag){
+			window.location.href = '../../index01.html';
+		}
+			}
+			
+		ba.onclick=()=>{
+			window.location.href='../../view/admin/login.html'
+		}
 	</script>
 </html>

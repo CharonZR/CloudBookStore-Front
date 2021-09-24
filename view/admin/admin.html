@@ -1,564 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云上书屋管理端</title>
-    <link rel="stylesheet" href="../../css/admin/admin.css">
-    <link rel="icon" href="../../images/admin/管理.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../../css/common/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
-    <script src="../../js/common/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/common/bootstrap.min.js"></script>
-    <script src="../../js/common/jquery-1.12.4.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>云上书屋管理端</title>
+		<link rel="stylesheet" href="../../css/admin/admin.css">
+		<link rel="icon" href="../../images/admin/管理.png" type="image/x-icon" />
+		<link rel="stylesheet" href="../../css/common/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/admin/download/font_2801350_hw9pyy8c125/iconfont.css">
+		<script src="../../js/common/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/common/bootstrap.min.js"></script>
+		<script src="../../js/common/jquery-1.12.4.js"></script>
+	</head>
 
-<body>
-    <div class="head">
-        <div class="head-left">
-            <a href="#">
-                <i class="iconfont">&#xe653;</i>
-                <span>云上管理</span>
-            </a>
-        </div>
-        <div class="head-middle">
-            <ul id="one-menu" class="nav nav-pills">
-                <!-- <li role="presentation" class="active"><a href="#">首页</a></li> -->
-                <li id="menu1" role="presentation">
-                    <a href="#">
-                        <i class="iconfont">&#xe698;</i> &nbsp; 首页
-                    </a>
-                </li>
+	<body>
+		<div class="head">
+			<div class="head-left">
+				<a href="#">
+					<i class="iconfont">&#xe653;</i>
+					<span>云上管理</span>
+				</a>
+			</div>
+			<div class="head-middle">
+				<ul id="one-menu" class="nav nav-pills">
+					<!-- <li role="presentation" class="active"><a href="#">首页</a></li> -->
+					<li id="menu1" role="presentation">
+						<a href="#">
+							<i class="iconfont">&#xe698;</i> &nbsp; 首页
+						</a>
+					</li>
 
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <i class="iconfont">&#xe61d;</i> &nbsp; 人员管理 <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li id="menu2-1"><a href="#">基本信息表(所有人员)</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li id="menu2-2"><a href="#">管理员表</a></li>
-                        <li id="menu2-3"><a href="#">用户表</a></li>
-                    </ul>
-                </li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="iconfont">&#xe61d;</i> &nbsp; 人员管理 <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li id="menu2-1"><a href="#">基本信息表(所有人员)</a></li>
+							<li role="separator" class="divider"></li>
+							<li id="menu2-2"><a href="#">管理员表</a></li>
+							<li id="menu2-3"><a href="#">用户表</a></li>
+						</ul>
+					</li>
 
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <i class="iconfont">&#xe600;</i> &nbsp; 商品管理 <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li id="menu3-1"><a href="#">书籍信息表</a></li>
-                        <li id="menu3-2"><a href="#">课程信息表</a></li>
-                        <li id="menu3-3"><a href="#">电子书信息表</a></li>
-                        <li id="menu3-4"><a href="#">VIP价格信息表</a></li>
-                    </ul>
-                </li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="iconfont">&#xe600;</i> &nbsp; 商品管理 <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li id="menu3-1"><a href="#">书籍信息表</a></li>
+							<li id="menu3-2"><a href="#">课程信息表</a></li>
+							<li id="menu3-3"><a href="#">电子书信息表</a></li>
+							<li id="menu3-4"><a href="#">VIP价格信息表</a></li>
+						</ul>
+					</li>
 
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <i class="iconfont">&#xebef;</i> &nbsp; 类别管理 <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li id="menu4-1"><a href="#">书籍类别表</a></li>
-                        <li id="menu4-2"><a href="#">课程类别表</a></li>
-                    </ul>
-                </li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="iconfont">&#xebef;</i> &nbsp; 类别管理 <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li id="menu4-1"><a href="#">书籍类别表</a></li>
+							<li id="menu4-2"><a href="#">课程类别表</a></li>
+						</ul>
+					</li>
 
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <i class="iconfont">&#xe615;</i> &nbsp; 订单管理 <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li id="menu5-1"><a href="#">订单表</a></li>
-                    </ul>
-                </li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<i class="iconfont">&#xe615;</i> &nbsp; 订单管理 <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li id="menu5-1"><a href="#">订单表</a></li>
+						</ul>
+					</li>
 
-                <li id="menu6" role="presentation">
-                    <a href="#">
-                        <i class="iconfont">&#xe670;</i> &nbsp; 公告
-                    </a>
-                </li>
+					<li id="menu6" role="presentation">
+						<a href="#">
+							<i class="iconfont">&#xe670;</i> &nbsp; 公告
+						</a>
+					</li>
 
-                <li id="menu7" role="presentation">
-                    <a href="#">
-                        <i class="iconfont">&#xe701;</i> &nbsp; 轮播图
-                    </a>
-                </li>
+					<li id="menu7" role="presentation">
+						<a href="#">
+							<i class="iconfont">&#xe701;</i> &nbsp; 轮播图
+						</a>
+					</li>
 
-            </ul>
-        </div>
-        <div class="head-right">
-            <ul>
-                <li class="sixin" style="margin-right: 30px;">
-                    <i class="iconfont" style="font-size: 30px;float: left;color: #3E8EF7;">&#xe628;</i>
-                    <sup class="sup"></sup>
-                    <div class="chat">
-                        <ul id="chat-ul">
+				</ul>
+			</div>
+			<div class="head-right">
+				<ul>
+					<li class="sixin" style="margin-right: 30px;">
+						<i class="iconfont" style="font-size: 30px;float: left;color: #3E8EF7;">&#xe628;</i>
+						<sup class="sup"></sup>
+						<div class="chat">
+							<ul id="chat-ul">
 
-                        </ul>
-                    </div>
-                </li>
-                <li class="admin-li">
-                    <div class="admin-img"></div>
-                    <span style="float: left; margin-left: 10px;margin-right: 20px;">尊敬的&nbsp;<h4 id="admin_name" style="color: red; display: inline;">饿熊的咆哮</h4>&nbsp;欢迎您!</span>
-                    <ul class="user" style="clear: both;">
-                        <li><a href="#" id="update_password" onclick="update_password()">修改密码</a></li>
-                        <li><a href="login.html">退出登录</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="middle">
-        <div style="position: relative;">
-            <div class="middlek one">
-                <!-- 首页 -->
-                <iframe src="in-admin/首页.html"></iframe>
-            </div>
-            <div class="middlek two">
-                <!-- 基本信息表(所有人员) -->
-                <iframe src="in-admin/基本信息表(所有人员).html"></iframe>
-            </div>
-            <div class="middlek three">
-                <!-- 管理员表 -->
-                <iframe src="in-admin/管理员表.html"></iframe>
-            </div>
-            <div class="middlek four">
-                <!-- 用户表 -->
-                <iframe src="in-admin/用户表.html"></iframe>
-            </div>
-            <div class="middlek five">
-                <!-- 书籍信息表 -->
-                <iframe src="in-admin/书籍信息表.html"></iframe>
-            </div>
-            <div class="middlek six">
-                <!-- 课程信息表 -->
-                <iframe src="in-admin/课程信息表.html"></iframe>
-            </div>
-            <div class="middlek seven">
-                <!-- 电子书信息表 -->
-                <iframe src="in-admin/电子书信息表.html"></iframe>
-            </div>
-            <div class="middlek eight">
-                <!-- VIP价格信息表 -->
-                <iframe src="in-admin/VIP价格信息表.html"></iframe>
-            </div>
-            <div class="middlek nine">
-                <!-- 书籍类别表 -->
-                <iframe src="in-admin/书籍类别表.html"></iframe>
-            </div>
-            <div class="middlek ten">
-                <!-- 课程类别表 -->
-                <iframe src="in-admin/课程类别表.html"></iframe>
-            </div>
-            <div class="middlek oneone">
-                <!-- 订单表 -->
-                <iframe src="in-admin/订单表.html"></iframe>
-            </div>
-            <div class="middlek onetwo">
-                <!-- 公告src="in-admin/公告.html?" -->
-                <iframe id="send_phone"></iframe>
-            </div>
-            <div class="middlek onethree">
-                <!-- 轮播图 -->
-                <iframe src="in-admin/轮播图.html"></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="bg">
-        <div class="inf">
-            <div class="inf-head">
-                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">来信</h4>
-                <input type="button" id="close" value="×">
-            </div>
-            <div class="inf-from" id="message">
+							</ul>
+						</div>
+					</li>
+					<li class="admin-li">
+						<div class="admin-img"></div>
+						<span style="float: left; margin-left: 10px;margin-right: 20px;">尊敬的&nbsp;<h4 id="admin_name" style="color: red; display: inline;">饿熊的咆哮</h4>&nbsp;欢迎您!</span>
+						<ul class="user" style="clear: both;">
+							<li><a href="#" id="update_password" onclick="update_password()">修改密码</a></li>
+							<li><a href="login.html">退出登录</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="middle">
+			<div style="position: relative;">
+				<div class="middlek one">
+					<!-- 首页 -->
+					<iframe src="in-admin/首页.html"></iframe>
+				</div>
+				<div class="middlek two">
+					<!-- 基本信息表(所有人员) -->
+					<iframe src="in-admin/基本信息表(所有人员).html"></iframe>
+				</div>
+				<div class="middlek three">
+					<!-- 管理员表 -->
+					<iframe src="in-admin/管理员表.html"></iframe>
+				</div>
+				<div class="middlek four">
+					<!-- 用户表 -->
+					<iframe src="in-admin/用户表.html"></iframe>
+				</div>
+				<div class="middlek five">
+					<!-- 书籍信息表 -->
+					<iframe src="in-admin/书籍信息表.html"></iframe>
+				</div>
+				<div class="middlek six">
+					<!-- 课程信息表 -->
+					<iframe src="in-admin/课程信息表.html"></iframe>
+				</div>
+				<div class="middlek seven">
+					<!-- 电子书信息表 -->
+					<iframe src="in-admin/电子书信息表.html"></iframe>
+				</div>
+				<div class="middlek eight">
+					<!-- VIP价格信息表 -->
+					<iframe src="in-admin/VIP价格信息表.html"></iframe>
+				</div>
+				<div class="middlek nine">
+					<!-- 书籍类别表 -->
+					<iframe src="in-admin/书籍类别表.html"></iframe>
+				</div>
+				<div class="middlek ten">
+					<!-- 课程类别表 -->
+					<iframe src="in-admin/课程类别表.html"></iframe>
+				</div>
+				<div class="middlek oneone">
+					<!-- 订单表 -->
+					<iframe src="in-admin/订单表.html"></iframe>
+				</div>
+				<div class="middlek onetwo">
+					<!-- 公告src="in-admin/公告.html?" -->
+					<iframe id="send_phone"></iframe>
+				</div>
+				<div class="middlek onethree">
+					<!-- 轮播图 -->
+					<iframe src="in-admin/轮播图.html"></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="bg">
+			<div class="inf">
+				<div class="inf-head">
+					<h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">来信</h4>
+					<input type="button" id="close" value="×">
+				</div>
+				<div class="inf-from" id="message">
 
-            </div>
-        </div>
-    </div>
-    <div class="bg_1">
-        <div class="inf">
-            <div class="inf-head">
-                <h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">修改密码</h4>
-                <input type="button" id="close_1" value="×">
-            </div>
-            <div class="inf-from" id="update">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputNickname">昵称</label>
-                        <input type="text" class="form-control" id="exampleInputNickname" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputAccount">账号</label>
-                        <input type="text" class="form-control" id="exampleInputAccount" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputOldPassword">原密码</label>
-                        <label class="tip tip2 two_1">密码不能为空</label>
-                        <label class="tip tip2 two_2">密码错误</label>
-                        <input type="password" class="form-control" id="exampleInputOldPassword" placeholder="原密码">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputNewPassword">新密码</label>
-                        <label class="tip tip3 three">密码格式错误,必须是6~18位,字母开头,数字,下划线</label>
-                        <label class="tip tip3 three_1">密码不能为空</label>
-                        <input type="password" class="form-control" id="exampleInputNewPassword" placeholder="新密码">
-                    </div>
-                    <button type="button" class="btn btn-default">修改</button>
-                </form>
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
+		</div>
+		<div class="bg_1">
+			<div class="inf">
+				<div class="inf-head">
+					<h4 style="color: white;display: inline;line-height: 30px;margin-left: 5px;">修改密码</h4>
+					<input type="button" id="close_1" value="×">
+				</div>
+				<div class="inf-from" id="update">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputNickname">昵称</label>
+							<input type="text" class="form-control" id="exampleInputNickname" disabled>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputAccount">账号</label>
+							<input type="text" class="form-control" id="exampleInputAccount" disabled>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputOldPassword">原密码</label>
+							<label class="tip tip2 two_1">密码不能为空</label>
+							<label class="tip tip2 two_2">密码错误</label>
+							<input type="password" class="form-control" id="exampleInputOldPassword" placeholder="原密码">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputNewPassword">新密码</label>
+							<label class="tip tip3 three">密码格式错误,必须是6~18位,字母开头,数字,下划线</label>
+							<label class="tip tip3 three_1">密码不能为空</label>
+							<input type="password" class="form-control" id="exampleInputNewPassword" placeholder="新密码">
+						</div>
+						<button type="button" class="btn btn-default">修改</button>
+					</form>
+				</div>
+			</div>
+		</div>
 
-    <script>
-        //传递url,跨域传输
-        $(function() {
-            let loc = location.href;
-            let n1 = loc.length;
-            let n2 = loc.indexOf('=');
-            let account = decodeURI(loc.substr(n2 + 1, 11));
-            let send_phone = document.getElementById("send_phone");
-            send_phone.src = 'in-admin/公告.html?' + 'send_phone=' + account;
-        })
+		<script>
+			//传递url,跨域传输
+			$(function() {
+				let loc = location.href;
+				let n1 = loc.length;
+				let n2 = loc.indexOf('=');
+				let account = decodeURI(loc.substr(n2 + 1, 11));
+				let send_phone = document.getElementById("send_phone");
+				send_phone.src = 'in-admin/公告.html?' + 'send_phone=' + account;
+			})
 
-        let chat_datas = [{
-            "nickName": "踏北小天才",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "东邪",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "西毒",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "南帝",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "北丐",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "踏北小天才",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "东邪",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "西毒",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "南帝",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "北丐",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "踏北小天才",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "东邪",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "西毒",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "南帝",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "北丐",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "踏北小天才",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "东邪",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "西毒",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "南帝",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "北丐",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "踏北小天才",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "东邪",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "西毒",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "南帝",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }, {
-            "nickName": "北丐",
-            "chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
-            "time": "2021-9-10 15:11:24"
-        }]
-        let chat_ul = document.getElementById("chat-ul");
-        let str = "";
-        let j = chat_datas.length;
-        let sup = document.getElementsByTagName("sup")[0];
-        if (j >= 99) {
-            j = "99+";
-        }
-        sup.innerHTML = j;
-        for (let i = 0; i < chat_datas.length; i++) {
-            str += '<li><div href="#" id="' + i + '" onclick="chat(this)">';
-            str += '<span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">' + chat_datas[i].nickName + '</h5>&nbsp;的来信:</span>';
-            str += '<p><a href="#">' + chat_datas[i].chat + '</a></p>';
-            str += '<span class="time">' + chat_datas[i].time + '</span>';
-            str += '</div></li>';
-        }
+			let chat_datas = [{
+				"nickName": "踏北小天才",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "东邪",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "西毒",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "南帝",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "北丐",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "踏北小天才",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "东邪",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "西毒",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "南帝",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "北丐",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "踏北小天才",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "东邪",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "西毒",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "南帝",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "北丐",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "踏北小天才",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "东邪",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "西毒",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "南帝",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "北丐",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "踏北小天才",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:（1）形成了一定规模优势，具有了很高的知名度、美誉度和诚信度。在多次市场调查中，始终是读者和出版社认可度最高的发行商；（2）建立了以行政区划为单位、较为紧密的区域系统，占据市场主导地位；（3）构建了一个庞大健全的分销渠道，发行网点遍布城乡；（4）有了较为雄厚的经济积累；（5）培养了一支较高素质的专业发行队伍；（6）形成了较为广泛紧密的社会关系。",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "东邪",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "西毒",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "南帝",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}, {
+				"nickName": "北丐",
+				"chat": "尊敬的管理员先生:你好! 我是踏北小天才,针对于我刚刚买的书,我想提以下几点建议:",
+				"time": "2021-9-10 15:11:24"
+			}]
+			let chat_ul = document.getElementById("chat-ul");
+			let str = "";
+			let j = chat_datas.length;
+			let sup = document.getElementsByTagName("sup")[0];
+			if (j >= 99) {
+				j = "99+";
+			}
+			sup.innerHTML = j;
+			for (let i = 0; i < chat_datas.length; i++) {
+				str += '<li><div href="#" id="' + i + '" onclick="chat(this)">';
+				str += '<span class="come-from">来自@&nbsp;<h5 style="color: red; display: inline;">' + chat_datas[i].nickName +
+					'</h5>&nbsp;的来信:</span>';
+				str += '<p><a href="#">' + chat_datas[i].chat + '</a></p>';
+				str += '<span class="time">' + chat_datas[i].time + '</span>';
+				str += '</div></li>';
+			}
 
-        chat_ul.innerHTML = str;
+			chat_ul.innerHTML = str;
 
-        $(function() {
-            $("#menu1").click(function() {
-                $(".middlek").css("display", "none");
-                $(".one").css("display", "block");
-            });
-            $("#menu2-1").click(function() {
-                $(".middlek").css("display", "none");
-                $(".two").css("display", "block");
-            });
-            $("#menu2-2").click(function() {
-                $(".middlek").css("display", "none");
-                $(".three").css("display", "block");
-            });
-            $("#menu2-3").click(function() {
-                $(".middlek").css("display", "none");
-                $(".four").css("display", "block");
-            });
-            $("#menu3-1").click(function() {
-                $(".middlek").css("display", "none");
-                $(".five").css("display", "block");
-            });
-            $("#menu3-2").click(function() {
-                $(".middlek").css("display", "none");
-                $(".six").css("display", "block");
-            });
-            $("#menu3-3").click(function() {
-                $(".middlek").css("display", "none");
-                $(".seven").css("display", "block");
-            });
-            $("#menu3-4").click(function() {
-                $(".middlek").css("display", "none");
-                $(".eight").css("display", "block");
-            });
-            $("#menu4-1").click(function() {
-                $(".middlek").css("display", "none");
-                $(".nine").css("display", "block");
-            });
-            $("#menu4-2").click(function() {
-                $(".middlek").css("display", "none");
-                $(".ten").css("display", "block");
-            });
-            $("#menu5-1").click(function() {
-                $(".middlek").css("display", "none");
-                $(".oneone").css("display", "block");
-            });
-            $("#menu6").click(function() {
-                $(".middlek").css("display", "none");
-                $(".onetwo").css("display", "block");
-            });
-            $("#menu7").click(function() {
-                $(".middlek").css("display", "none");
-                $(".onethree").css("display", "block");
-            });
+			$(function() {
+				$("#menu1").click(function() {
+					$(".middlek").css("display", "none");
+					$(".one").css("display", "block");
+				});
+				$("#menu2-1").click(function() {
+					$(".middlek").css("display", "none");
+					$(".two").css("display", "block");
+				});
+				$("#menu2-2").click(function() {
+					$(".middlek").css("display", "none");
+					$(".three").css("display", "block");
+				});
+				$("#menu2-3").click(function() {
+					$(".middlek").css("display", "none");
+					$(".four").css("display", "block");
+				});
+				$("#menu3-1").click(function() {
+					$(".middlek").css("display", "none");
+					$(".five").css("display", "block");
+				});
+				$("#menu3-2").click(function() {
+					$(".middlek").css("display", "none");
+					$(".six").css("display", "block");
+				});
+				$("#menu3-3").click(function() {
+					$(".middlek").css("display", "none");
+					$(".seven").css("display", "block");
+				});
+				$("#menu3-4").click(function() {
+					$(".middlek").css("display", "none");
+					$(".eight").css("display", "block");
+				});
+				$("#menu4-1").click(function() {
+					$(".middlek").css("display", "none");
+					$(".nine").css("display", "block");
+				});
+				$("#menu4-2").click(function() {
+					$(".middlek").css("display", "none");
+					$(".ten").css("display", "block");
+				});
+				$("#menu5-1").click(function() {
+					$(".middlek").css("display", "none");
+					$(".oneone").css("display", "block");
+				});
+				$("#menu6").click(function() {
+					$(".middlek").css("display", "none");
+					$(".onetwo").css("display", "block");
+				});
+				$("#menu7").click(function() {
+					$(".middlek").css("display", "none");
+					$(".onethree").css("display", "block");
+				});
 
 
-            $("#update_password").click(function() {
-                $(".bg_1").css("display", "block");
-            });
+				$("#update_password").click(function() {
+					$(".bg_1").css("display", "block");
+				});
 
-            $("#close").click(function() {
-                $(".bg").css("display", "none");
-            });
-            $("#close_1").click(function() {
-                $(".bg_1").css("display", "none");
-            });
-        })
+				$("#close").click(function() {
+					$(".bg").css("display", "none");
+				});
+				$("#close_1").click(function() {
+					$(".bg_1").css("display", "none");
+				});
+			})
 
-        function chat(obj) {
-            let bg = document.getElementsByClassName("bg");
-            let message = document.getElementById("message");
-            let i = obj.id;
-            let str_copy = "";
-            let admin_name = document.getElementById("admin_name").innerText;
+			function chat(obj) {
+				let bg = document.getElementsByClassName("bg");
+				let message = document.getElementById("message");
+				let i = obj.id;
+				let str_copy = "";
+				let admin_name = document.getElementById("admin_name").innerText;
 
-            str_copy += '<li>';
-            str_copy += '<span>来自@&nbsp;<h5 style="color: red; display: inline;">' + chat_datas[i].nickName + '</h5>&nbsp;的来信:</span>';
-            str_copy += '<hr>'
-            str_copy += '<p>&nbsp;&nbsp;&nbsp;&nbsp;' + chat_datas[i].chat + '</p>';
-            str_copy += '<hr>'
-            str_copy += '<span style="float:right;">' + chat_datas[i].time + '</span>';
-            str_copy += '</li>';
-            str_copy += '<div style="width: 100%;height: 30px;"></div>';
-            str_copy += '<div>';
-            str_copy += '<button type="button" class="btn btn-info" style="float:left;margin-left:30px;" onclick="reply()">回复</button>';
-            str_copy += '<button type="button" class="btn btn-warning" name="' + i + '" style="float:right;margin-right:30px;" onclick="clean(this)">忽略</button>';
-            str_copy += '<div style="width:100%;height:60px;"></div>'
-            str_copy += '<form id="reply" style="display:none;margin:30px auto">';
-            str_copy += '<span>@&nbsp;<h5 style="color: red; display: inline;">' + admin_name + '</h5>&nbsp;的回复:</span>';
-            str_copy += '<textarea style="margin-top:10px;" class="form-control" rows="8"></textarea>';
-            str_copy += '<button type="button" class="btn btn-success" name="' + i + '" style="float:left;margin-left:30px;margin-top:15px;" onclick="send(this)">发送</button>';
-            str_copy += '<span id="s" style="float:right;margin-right:30px;margin-top:20px;"></span>'
-            str_copy += '</form>';
-            str_copy += '</div>';
+				str_copy += '<li>';
+				str_copy += '<span>来自@&nbsp;<h5 style="color: red; display: inline;">' + chat_datas[i].nickName +
+					'</h5>&nbsp;的来信:</span>';
+				str_copy += '<hr>'
+				str_copy += '<p>&nbsp;&nbsp;&nbsp;&nbsp;' + chat_datas[i].chat + '</p>';
+				str_copy += '<hr>'
+				str_copy += '<span style="float:right;">' + chat_datas[i].time + '</span>';
+				str_copy += '</li>';
+				str_copy += '<div style="width: 100%;height: 30px;"></div>';
+				str_copy += '<div>';
+				str_copy +=
+					'<button type="button" class="btn btn-info" style="float:left;margin-left:30px;" onclick="reply()">回复</button>';
+				str_copy += '<button type="button" class="btn btn-warning" name="' + i +
+					'" style="float:right;margin-right:30px;" onclick="clean(this)">忽略</button>';
+				str_copy += '<div style="width:100%;height:60px;"></div>'
+				str_copy += '<form id="reply" style="display:none;margin:30px auto">';
+				str_copy += '<span>@&nbsp;<h5 style="color: red; display: inline;">' + admin_name + '</h5>&nbsp;的回复:</span>';
+				str_copy += '<textarea style="margin-top:10px;" class="form-control" rows="8"></textarea>';
+				str_copy += '<button type="button" class="btn btn-success" name="' + i +
+					'" style="float:left;margin-left:30px;margin-top:15px;" onclick="send(this)">发送</button>';
+				str_copy += '<span id="s" style="float:right;margin-right:30px;margin-top:20px;"></span>'
+				str_copy += '</form>';
+				str_copy += '</div>';
 
-            message.innerHTML = str_copy;
-            bg[0].style.display = "block";
-            console.log(bg)
-        }
+				message.innerHTML = str_copy;
+				bg[0].style.display = "block";
+				console.log(bg)
+			}
 
-        function reply() {
-            $("#reply").css("display", "block");
-        }
+			function reply() {
+				$("#reply").css("display", "block");
+			}
 
-        function clean(obj) {
-            var flag = confirm("你确定要忽略该条信息吗吗?");
-            if (flag) {
-                let i = obj.name;
-                let div = document.getElementById(i);
-                let chat_ul = document.getElementById("chat-ul");
-                chat_ul.removeChild(div.parentElement);
-                j--;
-                sup.innerHTML = j;
-                alert("已忽略")
-                $(".bg").css("display", "none");
+			function clean(obj) {
+				var flag = confirm("你确定要忽略该条信息吗吗?");
+				if (flag) {
+					let i = obj.name;
+					let div = document.getElementById(i);
+					let chat_ul = document.getElementById("chat-ul");
+					chat_ul.removeChild(div.parentElement);
+					j--;
+					sup.innerHTML = j;
+					alert("已忽略")
+					$(".bg").css("display", "none");
 
-            }
-        }
+				}
+			}
 
-        function send(obj) {
-            var flag = confirm("你确定要发送吗?");
-            if (flag) {
-                let i = obj.name;
-                let div = document.getElementById(i);
-                let chat_ul = document.getElementById("chat-ul");
-                chat_ul.removeChild(div.parentElement);
-                j--;
-                sup.innerHTML = j;
-                alert("发送成功!");
-                $(".bg").css("display", "none");
-            }
-        }
+			function send(obj) {
+				var flag = confirm("你确定要发送吗?");
+				if (flag) {
+					let i = obj.name;
+					let div = document.getElementById(i);
+					let chat_ul = document.getElementById("chat-ul");
+					chat_ul.removeChild(div.parentElement);
+					j--;
+					sup.innerHTML = j;
+					alert("发送成功!");
+					$(".bg").css("display", "none");
+				}
+			}
 
-        function update_password() {
-            let admin_name = document.getElementById("admin_name").innerText;
-            let loc = location.href;
-            let n1 = loc.length;
-            let n2 = loc.indexOf('=');
-            let account = decodeURI(loc.substr(n2 + 1, 11));
-            let div = document.getElementById("update");
+			function update_password() {
+				let admin_name = document.getElementById("admin_name").innerText;
+				let loc = location.href;
+				let n1 = loc.length;
+				let n2 = loc.indexOf('=');
+				let account = decodeURI(loc.substr(n2 + 1, 11));
+				let div = document.getElementById("update");
 
-            let input_nickname = document.getElementById("exampleInputNickname");
-            let input_account = document.getElementById("exampleInputAccount");
+				let input_nickname = document.getElementById("exampleInputNickname");
+				let input_account = document.getElementById("exampleInputAccount");
 
-            input_nickname.placeholder = admin_name;
-            input_account.placeholder = account;
+				input_nickname.placeholder = admin_name;
+				input_account.placeholder = account;
 
-        }
+			}
 
-        //获取当前时间以字符串形式显示在span标签内
-        //  2020/10/15 15:08:10
-        function loadTime() {
-            var currentDate = new Date();
-            var dateStr = formatDate(currentDate);
-            var span = document.getElementById("s");
-            span.innerText = dateStr;
-        }
-        //日期对象 转换为 指定日期格式的字符串 yyyy/MM/dd HH:mm:ss
-        function formatDate(date) {
-            var str = date.getFullYear() + "/" + subDate((date.getMonth() + 1)) + "/" +
-                subDate(date.getDate()) + " " + subDate(date.getHours()) + ":" +
-                subDate(date.getMinutes()) + ":" + subDate(date.getSeconds());
-            return str;
-        }
-        //补全日期 不足两位前面补0  5--05 10--10
-        //先统一前面加0  05  010
-        function subDate(s) {
-            var s1 = "0" + s;
-            return s1.substring(s1.length - 2);
-        }
+			//获取当前时间以字符串形式显示在span标签内
+			//  2020/10/15 15:08:10
+			function loadTime() {
+				var currentDate = new Date();
+				var dateStr = formatDate(currentDate);
+				var span = document.getElementById("s");
+				span.innerText = dateStr;
+			}
+			//日期对象 转换为 指定日期格式的字符串 yyyy/MM/dd HH:mm:ss
+			function formatDate(date) {
+				var str = date.getFullYear() + "/" + subDate((date.getMonth() + 1)) + "/" +
+					subDate(date.getDate()) + " " + subDate(date.getHours()) + ":" +
+					subDate(date.getMinutes()) + ":" + subDate(date.getSeconds());
+				return str;
+			}
+			//补全日期 不足两位前面补0  5--05 10--10
+			//先统一前面加0  05  010
+			function subDate(s) {
+				var s1 = "0" + s;
+				return s1.substring(s1.length - 2);
+			}
 
-        onload = function() {
-            //每隔1秒 执行loadTime方法
-            setInterval(loadTime, 1000);
-        };
-        $(function() {
-            $(".btn").on('click', function() {
-                if (confirm("你确定要修改密码吗?")) {
-                    var flag = true;
-                    var password = 'wjz110032'; //模拟原密码,真实数据根据账号查询出来
-                    var password_reg = /^[a-zA-Z]\w{5,17}$/;
+			onload = function() {
+				//每隔1秒 执行loadTime方法
+				setInterval(loadTime, 1000);
+			};
+			$(function() {
+				$(".btn").on('click', function() {
+					if (confirm("你确定要修改密码吗?")) {
+						var flag = true;
+						var password = 'wjz110032'; //模拟原密码,真实数据根据账号查询出来
+						var password_reg = /^[a-zA-Z]\w{5,17}$/;
 
-                    //原密码
-                    var oldpassword = $("#exampleInputOldPassword").val();
-                    if (oldpassword == '') {
-                        $(".tip2").css("display", "none");
-                        $(".two_1").css("display", "block");
-                        flag = false;
-                    } else if (oldpassword != password) {
-                        $(".tip2").css("display", "none");
-                        $(".two_2").css("display", "block");
-                        flag = false;
-                    } else {
-                        $(".tip2").css("display", "none");
-                    }
+						//原密码
+						var oldpassword = $("#exampleInputOldPassword").val();
+						if (oldpassword == '') {
+							$(".tip2").css("display", "none");
+							$(".two_1").css("display", "block");
+							flag = false;
+						} else if (oldpassword != password) {
+							$(".tip2").css("display", "none");
+							$(".two_2").css("display", "block");
+							flag = false;
+						} else {
+							$(".tip2").css("display", "none");
+						}
 
-                    //新密码
-                    var newpassword = $("#exampleInputNewPassword").val();
-                    if (newpassword == '') {
-                        $(".tip3").css("display", "none");
-                        $(".three_1").css("display", "block");
-                        flag = false;
-                    } else if (password_reg.test(newpassword)) {
-                        $(".tip3").css("display", "none");
-                    } else {
-                        $(".tip3").css("display", "none");
-                        $(".three").css("display", "block");
-                        flag = false;
-                    }
+						//新密码
+						var newpassword = $("#exampleInputNewPassword").val();
+						if (newpassword == '') {
+							$(".tip3").css("display", "none");
+							$(".three_1").css("display", "block");
+							flag = false;
+						} else if (password_reg.test(newpassword)) {
+							$(".tip3").css("display", "none");
+						} else {
+							$(".tip3").css("display", "none");
+							$(".three").css("display", "block");
+							flag = false;
+						}
 
-                    if (flag) {
-                        alert("修改密码成功!请重新登录!")
-                        window.location.href = 'login.html?';
-                    }
-                }
-            })
-        })
-    </script>
-</body>
+						if (flag) {
+							alert("修改密码成功!请重新登录!")
+							window.location.href = 'login.html?';
+						}
+					}
+				})
+			})
+		</script>
+	</body>
 
 </html>

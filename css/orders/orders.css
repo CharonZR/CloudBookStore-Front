@@ -1,0 +1,248 @@
+.banners{
+            
+    color: black;
+    width: 180px;
+    height: 600px;
+    background-color: white;
+    margin-left: 100px;
+    padding-top: 20px;
+    margin-top: 40px;
+    
+}
+
+.banners1{
+    margin:0px;
+    padding: 0;
+    height:20px;
+    width: 300px;
+	margin-top: 30px;
+   
+}
+
+
+.d0{
+    background-color: rgb(238, 238, 238);
+    width: 1520px;
+    height: 900px;
+	margin-top: 2px;
+}
+ul{
+    list-style: none;
+}
+.u1 li{
+   display: inline-block;
+}
+.u1{
+   float: left;
+   
+}
+.u2{
+    margin-left:0px;
+}
+.d1{
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    left: 20px;
+    background-color:  rgb(238, 238, 238);
+    
+}
+a{
+    text-decoration: none;
+
+}
+
+span{
+    color: rgb(133, 133, 133);
+    font-size: 14px;
+    line-height: 46px;
+}
+/*a:active{
+    color: brown;
+}*/
+.header-nav a:hover{
+    background-color: rgb(196,219,102);
+    opacity: 0.8;
+}
+.d2{
+   height: 619px;
+   width: 981px;
+   position: absolute;
+   left: 350px;
+   background-color: rgb(238, 238, 238);
+   margin-top: 25px;
+}
+.l1{
+  position: absolute;
+  left: 800px;
+  top: 80px;
+  padding: 2px 32px 2px 16px;
+  background-color: rgb(238, 238, 238);
+}
+.l2{
+    position: absolute;
+    left: 80px;
+    top: 127px;
+    padding: 2px 32px 2px 16px;
+    background-color: rgb(238, 238, 238);
+  }
+.u3 li:nth-child(1){
+   padding-left: 20px;
+   padding-right: 20px;
+   color: black;
+   margin-left:-58px;
+}
+.u3 li:nth-child(2){
+   padding-left: 20px;
+   padding-right: 20px;
+   color: black;
+} .u3 li:nth-child(3){
+   padding-left: 20px;
+   padding-right: 20px;
+   color: black;
+} .u3 li:nth-child(4){
+   padding-left: 20px;
+   padding-right: 20px;
+   color: black;
+}
+.u3 a:hover{
+    background-color: rgb(196,219,102);
+    opacity: 0.8;
+}
+
+
+.d5{
+   width: 981px;
+   height: 50px;
+   background-color: lightgray;
+   margin-top: 30px;
+  
+}
+em{
+   color: rgb(189, 50, 50);
+   font-style:normal;
+   margin-left: 5px;
+   }
+   .s1{
+       position: absolute;
+       top: 132px;
+       left: 10px;
+   }
+   .s2{
+       position: absolute;
+       top: 131px;
+       left: 680px;
+     
+   }
+   .ph2{
+       position: absolute;
+       top: 112px;
+       left: 500px;
+   }
+   .ph1{
+       position: absolute;
+       top: 112px;
+       left: 270px;
+       width: 200px;
+   }
+   .ph4{
+       position: absolute;
+       top: 112px;
+       left: 860px;
+       width: 200px;
+   }
+   .ph5{
+       position: absolute;
+       top: 110px;
+       left: 0px;
+   }
+   .ph6{
+       position: absolute;
+       top: 110px;
+       left: 100px;
+       }
+       .ph7{
+        position: absolute;
+        top: 110px;
+        left: 200px;
+        }
+
+   .d24{
+       width: 980px;height: 518px;
+       border: 1px solid black;
+       background-color: #fff;
+
+   }
+   .d23{
+    width: 980px;height: 518px;
+    background-color: #fff;
+
+}
+   h3{
+       line-height: 2px;
+   }
+ 
+.imgs1 {
+    position: absolute;
+    left: 325px;
+    top: 200px;
+    
+}
+.imgs2 {
+    position: absolute;
+    left: 390px;
+    top: 200px;
+    width: 200px;
+    height: 210px;
+    background-image: url(../../images/orders/订单评价.png);
+    background-size: cover;
+    
+}
+.imgs3 {
+    position: absolute;
+    left: 350px;
+    top: 230px;
+    width: 220px;
+    height: 210px;
+    background-image: url(../../images/orders/已评价1.png);
+    background-size: cover;
+    
+}
+  .d22{
+      position: absolute;
+      left: 450px;
+      top: 500px;
+	 
+  }
+  .d25{
+    position: absolute;
+    left: 450px;
+    top: 500px;
+   
+}
+  .banners-nav1 a:hover{
+    background-color: rgb(196,219,102);
+    opacity: 0.8;
+}
+.banners-nav2 a:hover{
+    background-color: rgb(196,219,102);
+    opacity: 0.8;
+} 
+.banners-nav3 a:hover{
+    background-color: rgb(196,219,102);
+    opacity: 0.8;
+}
+.banners-nav4 a:hover{
+    background-color: rgb(196,219,102);
+    opacity: 0.8;
+}
+
+#ta{
+	display: none;
+	
+}
+#tc{
+	/* display: none; */
+    display: block;
+	
+}
